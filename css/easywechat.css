@@ -323,7 +323,7 @@ body.home {
   color: #fff;
 }
 .home .mobile-nav-toggle-bar {
-  background: #fff url("../bg.jpg") center center cover;
+  background: #fff url("../bg.jpg") no-repeat center center cover;
 }
 #banner {
   color: rgba(255,255,255,0.8);
