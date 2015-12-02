@@ -316,6 +316,9 @@ body {
   width: 190px;
 }
 body.home {
+  background: #171f26;
+}
+.home .with-background {
   background: #171f26 url("../bg.jpg") no-repeat center -300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
