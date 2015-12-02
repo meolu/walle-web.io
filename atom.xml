@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  
+  <title><![CDATA[Easy WeChat]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://easywechat.org//"/>
+  <updated>2015-06-18T07:56:06.000Z</updated>
+  <id>http://easywechat.org//</id>
+  
+  <author>
+    <name><![CDATA[overtrue]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://easywechat.org/news/2015/11/15/hello-world/"/>
+    <id>http://easywechat.org/news/2015/11/15/hello-world/</id>
+    <published>2015-11-15T14:18:00.000Z</published>
+    <updated>2015-06-18T07:56:06.000Z</updated>
+    <content type="html"><![CDATA[<p>Hello world!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Hello world!</p>
+]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
