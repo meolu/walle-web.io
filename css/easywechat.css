@@ -191,12 +191,12 @@ body {
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
-  background: url("/logo.svg") no-repeat center left;
+  background: url("/logo.svg") no-repeat left center;
   width: 150px;
   height: 50px;
-  -webkit-background-size: 150px 32px;
-  -moz-background-size: 150px 32px;
-  background-size: 150px 32px;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
   display: inline-block;
 }
 @media screen and (min-width: 769px) {
