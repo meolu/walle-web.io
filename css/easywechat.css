@@ -191,12 +191,12 @@ body {
   text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
-  background: url("/logo.svg") no-repeat;
+  background: url("/logo.svg") no-repeat center left;
   width: 150px;
   height: 50px;
-  -webkit-background-size: 150px 50px;
-  -moz-background-size: 150px 50px;
-  background-size: 150px 50px;
+  -webkit-background-size: 150px 32px;
+  -moz-background-size: 150px 32px;
+  background-size: 150px 32px;
   display: inline-block;
 }
 @media screen and (min-width: 769px) {
@@ -319,7 +319,7 @@ body.home {
   background: #171f26;
 }
 .home .with-background {
-  background: #171f26 url("../bg.jpg") no-repeat center -300px;
+  background: #171f26 url("../bg.jpg") no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
