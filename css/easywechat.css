@@ -125,8 +125,8 @@ select {
 }
 body {
   background: #fff;
-  font-size: 15px;
-  font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
+  font-size: 14px;
+  font-family: 'Pingfang SC', 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
   color: #444;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -1483,14 +1483,14 @@ code {
   font-family: Monaco, "Source Code Pro", Menlo, Consolas, monospace;
   color: #4d4d4c;
   background: #eee;
-  font-size: 0.95em;
+  font-size: 0.55em;
 }
 code {
   padding: 0 5px;
 }
 pre {
   padding: 10px 15px;
-  line-height: 22px;
+  line-height: 1.5em;
   word-wrap: break-word;
 }
 pre code {
