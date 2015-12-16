@@ -49,7 +49,7 @@
 <meta property="og:description" content="在我们已经安装完成后，即可很快的开始使用它了，当然你还是有必要明白PHP基本知识，如命名空间等，我这里就不赘述了。
 我们以完成服务器端验证与接收响应用户发送的消息为例来演示,首先你有必要了解一下微信交互的运行流程：
                                  +-----------------+                       +---------------+">
-<meta property="og:updated_time" content="2015-12-16T16:39:35.891Z">
+<meta property="og:updated_time" content="2015-12-16T16:43:35.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速开始">
 <meta name="twitter:description" content="在我们已经安装完成后，即可很快的开始使用它了，当然你还是有必要明白PHP基本知识，如命名空间等，我这里就不赘述了。
@@ -124,10 +124,10 @@
                 <p>在我们已经安装完成后，即可很快的开始使用它了，当然你还是有必要明白PHP基本知识，如命名空间等，我这里就不赘述了。</p>
 <p>我们以完成服务器端验证与接收响应用户发送的消息为例来演示,首先你有必要了解一下微信交互的运行流程：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">                                 +-----------------+                       +---------------+&#10;+----------+                     |                 |    POST/GET/PUT       |               |&#10;|          | ------------------&#62; |                 | -------------------&#62;  |               |&#10;|   user   |                     |  wechat server  |                       |  your server  |&#10;|          | &#60; - - - - - - - - - |                 |                       |               |&#10;+----------+                     |                 | &#60;- - - - - - - - - -  |               |&#10;                                 +-----------------+                       +---------------+</span><br></pre></td></tr></table></figure>
-<p>那么我们要做的就是图中 <strong>微信服务器把用户消息转到我们的自有服务器（虚线部分）</strong> 后的处理过程。</p>
+<p>那么我们要做的就是图中 <strong>微信服务器把用户消息转到我们的自有服务器（虚线返回部分）</strong> 后的处理过程。</p>
 <h2 id="u670D_u52A1_u7AEF_u9A8C_u8BC1" class="article-heading"><a href="#u670D_u52A1_u7AEF_u9A8C_u8BC1" class="headerlink" title="服务端验证"></a>服务端验证<a class="article-anchor" href="#u670D_u52A1_u7AEF_u9A8C_u8BC1" aria-hidden="true"></a></h2><p>在微信接入开始有一个 “服务器验证” 的过程，这一步呢，其实就是微信服务器向我们服务器发起一个请求（上图实线部分），传了一个名称为 <code>echostr</code> 的字符串过来，我们只需要原样返回就好了。</p>
 <p>你也知道，微信后台只能填写一个服务器地址，所以 <strong>服务器验证</strong> 与 <strong>消息的接收与回复</strong>，都在这一个链接内完成交互。</p>
-<p>考虑到这些呢，我已经把验证这一步给封装到 SDK 里了，你可以完全忽略这一步。</p>
+<p>考虑到这些，我已经把验证这一步给封装到 SDK 里了，你可以完全忽略这一步。</p>
 <p>下面我们来配置一个基本的服务端，这里假设我们自己的服务器域名叫 <code>easywechat.org</code>，我们在服务器上准备这么一个文件<code>server.php</code>:</p>
 <p>// server.php</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">include</span> <span class="keyword">__DIR__</span> . <span class="string">'/vendor/autoload.php'</span>; <span class="comment">// 引入 composer 入口文件</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">WeChat</span>\<span class="title">Application</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$options</span> = [</span><br><span class="line">    <span class="string">'debug'</span>  =&gt; <span class="keyword">true</span>,</span><br><span class="line">    <span class="string">'app_id'</span> =&gt; <span class="string">'your-app-id'</span>,</span><br><span class="line">    <span class="string">'secret'</span> =&gt; <span class="string">'you-secret'</span>,</span><br><span class="line">    <span class="string">'token'</span>  =&gt; <span class="string">'easywechat'</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 'aes_key' =&gt; null, // 可选</span></span><br><span class="line"></span><br><span class="line">    <span class="string">'log'</span> =&gt; [</span><br><span class="line">        <span class="string">'level'</span> =&gt; \Monolog\Logger::DEBUG,</span><br><span class="line">        <span class="string">'file'</span>  =&gt; <span class="string">'/tmp/easywechat.log'</span>,</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 得到服务端实例</span></span><br><span class="line"><span class="variable">$server</span> = <span class="variable">$app</span>[<span class="string">'server'</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将响应输出</span></span><br><span class="line"><span class="variable">$server</span>-&gt;serve()-&gt;send();</span><br></pre></td></tr></table></figure>
@@ -136,10 +136,12 @@
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这行代码是引入 `composer` 的入口文件，这样我们的类才能正常加载。</span></span><br><span class="line"><span class="keyword">include</span> <span class="keyword">__DIR__</span> . <span class="string">'/vendor/autoload.php'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 引入我们的主项目的入口类。</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">WeChat</span>\<span class="title">Application</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 一些配置</span></span><br><span class="line"><span class="variable">$options</span> = [...];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用配置来初始化一个项目。</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从项目实例中得到服务端应用实例。</span></span><br><span class="line"><span class="variable">$server</span> = <span class="variable">$app</span>[<span class="string">'server'</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable">$server</span>-&gt;serve()-&gt;send();</span><br></pre></td></tr></table></figure>
 <p>最后这一行我有必要详细讲一下：</p>
 <p>&gt;</p>
+<blockquote>
 <ol>
 <li>我们的 <code>$server-&gt;serve()</code> 就是执行服务端业务了，那么它的返回值呢，是一个 <code>Symfony\Component\HttpFoundation\Response</code> 实例。</li>
 <li>我这里是直接调用了它的 <code>send()</code> 方法，它就是直接输出了，我们在一些框架就不能直接输出了，那你就直接拿到 Response 实例后做相应的操作即可，比如 Laravel 里你就可以直接 <code>return $server-&gt;serve();</code></li>
 </ol>
+</blockquote>
 <p>所以上面这行代码就相当于：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$response</span> = <span class="variable">$server</span>-&gt;serve();</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$response</span>;</span><br></pre></td></tr></table></figure>
 <p>OK, 有了上面的代码，那么请你按<strong><a href="http://mp.weixin.qq.com/wiki/17/2d4265491f12608cd170a95559800f2d.html" target="_blank" rel="external">微信官方的接入指引</a></strong> 操作，并相应修改上面的 <code>$options</code> 的配置。</p>
@@ -173,7 +175,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-16T16:39:35.891Z" itemprop="dateModified">上次更新：2015-12-17</time>
+                <time class="article-footer-updated" datetime="2015-12-16T16:43:35.387Z" itemprop="dateModified">上次更新：2015-12-17</time>
                 <a href="index.html" class="article-footer-prev" title="概述"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="installation.html" class="article-footer-next" title="安装"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
