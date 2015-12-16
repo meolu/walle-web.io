@@ -3,12 +3,8 @@
 
   function changeLang(){
     var lang = this.value;
-    var canonical = this.dataset.canonical;
     if (lang === 'zh-cn') lang = '';
-
-    if (lang) lang += '/';
-
-    location.href = '/' + lang + canonical;
+    location.href = window.location.href.replace(/(zh-cn|en)/g, lang);;
   }
 
   document.getElementById('lang-select').addEventListener('change', changeLang);
