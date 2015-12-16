@@ -699,14 +699,14 @@ a.article-title:hover {
 }
 .article-edit-link {
   float: right;
-  color: #bbb;
-  font-size: 24px;
+  color: #1daeeb;
   line-height: 36px;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   -ms-transition: 0.2s;
   transition: 0.2s;
   display: none;
+  text-decoration: none;
 }
 .article-edit-link:hover {
   color: #575757;
