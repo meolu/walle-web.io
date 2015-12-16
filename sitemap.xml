@@ -2,493 +2,493 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://easywechat.org/docs/notice.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/README.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/contributing.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/errors.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/events.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/index.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/installation.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/js.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/material.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/menu.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/message-transfer.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/messages.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/miscellaneous.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/oauth.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/qrcode.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/releases.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/roadmap.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/semantic.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/server.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/setup.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/short-url.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://easywechat.org/docs/staff.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/store.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/troubleshooting.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/tutorial.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/user-group.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/users.html</loc>
-    <lastmod>2015-12-16T16:45:17.691Z</lastmod>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/docs/configuration.html</loc>
-    <lastmod>2015-12-16T16:45:17.687Z</lastmod>
+    <loc>http://easywechat.org/docs/server.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/setup.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/short-url.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/semantic.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/store.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/troubleshooting.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/tutorial.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/user-group.html</loc>
+    <lastmod>2015-12-16T16:51:27.397Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/notice.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/installation.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/js.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/material.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/menu.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/message-transfer.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/messages.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/miscellaneous.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/oauth.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/qrcode.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/releases.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/roadmap.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/README.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/accounts.html</loc>
-    <lastmod>2015-12-16T16:45:17.687Z</lastmod>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/anaylsis.html</loc>
-    <lastmod>2015-12-16T16:45:17.687Z</lastmod>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/cache.html</loc>
-    <lastmod>2015-12-16T16:45:17.687Z</lastmod>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/card.html</loc>
-    <lastmod>2015-12-16T16:45:17.687Z</lastmod>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/docs/zh-cn/accounts.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <loc>http://easywechat.org/docs/configuration.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/docs/zh-cn/README.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <loc>http://easywechat.org/docs/contributing.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/docs/zh-cn/events.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <loc>http://easywechat.org/docs/errors.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/docs/zh-cn/index.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <loc>http://easywechat.org/docs/events.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/docs/zh-cn/installation.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/js.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/material.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/menu.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/message-transfer.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/messages.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/miscellaneous.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/notice.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/oauth.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/configuration.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/releases.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/roadmap.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/errors.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/semantic.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/server.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/setup.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/short-url.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/staff.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/store.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/troubleshooting.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/tutorial.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/user-group.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <loc>http://easywechat.org/docs/index.html</loc>
+    <lastmod>2015-12-16T16:51:27.393Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/zh-cn/users.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/contributing.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/card.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/zh-cn/cache.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/zh-cn/anaylsis.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/cache.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/card.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/configuration.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/contributing.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/errors.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/events.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/index.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/installation.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/js.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/material.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/menu.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/message-transfer.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/messages.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/miscellaneous.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/README.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/notice.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/oauth.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/zh-cn/qrcode.html</loc>
-    <lastmod>2015-12-16T16:45:08.063Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/releases.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/roadmap.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/semantic.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/server.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/setup.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/short-url.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/staff.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/accounts.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/user-group.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/tutorial.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/troubleshooting.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/zh-cn/store.html</loc>
+    <lastmod>2015-12-16T16:51:17.989Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/staff.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/short-url.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/setup.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/server.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/semantic.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/roadmap.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/releases.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/qrcode.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/oauth.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/users.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/user-group.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/troubleshooting.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/store.html</loc>
-    <lastmod>2015-12-16T16:45:08.027Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/cache.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/menu.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/js.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/installation.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/index.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/events.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/errors.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/contributing.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/configuration.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/card.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/material.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/anaylsis.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/accounts.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/README.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/notice.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/message-transfer.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://easywechat.org/docs/en/messages.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/docs/en/miscellaneous.html</loc>
-    <lastmod>2015-12-16T16:45:08.023Z</lastmod>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
   </url>
   
   <url>
-    <loc>http://easywechat.org/en/index.html</loc>
-    <lastmod>2015-12-16T16:43:08.893Z</lastmod>
+    <loc>http://easywechat.org/docs/en/messages.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/message-transfer.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/menu.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/material.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/js.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/installation.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/index.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/events.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/errors.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/contributing.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/configuration.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/card.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/cache.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/users.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/user-group.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/troubleshooting.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/store.html</loc>
+    <lastmod>2015-12-16T16:51:17.949Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/README.html</loc>
+    <lastmod>2015-12-16T16:51:17.945Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/accounts.html</loc>
+    <lastmod>2015-12-16T16:51:17.945Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/docs/en/anaylsis.html</loc>
+    <lastmod>2015-12-16T16:51:17.945Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/index.html</loc>
-    <lastmod>2015-12-16T16:43:08.893Z</lastmod>
+    <lastmod>2015-12-16T16:48:24.699Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://easywechat.org/en/index.html</loc>
+    <lastmod>2015-12-16T16:48:24.699Z</lastmod>
   </url>
   
   <url>
     <loc>http://easywechat.org/news/2015/12/16/hello-world/</loc>
-    <lastmod>2015-12-16T16:43:08.893Z</lastmod>
+    <lastmod>2015-12-16T16:48:24.699Z</lastmod>
   </url>
   
 </urlset>
