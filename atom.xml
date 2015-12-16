@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  
-  <title><![CDATA[Easy WeChat]]></title>
+  <title><![CDATA[Easy We Chat]]></title>
   
   <link href="/atom.xml" rel="self"/>
-  <link href="http://easywechat.org//"/>
-  <updated>2015-06-18T07:56:06.000Z</updated>
-  <id>http://easywechat.org//</id>
+  <link href="http://easywechat.org/"/>
+  <updated>2015-12-16T09:00:19.160Z</updated>
+  <id>http://easywechat.org/</id>
   
   <author>
     <name><![CDATA[overtrue]]></name>
@@ -17,10 +16,10 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://easywechat.org/news/2015/11/15/hello-world/"/>
-    <id>http://easywechat.org/news/2015/11/15/hello-world/</id>
-    <published>2015-11-15T14:18:00.000Z</published>
-    <updated>2015-06-18T07:56:06.000Z</updated>
+    <link href="http://easywechat.org/news/2015/12/16/hello-world/"/>
+    <id>http://easywechat.org/news/2015/12/16/hello-world/</id>
+    <published>2015-12-16T09:00:19.160Z</published>
+    <updated>2015-12-16T09:00:19.160Z</updated>
     <content type="html"><![CDATA[<p>Hello world!</p>
 ]]></content>
     <summary type="html">
