@@ -767,7 +767,7 @@ a.article-title:hover {
 .article-content h6 {
   line-height: 1em;
   font-weight: 500;
-  margin: 1em 0;
+  margin: 2em 0 1em;
 }
 .article-content a {
   color: #444;
