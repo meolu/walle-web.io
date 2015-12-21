@@ -101,6 +101,23 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+.text-center {
+  text-align: center;
+}
+.nav,
+.clearfix:before {
+  display: table;
+  content: " ";
+}
+.nav,
+.clearfix:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+.md-padding-y {
+  padding: 20px 0;
+}
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -224,7 +241,6 @@ body {
   -ms-transition: 0.2s;
   transition: 0.2s;
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
-  text-transform: uppercase;
   display: block;
   padding: 0 20px;
 }
@@ -1592,4 +1608,83 @@ pre .coffeescript .title {
 pre .keyword,
 pre .javascript .function {
   color: #8959a8;
+}
+.nav.nav-tabs {
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.nav.nav-tabs li {
+  margin-bottom: -1px;
+  display: inline-block;
+  position: relative;
+}
+.nav.nav-tabs li > a {
+  margin-right: 2px;
+  line-height: 1.5;
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  cursor: default;
+}
+.nav.nav-tabs li > a:hover {
+  border-color: #eee;
+}
+.nav.nav-tabs li.active > a,
+.nav.nav-tabs li.active > a:hover,
+.nav.nav-tabs li.active > a:focus {
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #eee;
+  border-bottom-color: transparent;
+}
+.tab-content .tab-pane {
+  display: none;
+}
+.tab-content .active {
+  display: block;
+}
+.donate .qrcode-list {
+  text-align: center;
+}
+.donate .qrcode-list img {
+  display: inline-block;
+}
+@media screen and (min-width: 769px) {
+  .donate .qrcode-list img {
+    max-width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .donate .qrcode-list img {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .donate .qrcode-list img {
+    max-width: 49%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .donate #tab-wechat img {
+    max-width: 30%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .donate #tab-alipay img {
+    max-width: 25%;
+  }
+}
+.donate-btn {
+  margin: 20px 0;
+}
+.donate-btn a {
+  border: 1px solid #f57e42;
+  background: #f57e42;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.donate-btn a:hover {
+  background: #f56342;
+  border: 1px solid #f56342;
 }
