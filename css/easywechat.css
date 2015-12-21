@@ -1675,7 +1675,7 @@ pre .javascript .function {
   }
 }
 .donate-btn {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 .donate-btn a {
   border: 1px solid #f57e42;
@@ -1687,4 +1687,6 @@ pre .javascript .function {
 .donate-btn a:hover {
   background: #f56342;
   border: 1px solid #f56342;
+  color: #fff;
+  text-decoration: none;
 }
