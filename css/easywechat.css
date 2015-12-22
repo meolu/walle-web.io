@@ -246,7 +246,7 @@ body {
 }
 .main-nav-link:hover {
   opacity: 1;
-  color: #575757;
+  color: #009cf4;
 }
 #search-btn-wrap {
   display: none;
@@ -391,7 +391,7 @@ body.home {
 }
 #banner-start-link {
   color: #fff;
-  background: #444;
+  background: #0089d7;
   display: table-cell;
   vertical-align: middle;
   padding: 15px;
@@ -402,7 +402,7 @@ body.home {
   transition: 0.2s;
 }
 #banner-start-link:hover {
-  background: #575757;
+  background: #009cf4;
 }
 #banner-share {
   display: none;
@@ -463,7 +463,7 @@ body.home {
   }
 }
 .intro-feature-icon {
-  color: #444;
+  color: #0089d7;
   font-size: 36px;
   padding-bottom: 26px;
   text-align: center;
@@ -478,7 +478,7 @@ body.home {
   }
 }
 .intro-feature-title {
-  color: #444;
+  color: #0089d7;
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
   font-size: 24px;
 }
@@ -505,7 +505,7 @@ body.home {
 }
 .intro-cmd-item:before {
   content: "$";
-  color: #444;
+  color: #0089d7;
   padding-right: 15px;
 }
 #intro-get-started-wrap {
@@ -515,13 +515,13 @@ body.home {
   font-size: 18px;
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
   display: inline-block;
-  color: #444;
+  color: #0089d7;
   text-decoration: none;
   margin: 40px 0;
   border: 1px solid;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  border-color: #696969;
+  border-color: #13a9ff;
   padding: 12px 24px;
   position: relative;
   -webkit-transition: 0.2s;
@@ -530,7 +530,7 @@ body.home {
   transition: 0.2s;
 }
 #intro-get-started-link:hover {
-  background: #696969;
+  background: #13a9ff;
   color: #fff;
 }
 #sidebar {
@@ -551,7 +551,7 @@ body.home {
   padding: 10px 0;
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
   font-weight: 500;
-  color: #444;
+  color: #0089d7;
   display: inline-block;
   border-top: 1px solid #e3e3e3;
   line-height: 1;
@@ -572,11 +572,11 @@ body.home {
 }
 .sidebar-link.current,
 .toc-link.current {
-  color: #444;
+  color: #0089d7;
 }
 .sidebar-link:hover,
 .toc-link:hover {
-  color: #575757;
+  color: #009cf4;
 }
 #content {
   position: relative;
@@ -673,7 +673,7 @@ body.home {
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
 }
 #article-toc-top:hover {
-  color: #575757;
+  color: #009cf4;
 }
 .article-header {
   padding-bottom: 20px;
@@ -699,7 +699,7 @@ body.home {
   transition: 0.2s;
 }
 a.article-title:hover {
-  color: #575757;
+  color: #009cf4;
 }
 .post .article-title {
   float: none;
@@ -711,7 +711,7 @@ a.article-title:hover {
   margin-top: 1em;
 }
 .article-date:hover {
-  color: #575757;
+  color: #009cf4;
 }
 .article-edit-link {
   float: right;
@@ -725,7 +725,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-edit-link:hover {
-  color: #575757;
+  color: #009cf4;
 }
 @media screen and (min-width: 769px) {
   .article-edit-link {
@@ -786,11 +786,11 @@ a.article-title:hover {
   margin: 2em 0 1em;
 }
 .article-content a {
-  color: #444;
+  color: #0089d7;
   text-decoration: none;
 }
 .article-content a:hover {
-  color: #575757;
+  color: #009cf4;
   text-decoration: underline;
 }
 @media print {
@@ -834,9 +834,6 @@ a.article-title:hover {
 }
 .article-content dl {
   list-style: square;
-}
-.article-content li p {
-  margin: 0;
 }
 .article-content li table,
 .article-content li blockquote,
@@ -918,7 +915,7 @@ a.article-title:hover {
 }
 .article-footer-prev,
 .article-footer-next {
-  color: #444;
+  color: #0089d7;
   text-decoration: none;
   font-weight: 500;
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -927,7 +924,7 @@ a.article-title:hover {
 }
 .article-footer-prev:hover,
 .article-footer-next:hover {
-  color: #575757;
+  color: #009cf4;
 }
 @media print {
   .article-footer-prev,
@@ -1064,13 +1061,13 @@ a.article-title:hover {
 .plugin-name {
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
   font-weight: 500;
-  color: #444;
+  color: #0089d7;
   font-size: 20px;
   text-decoration: none;
   line-height: 1;
 }
 .plugin-name:hover {
-  color: #575757;
+  color: #009cf4;
 }
 .plugin-desc {
   line-height: 1.6em;
@@ -1095,7 +1092,7 @@ a.article-title:hover {
   margin-right: 10px;
 }
 .plugin-tag:hover {
-  color: #575757;
+  color: #009cf4;
 }
 .plugin-tag:before {
   content: "#";
@@ -1185,7 +1182,7 @@ a.article-title:hover {
   clear: both;
 }
 .archive-post-link:hover {
-  color: #575757;
+  color: #009cf4;
 }
 .archive-post-title {
   font-family: 'Lantinghei SC', 'Open Sans', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', "微软雅黑", STHeiti, 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -1354,7 +1351,7 @@ a.article-title:hover {
   text-overflow: ellipsis;
 }
 .mobile-nav-title {
-  color: #444;
+  color: #0089d7;
   font-weight: 500;
   padding: 10px 15px;
   line-height: 1;
