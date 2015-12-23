@@ -39,22 +39,19 @@
   <!-- RSS -->
   <link rel="alternative" href="/atom.xml" title="Easy We Chat" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="消息的监听再简单不过了，你不需要像其它 SDK 一样麻烦，这将会是前所未有的简单，你可以选择监听所有类型或者指定某种类型，以及作出相应的响应，比如回复一条应答消息。
-在本 SDK 中，服务端的操作，例如：服务器认证，监听事件，接收用户消息等所有微信向我们自有服务器发起请求的，都交由 Overtrue\Wechat\Server 来处理。
-获取服务端实例&amp;lt;?phpuse Overtrue\We">
+  <meta name="description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
+关于更多素材管理请参考：素材管理">
 <meta property="og:type" content="website">
 <meta property="og:title" content="消息">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/messages.html">
 <meta property="og:site_name" content="Easy We Chat">
-<meta property="og:description" content="消息的监听再简单不过了，你不需要像其它 SDK 一样麻烦，这将会是前所未有的简单，你可以选择监听所有类型或者指定某种类型，以及作出相应的响应，比如回复一条应答消息。
-在本 SDK 中，服务端的操作，例如：服务器认证，监听事件，接收用户消息等所有微信向我们自有服务器发起请求的，都交由 Overtrue\Wechat\Server 来处理。
-获取服务端实例&amp;lt;?phpuse Overtrue\We">
-<meta property="og:updated_time" content="2015-12-23T15:21:38.527Z">
+<meta property="og:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
+关于更多素材管理请参考：素材管理">
+<meta property="og:updated_time" content="2015-12-23T15:35:55.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="消息">
-<meta name="twitter:description" content="消息的监听再简单不过了，你不需要像其它 SDK 一样麻烦，这将会是前所未有的简单，你可以选择监听所有类型或者指定某种类型，以及作出相应的响应，比如回复一条应答消息。
-在本 SDK 中，服务端的操作，例如：服务器认证，监听事件，接收用户消息等所有微信向我们自有服务器发起请求的，都交由 Overtrue\Wechat\Server 来处理。
-获取服务端实例&amp;lt;?phpuse Overtrue\We">
+<meta name="twitter:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
+关于更多素材管理请参考：素材管理">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="消息">
@@ -121,123 +118,14 @@
                 <a href="https://github.com/EasyWeChat/docs/edit/zh-cn/messages.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
-                <p>消息的监听再简单不过了，你不需要像其它 SDK 一样麻烦，这将会是前所未有的简单，你可以选择监听所有类型或者指定某种类型，以及作出相应的响应，比如回复一条应答消息。</p>
-<p>在本 SDK 中，服务端的操作，例如：服务器认证，监听事件，接收用户消息等所有微信向我们自有服务器发起请求的，都交由 <code>Overtrue\Wechat\Server</code> 来处理。</p>
-<h3 id="u83B7_u53D6_u670D_u52A1_u7AEF_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u670D_u52A1_u7AEF_u5B9E_u4F8B" class="headerlink" title="获取服务端实例"></a>获取服务端实例<a class="article-anchor" href="#u83B7_u53D6_u670D_u52A1_u7AEF_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Server</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$appId</span>          = <span class="string">'wx3cf0f39249eb0e60'</span>;</span><br><span class="line"><span class="variable">$token</span>          = <span class="string">'hellotest'</span>;</span><br><span class="line"><span class="variable">$encodingAESKey</span> = <span class="string">'EJThPazwzO4k1cyXJnwQtL60zBdhWvFaHb4emv0dLVN'</span>; <span class="comment">// 可选</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// $encodingAESKey 可以为空</span></span><br><span class="line"><span class="variable">$server</span> = <span class="keyword">new</span> Server(<span class="variable">$appId</span>, <span class="variable">$token</span>, <span class="variable">$encodingAESKey</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="u63A5_u6536_u6D88_u606F" class="article-heading"><a href="#u63A5_u6536_u6D88_u606F" class="headerlink" title="接收消息"></a>接收消息<a class="article-anchor" href="#u63A5_u6536_u6D88_u606F" aria-hidden="true"></a></h3><h4 id="u8BED_u6CD5_uFF1A" class="article-heading"><a href="#u8BED_u6CD5_uFF1A" class="headerlink" title="语法："></a>语法：<a class="article-anchor" href="#u8BED_u6CD5_uFF1A" aria-hidden="true"></a></h4><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$wechat</span>-&gt;on(<span class="string">'message'</span>, callable <span class="variable">$callback</span>); <span class="comment">// 全部类型</span></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="variable">$wechat</span>-&gt;on(<span class="string">'message'</span>, string <span class="variable">$messageType</span>, callable <span class="variable">$callback</span>); <span class="comment">// 只监听指定类型</span></span><br></pre></td></tr></table></figure>
-<h4 id="u53C2_u6570_u8BF4_u660E_uFF1A" class="article-heading"><a href="#u53C2_u6570_u8BF4_u660E_uFF1A" class="headerlink" title="参数说明："></a>参数说明：<a class="article-anchor" href="#u53C2_u6570_u8BF4_u660E_uFF1A" aria-hidden="true"></a></h4><ul>
-<li><code>$messageType</code> string, 指定要处理的消息类型，ex：<code>image</code></li>
-<li><code>$callback</code> callable, 回调函数，closure 匿名函数，或者一切可调用的方法或者函数</li>
-</ul>
-<p><code>$callback</code> 接收一个参数：<code>$message</code> 为用户发送的消息对象，你可以访问<a href="https://github.com/overtrue/wechat/wiki/%E6%B6%88%E6%81%AF%E7%9A%84%E4%BD%BF%E7%94%A8#%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E7%9A%84%E5%B1%9E%E6%80%A7" target="_blank" rel="external">请求消息的所有属性</a>，比如：<code>$message-&gt;FromUserName</code> 得到发送消息的人的 <code>openid</code>，<code>$message-&gt;MsgType</code> 获取消息的类型如 <code>text</code> 或者 <code>image</code> 等，更多请参考：<a href="https://github.com/overtrue/wechat/wiki/%E6%B6%88%E6%81%AF%E7%9A%84%E4%BD%BF%E7%94%A8#%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E7%9A%84%E5%B1%9E%E6%80%A7" target="_blank" rel="external">请求消息的属性</a></p>
-<p>example:</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Server</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Message</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$appId</span>          = <span class="string">'wx3cf0f39249eb0e60'</span>;</span><br><span class="line"><span class="variable">$secret</span>         = <span class="string">'f1c242f4f28f735d4687abb469072a29'</span>;</span><br><span class="line"><span class="variable">$token</span>          = <span class="string">'hellotest'</span>;</span><br><span class="line"><span class="variable">$encodingAESKey</span> = <span class="string">'EJThPazwzO4k1cyXJnwQtL60zBdhWvFaHb4emv0dLVN'</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$server</span> = <span class="keyword">new</span> Server(<span class="variable">$appId</span>, <span class="variable">$token</span>, <span class="variable">$encodingAESKey</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听所有类型</span></span><br><span class="line"><span class="variable">$server</span>-&gt;on(<span class="string">'message'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$message</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Message::make(<span class="string">'text'</span>)-&gt;content(<span class="string">'您好！'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 监听指定类型</span></span><br><span class="line"><span class="variable">$server</span>-&gt;on(<span class="string">'message'</span>, <span class="string">'image'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$message</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Message::make(<span class="string">'text'</span>)-&gt;content(<span class="string">'我们已经收到您发送的图片！'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="variable">$result</span> = <span class="variable">$server</span>-&gt;serve();</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$result</span>;</span><br></pre></td></tr></table></figure>
-<p>我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。</p>
-<h3 id="u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027" class="article-heading"><a href="#u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027" class="headerlink" title="请求消息的属性"></a>请求消息的属性<a class="article-anchor" href="#u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027" aria-hidden="true"></a></h3><p>当你接收到用户发来的消息时，可能会提取消息中的相关属性，那么请参考：</p>
-<p>请求消息基本属性：</p>
-<pre><code>ToUserName    接收方帐号（该公众号 ID）
-FromUserName  发送方帐号（代表用户的唯一标识）
-CreateTime    消息创建时间（时间戳）
-MsgId         消息 ID（64位整型）
-</code></pre><p>文本消息请求：</p>
-<pre><code>MsgType  text
-Content  文本消息内容
-</code></pre><p>图片消息请求：</p>
-<pre><code>MsgType  image
-PicUrl   图片链接
-</code></pre><p>地理位置消息请求：</p>
-<pre><code>MsgType     location
-Location_X  地理位置纬度
-Location_Y  地理位置经度
-Scale       地图缩放大小
-Label       地理位置信息
-</code></pre><p>链接消息请求：</p>
-<pre><code>MsgType      link
-Title        消息标题
-Description  消息描述
-Url          消息链接
-</code></pre><h3 id="u56DE_u590D_u6D88_u606F_u7684_u7C7B_u578B_u53CA_u5C5E_u6027_uFF08_u521B_u5EFA_u56DE_u590D_u65F6_u7528_u5230_uFF09" class="article-heading"><a href="#u56DE_u590D_u6D88_u606F_u7684_u7C7B_u578B_u53CA_u5C5E_u6027_uFF08_u521B_u5EFA_u56DE_u590D_u65F6_u7528_u5230_uFF09" class="headerlink" title="回复消息的类型及属性（创建回复时用到）"></a>回复消息的类型及属性（创建回复时用到）<a class="article-anchor" href="#u56DE_u590D_u6D88_u606F_u7684_u7C7B_u578B_u53CA_u5C5E_u6027_uFF08_u521B_u5EFA_u56DE_u590D_u65F6_u7528_u5230_uFF09" aria-hidden="true"></a></h3><table>
-<thead>
-<tr>
-<th>消息类型</th>
-<th>类型名称</th>
-<th>属性</th>
-<th>除属性自身外提供的方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>文本</td>
-<td><code>text</code></td>
-<td><code>content</code> 内容</td>
-<td></td>
-</tr>
-<tr>
-<td>图片</td>
-<td><code>image</code></td>
-<td><code>media_id</code> 媒体资源id</td>
-<td><code>media($mediaId)</code></td>
-</tr>
-<tr>
-<td>声音</td>
-<td><code>voice</code></td>
-<td><code>media_id</code> 媒体资源id</td>
-<td><code>media($mediaId)</code></td>
-</tr>
-<tr>
-<td>音乐</td>
-<td><code>music</code></td>
-<td><code>title</code> 标题 <br><code>description</code> 描述 <br><code>url</code> 音乐URL <br><code>hq_url</code> 高清URL <br><code>thumb_media_id</code> 封面资源id</td>
-<td><code>thumb($mediaId)</code></td>
-</tr>
-<tr>
-<td>视频</td>
-<td><code>video</code></td>
-<td><code>title</code> 标题 <br><code>description</code> 描述 <br><code>media_id</code> 媒体资源id <br><code>thumb_media_id</code> 封面资源id</td>
-<td><code>media($mediaId)</code> <br><code>thumb($mediaId)</code></td>
-</tr>
-<tr>
-<td>位置</td>
-<td><code>location</code></td>
-<td><code>lat</code> 地理位置纬度 <br><code>lon</code> 地理位置经度 <br><code>scale</code> 地图缩放大小 <br><code>label</code> 地理位置信息</td>
-<td></td>
-</tr>
-<tr>
-<td>链接</td>
-<td><code>link</code></td>
-<td><code>title</code> 标题 <br><code>description</code> 描述<br>url  链接URL</td>
-<td></td>
-</tr>
-<tr>
-<td>图文*</td>
-<td><code>news(news_item)</code></td>
-<td>‘title’  标题 <br>  ‘description’  描述<br> ‘pic_url’ 图片链接 <br> ‘url’ 链接URL</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>注意：图文消息结构与其它不一样，具体请参考下面的示例部分。</p>
-</blockquote>
-<h3 id="u521B_u5EFA_u6D88_u606F" class="article-heading"><a href="#u521B_u5EFA_u6D88_u606F" class="headerlink" title="创建消息"></a>创建消息<a class="article-anchor" href="#u521B_u5EFA_u6D88_u606F" aria-hidden="true"></a></h3><p><strong>请注意：消息工厂类的命名空间为 <code>Overtrue\Wechat\Message</code></strong></p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Server</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Message</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$appId</span>          = <span class="string">'wx3cf0f39249eb0e60'</span>;</span><br><span class="line"><span class="variable">$token</span>          = <span class="string">'hellotest'</span>;</span><br><span class="line"><span class="variable">$encodingAESKey</span> = <span class="string">'EJThPazwzO4k1cyXJnwQtL60zBdhWvFaHb4emv0dLVN'</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$server</span> = <span class="keyword">new</span> Server(<span class="variable">$appId</span>, <span class="variable">$token</span>, <span class="variable">$encodingAESKey</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$server</span>-&gt;on(<span class="string">'event'</span>, <span class="string">'subscribe'</span>, <span class="function"><span class="keyword">function</span><span class="params">(<span class="variable">$event</span>)</span></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Message::make(<span class="string">'text'</span>)-&gt;content(<span class="string">'您好！欢迎关注 overtrue'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这里有一点需要注意，当属性带下划线的时候，方法名是支持两种的：<code>media_id()</code> 或者 <code>mediaId()</code> 都一样。</p>
-<h3 id="u4E0A_u4F20_u7D20_u6750_u6587_u4EF6" class="article-heading"><a href="#u4E0A_u4F20_u7D20_u6750_u6587_u4EF6" class="headerlink" title="上传素材文件"></a>上传素材文件<a class="article-anchor" href="#u4E0A_u4F20_u7D20_u6750_u6587_u4EF6" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Media</span>;</span><br><span class="line"><span class="comment">// $appId = <span class="label">xxxx;</span></span></span><br><span class="line"><span class="comment">// $appSecret = <span class="label">xxxx;</span></span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$media</span> = <span class="keyword">new</span> Media(<span class="variable">$appId</span>, <span class="variable">$appSecret</span>);</span><br><span class="line"><span class="variable">$imageId</span> = <span class="variable">$media</span>-&gt;image(<span class="keyword">__DIR__</span> . <span class="string">'/demo.jpg'</span>); <span class="comment">// 上传并返回媒体ID</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$message</span> = Message::make(<span class="string">'image'</span>)-&gt;media(<span class="variable">$imageId</span>);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>请注意：方法<code>media($mediaId)</code>会直接赋值到<code>media_id</code>属性。不会自动上传文件。1.x 版本是会自动上传的，2.x 已经不再提供。</p>
-</blockquote>
-<h4 id="u8FD9_u91CC_u6709_u4E24_u4E2A_u65B9_u6CD5_u7528_u4E8E_u8BBE_u7F6E_u7D20_u6750ID_uFF1A" class="article-heading"><a href="#u8FD9_u91CC_u6709_u4E24_u4E2A_u65B9_u6CD5_u7528_u4E8E_u8BBE_u7F6E_u7D20_u6750ID_uFF1A" class="headerlink" title="这里有两个方法用于设置素材ID："></a>这里有两个方法用于设置素材ID：<a class="article-anchor" href="#u8FD9_u91CC_u6709_u4E24_u4E2A_u65B9_u6CD5_u7528_u4E8E_u8BBE_u7F6E_u7D20_u6750ID_uFF1A" aria-hidden="true"></a></h4><ul>
-<li><code>media($mediaId)</code> 对应设置 <code>media_id</code></li>
-<li><code>thumb($mediaId)</code> 对应设置 <code>thumb_media_id</code></li>
-</ul>
-<h3 id="u56FE_u6587_u6D88_u606F" class="article-heading"><a href="#u56FE_u6587_u6D88_u606F" class="headerlink" title="图文消息"></a>图文消息<a class="article-anchor" href="#u56FE_u6587_u6D88_u606F" aria-hidden="true"></a></h3><p>图文消息比较不一样的是他是包含多个 item 的结构体，那么这里需要使用 <code>Message::make(&#39;news_item&#39;)</code> 来得到消息 item：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$news</span> = Message::make(<span class="string">'news'</span>)-&gt;items(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">array</span>(</span><br><span class="line">            Message::make(<span class="string">'news_item'</span>)-&gt;title(<span class="string">'测试标题'</span>),</span><br><span class="line">            Message::make(<span class="string">'news_item'</span>)-&gt;title(<span class="string">'测试标题2'</span>)-&gt;description(<span class="string">'好不好？'</span>),</span><br><span class="line">            Message::make(<span class="string">'news_item'</span>)-&gt;title(<span class="string">'测试标题3'</span>)-&gt;description(<span class="string">'好不好说句话？'</span>)-&gt;url(<span class="string">'http://baidu.com'</span>),</span><br><span class="line">            Message::make(<span class="string">'news_item'</span>)-&gt;title(<span class="string">'测试标题4'</span>)-&gt;url(<span class="string">'http://baidu.com/abc.php'</span>)-&gt;picUrl(<span class="string">'http://www.baidu.com/demo.jpg'</span>),</span><br><span class="line">           );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+                <p>我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。</p>
 <p>关于更多素材管理请参考：<a href="素材管理">素材管理</a></p>
 
 
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-23T15:21:38.527Z" itemprop="dateModified">上次更新：2015-12-23</time>
+                <time class="article-footer-updated" datetime="2015-12-23T15:35:55.191Z" itemprop="dateModified">上次更新：2015-12-23</time>
                 <a href="server.html" class="article-footer-prev" title="服务端"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="events.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -246,7 +134,7 @@ Url          消息链接
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u83B7_u53D6_u670D_u52A1_u7AEF_u5B9E_u4F8B"><span class="toc-text">获取服务端实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u63A5_u6536_u6D88_u606F"><span class="toc-text">接收消息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u8BED_u6CD5_uFF1A"><span class="toc-text">语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u53C2_u6570_u8BF4_u660E_uFF1A"><span class="toc-text">参数说明：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027"><span class="toc-text">请求消息的属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u56DE_u590D_u6D88_u606F_u7684_u7C7B_u578B_u53CA_u5C5E_u6027_uFF08_u521B_u5EFA_u56DE_u590D_u65F6_u7528_u5230_uFF09"><span class="toc-text">回复消息的类型及属性（创建回复时用到）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u521B_u5EFA_u6D88_u606F"><span class="toc-text">创建消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u4E0A_u4F20_u7D20_u6750_u6587_u4EF6"><span class="toc-text">上传素材文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u8FD9_u91CC_u6709_u4E24_u4E2A_u65B9_u6CD5_u7528_u4E8E_u8BBE_u7F6E_u7D20_u6750ID_uFF1A"><span class="toc-text">这里有两个方法用于设置素材ID：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u56FE_u6587_u6D88_u606F"><span class="toc-text">图文消息</span></a></li></ol>
+              
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

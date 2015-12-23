@@ -49,7 +49,7 @@
 <meta property="og:description" content="我们在入门小教程一节以服务端为例讲解了一个基本的消息的处理，这里就不再讲服务器验证的流程了，请直接参考前面的入门实例即可。
 服务端的作用呢，在整个微信开发中主要是负责 接收用户发送过来的消息，还有 用户触发的一系列事件。
 首先我们得厘清一下消息与事件的回复，当你收到用户消息后（消息由微信服务器推送到你的服务器），在你对消息进行一些处理后，不管是选择回复一个消息还是什么不都回给用户，你也应该给微信服">
-<meta property="og:updated_time" content="2015-12-23T15:21:38.527Z">
+<meta property="og:updated_time" content="2015-12-23T15:35:55.191Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务端">
 <meta name="twitter:description" content="我们在入门小教程一节以服务端为例讲解了一个基本的消息的处理，这里就不再讲服务器验证的流程了，请直接参考前面的入门实例即可。
@@ -129,7 +129,30 @@
 <p>这里我们使用 <code>setMessageHandler</code> 传入了一个 <strong>闭包（<a href="http://php.net/manual/en/class.closure.php" target="_blank" rel="external">Closure</a>）</strong>，该闭包接收一个参数 <code>$message</code> 为消息对象（Collection），这里需要注意的时，与 2.0 不同，2.0 当中我们对消息与事件做了区分，还对消息进行了分类（按 MsgType）。在 3.0 后，所有的消息包括事件都会使用 <code>setMessageHandler</code> 来处理，也就是说你可能需要在里面进行一些判断，例如：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$server</span>-&gt;setMessageHandler(<span class="function"><span class="keyword">function</span> <span class="params">(<span class="variable">$message</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (<span class="variable">$message</span>-&gt;MsgType) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'event'</span>:</span><br><span class="line">            <span class="comment"># 事件消息...</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'text'</span>:</span><br><span class="line">            <span class="comment"># 文字消息...</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'image'</span>:</span><br><span class="line">            <span class="comment"># 图片消息...</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'voice'</span>:</span><br><span class="line">            <span class="comment"># 语音消息...</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="comment">// ... 其它消息</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="comment"># code...</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>当然，因为这里 <code>setMessageHandler</code> 接收一个 <a href="http://php.net/manual/zh/language.types.callable.php" target="_blank" rel="external"><code>callable</code></a> 的参数，所以你不一定要传入一个 Closure 闭包，你可以选择传入一个函数名，一个 <code>[$class, $method]</code> 或者 <code>Foo::bar</code> 这样的类型。</p>
-<h2 id="u56DE_u590D_u6D88_u606F" class="article-heading"><a href="#u56DE_u590D_u6D88_u606F" class="headerlink" title="回复消息"></a>回复消息<a class="article-anchor" href="#u56DE_u590D_u6D88_u606F" aria-hidden="true"></a></h2><p>回复的消息可以为 <code>null</code>，此时 SDK 会返回给微信一个 “SUCCESS”，你也可以回复一个普通字符串，比如：<code>欢迎关注 overtrue.</code>，此时 SDK 会对它进行一个封装，产生一个 <a href="https://github.com/EasyWeChat/message/blob/master/src/Text.php" target="_blank" rel="external"><code>EasyWeChat\Message\Text</code></a> 类型的消息并在最后的 <code>$server-&gt;serve();</code> 时生成对应的消息 XML 格式。</p>
+<h2 id="u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027" class="article-heading"><a href="#u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027" class="headerlink" title="请求消息的属性"></a>请求消息的属性<a class="article-anchor" href="#u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027" aria-hidden="true"></a></h2><p>当你接收到用户发来的消息时，可能会提取消息中的相关属性，那么请参考：</p>
+<p>请求消息基本属性：</p>
+<pre><code>ToUserName    接收方帐号（该公众号 ID）
+FromUserName  发送方帐号（代表用户的唯一标识）
+CreateTime    消息创建时间（时间戳）
+MsgId         消息 ID（64位整型）
+</code></pre><p>文本消息请求：</p>
+<pre><code>MsgType  text
+Content  文本消息内容
+</code></pre><p>图片消息请求：</p>
+<pre><code>MsgType  image
+PicUrl   图片链接
+</code></pre><p>地理位置消息请求：</p>
+<pre><code>MsgType     location
+Location_X  地理位置纬度
+Location_Y  地理位置经度
+Scale       地图缩放大小
+Label       地理位置信息
+</code></pre><p>链接消息请求：</p>
+<pre><code>MsgType      link
+Title        消息标题
+Description  消息描述
+Url          消息链接
+</code></pre><h2 id="u56DE_u590D_u6D88_u606F" class="article-heading"><a href="#u56DE_u590D_u6D88_u606F" class="headerlink" title="回复消息"></a>回复消息<a class="article-anchor" href="#u56DE_u590D_u6D88_u606F" aria-hidden="true"></a></h2><p>回复的消息可以为 <code>null</code>，此时 SDK 会返回给微信一个 “SUCCESS”，你也可以回复一个普通字符串，比如：<code>欢迎关注 overtrue.</code>，此时 SDK 会对它进行一个封装，产生一个 <a href="https://github.com/EasyWeChat/message/blob/master/src/Text.php" target="_blank" rel="external"><code>EasyWeChat\Message\Text</code></a> 类型的消息并在最后的 <code>$server-&gt;serve();</code> 时生成对应的消息 XML 格式。</p>
 <p>如果你想返回一个自己手动拼的原生 XML 格式消息，请返回一个 <a href="https://github.com/EasyWeChat/message/blob/master/src/Raw.php" target="_blank" rel="external"><code>EasyWeChat\Message\Raw</code></a> 实例即可。</p>
 <p>关于消息的使用，我们会在 <a href="messages.html"><code>消息</code></a> 章节。</p>
 
@@ -137,7 +160,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-23T15:21:38.527Z" itemprop="dateModified">上次更新：2015-12-23</time>
+                <time class="article-footer-updated" datetime="2015-12-23T15:35:55.191Z" itemprop="dateModified">上次更新：2015-12-23</time>
                 <a href="configuration.html" class="article-footer-prev" title="配置"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="messages.html" class="article-footer-next" title="消息"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -146,7 +169,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u57FA_u672C_u4F7F_u7528"><span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u56DE_u590D_u6D88_u606F"><span class="toc-text">回复消息</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u57FA_u672C_u4F7F_u7528"><span class="toc-text">基本使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BF7_u6C42_u6D88_u606F_u7684_u5C5E_u6027"><span class="toc-text">请求消息的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u56DE_u590D_u6D88_u606F"><span class="toc-text">回复消息</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
