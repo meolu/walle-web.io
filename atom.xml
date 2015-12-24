@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://easywechat.org/"/>
-  <updated>2015-12-24T16:45:11.792Z</updated>
+  <updated>2015-12-24T16:47:46.189Z</updated>
   <id>http://easywechat.org/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Hello World]]></title>
     <link href="http://easywechat.org/news/2015/12/24/hello-world/"/>
     <id>http://easywechat.org/news/2015/12/24/hello-world/</id>
-    <published>2015-12-24T16:45:11.792Z</published>
-    <updated>2015-12-24T16:45:11.792Z</updated>
+    <published>2015-12-24T16:47:46.189Z</published>
+    <updated>2015-12-24T16:47:46.189Z</updated>
     <content type="html"><![CDATA[<p>Hello world!</p>
 ]]></content>
     <summary type="html">
