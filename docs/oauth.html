@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Easy We Chat">
 <meta property="og:description" content="关于 OAuth2.0OAuth是一个关于授权（authorization）的开放网络标准，在全世界得到广泛应用，目前的版本是2.0版。
 &amp;#10;+--------+                               +---------------+&amp;#10;|        |--(A)- Authorization Request -&amp;#62;|   Resource    |&amp;">
-<meta property="og:updated_time" content="2015-12-25T16:25:37.332Z">
+<meta property="og:updated_time" content="2015-12-26T14:55:26.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网页授权">
 <meta name="twitter:description" content="关于 OAuth2.0OAuth是一个关于授权（authorization）的开放网络标准，在全世界得到广泛应用，目前的版本是2.0版。
@@ -162,6 +162,10 @@
 <li><strong>发起授权页</strong>，此页面其实可以省略，可以做成一个中间件，全局检查未登录就发起授权。</li>
 <li><strong>授权回调页</strong>，接收用户授权后的状态，并获取用户信息，写入用户会话状态（SESSION）。</li>
 </ol>
+<h2 id="u5F00_u59CB_u4E4B_u524D" class="article-heading"><a href="#u5F00_u59CB_u4E4B_u524D" class="headerlink" title="开始之前"></a>开始之前<a class="article-anchor" href="#u5F00_u59CB_u4E4B_u524D" aria-hidden="true"></a></h2><p>在开始之前请一定要记住，先登录公众号后台，找到<strong>边栏 “开发”</strong> 模块下的 <strong>“接口权限”</strong>，点击 <strong>“网页授权获取用户基本信息”</strong> 后面的修改，添加你的网页授权域名。</p>
+<blockquote>
+<p>如果你的授权地址为：<a href="http://www.abc.com/xxxxx，那么请填写" target="_blank" rel="external">http://www.abc.com/xxxxx，那么请填写</a> www.abc.com，也就是说请填写与网址匹配的域名，前者如果填写abc.com是通过不了的。</p>
+</blockquote>
 <h2 id="SDK__u4E2D_OAuth__u6A21_u5757_u7684_API" class="article-heading"><a href="#SDK__u4E2D_OAuth__u6A21_u5757_u7684_API" class="headerlink" title="SDK 中 OAuth 模块的 API"></a>SDK 中 OAuth 模块的 API<a class="article-anchor" href="#SDK__u4E2D_OAuth__u6A21_u5757_u7684_API" aria-hidden="true"></a></h2><p>  在 SDK 中，我们使用名称为 <code>oauth</code> 的模块来完成授权服务，我们主要用到以下两个 API：</p>
 <h3 id="u53D1_u8D77_u6388_u6743" class="article-heading"><a href="#u53D1_u8D77_u6388_u6743" class="headerlink" title="发起授权"></a>发起授权<a class="article-anchor" href="#u53D1_u8D77_u6388_u6743" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$response</span> = <span class="variable">$app</span>[<span class="string">'oauth'</span>]-&gt;with($目标页面URL)</span><br><span class="line">                          -&gt;scope([<span class="string">'snsapi_userinfo'</span>])</span><br><span class="line">                          -&gt;redirect();</span><br></pre></td></tr></table></figure>
 <p>它的返回值 <code>$response</code> 是一个 <a href="http://api.symfony.com/3.0/Symfony/Component/HttpFoundation/RedirectResponse.html" target="_blank" rel="external">Symfony\Component\HttpFoundation\RedirectResponse</a> 实例。</p>
@@ -183,7 +187,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-25T16:25:37.332Z" itemprop="dateModified">上次更新：2015-12-26</time>
+                <time class="article-footer-updated" datetime="2015-12-26T14:55:26.452Z" itemprop="dateModified">上次更新：2015-12-26</time>
                 <a href="user-group.html" class="article-footer-prev" title="用户组"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="material.html" class="article-footer-next" title="素材管理"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -192,7 +196,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5173_u4E8E_OAuth2-0"><span class="toc-text">关于 OAuth2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5FAE_u4FE1_OAuth"><span class="toc-text">微信 OAuth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u903B_u8F91_u7EC4_u6210"><span class="toc-text">逻辑组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SDK__u4E2D_OAuth__u6A21_u5757_u7684_API"><span class="toc-text">SDK 中 OAuth 模块的 API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u53D1_u8D77_u6388_u6743"><span class="toc-text">发起授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u83B7_u53D6_u5DF2_u6388_u6743_u7528_u6237"><span class="toc-text">获取已授权用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7F51_u9875_u6388_u6743_u5B9E_u4F8B"><span class="toc-text">网页授权实例</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5173_u4E8E_OAuth2-0"><span class="toc-text">关于 OAuth2.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5FAE_u4FE1_OAuth"><span class="toc-text">微信 OAuth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u903B_u8F91_u7EC4_u6210"><span class="toc-text">逻辑组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F00_u59CB_u4E4B_u524D"><span class="toc-text">开始之前</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SDK__u4E2D_OAuth__u6A21_u5757_u7684_API"><span class="toc-text">SDK 中 OAuth 模块的 API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u53D1_u8D77_u6388_u6743"><span class="toc-text">发起授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u83B7_u53D6_u5DF2_u6388_u6743_u7528_u6237"><span class="toc-text">获取已授权用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7F51_u9875_u6388_u6743_u5B9E_u4F8B"><span class="toc-text">网页授权实例</span></a></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>

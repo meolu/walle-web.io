@@ -39,28 +39,31 @@
   <!-- RSS -->
   <link rel="alternative" href="/atom.xml" title="Easy We Chat" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="本 SDK 由 Overtrue\Wechat\QRCode 提供微信二维码创建与获取等服务。
-目前有2种类型的二维码：
+  <meta name="description" content="目前有2种类型的二维码：
 
 临时二维码，是有过期时间的，最长可以设置为在二维码生成后的7天（即604800秒）后过期，但能够生成较多数量。临时二维码主要用于帐号绑定等不要求二维码永久保存的业务场景
-永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统">
+永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统计等场景。
+
+获取实例&amp;lt;?php// ... 前面部分省略$app = new Appli">
 <meta property="og:type" content="website">
 <meta property="og:title" content="二维码">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/qrcode.html">
 <meta property="og:site_name" content="Easy We Chat">
-<meta property="og:description" content="本 SDK 由 Overtrue\Wechat\QRCode 提供微信二维码创建与获取等服务。
-目前有2种类型的二维码：
+<meta property="og:description" content="目前有2种类型的二维码：
 
 临时二维码，是有过期时间的，最长可以设置为在二维码生成后的7天（即604800秒）后过期，但能够生成较多数量。临时二维码主要用于帐号绑定等不要求二维码永久保存的业务场景
-永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统">
-<meta property="og:updated_time" content="2015-12-25T16:25:37.332Z">
+永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统计等场景。
+
+获取实例&amp;lt;?php// ... 前面部分省略$app = new Appli">
+<meta property="og:updated_time" content="2015-12-26T14:55:26.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维码">
-<meta name="twitter:description" content="本 SDK 由 Overtrue\Wechat\QRCode 提供微信二维码创建与获取等服务。
-目前有2种类型的二维码：
+<meta name="twitter:description" content="目前有2种类型的二维码：
 
 临时二维码，是有过期时间的，最长可以设置为在二维码生成后的7天（即604800秒）后过期，但能够生成较多数量。临时二维码主要用于帐号绑定等不要求二维码永久保存的业务场景
-永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统">
+永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统计等场景。
+
+获取实例&amp;lt;?php// ... 前面部分省略$app = new Appli">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="二维码">
@@ -127,13 +130,12 @@
                 <a href="https://github.com/EasyWeChat/docs/edit/zh-cn/qrcode.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
-                <p>本 SDK 由 <code>Overtrue\Wechat\QRCode</code> 提供微信二维码创建与获取等服务。</p>
-<p>目前有2种类型的二维码：</p>
+                <p>目前有2种类型的二维码：</p>
 <ol>
 <li>临时二维码，是有过期时间的，最长可以设置为在二维码生成后的7天（即604800秒）后过期，但能够生成较多数量。临时二维码主要用于帐号绑定等不要求二维码永久保存的业务场景</li>
 <li>永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统计等场景。</li>
 </ol>
-<h3 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">QRCode</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$appId</span>  = <span class="string">'wx3cf0f39249eb0e60'</span>;</span><br><span class="line"><span class="variable">$secret</span> = <span class="string">'f1c242f4f28f735d4687abb469072a29'</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$qrcode</span> = <span class="keyword">new</span> QRCode(<span class="variable">$appId</span>, <span class="variable">$secret</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ... 前面部分省略</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$qrcode</span> = <span class="variable">$app</span>[<span class="string">'qrcode'</span>];</span><br></pre></td></tr></table></figure>
 <h2 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h2><ul>
 <li><code>Bag temporary($sceneId, $expireSeconds = null)</code> 创建临时二维码；</li>
 <li><code>Bag forever($sceneValue)</code> 创建永久二维码</li>
@@ -153,7 +155,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-25T16:25:37.332Z" itemprop="dateModified">上次更新：2015-12-26</time>
+                <time class="article-footer-updated" datetime="2015-12-26T14:55:26.452Z" itemprop="dateModified">上次更新：2015-12-26</time>
                 <a href="anaylsis.html" class="article-footer-prev" title="数据统计与分析"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="short-url.html" class="article-footer-next" title="短网址"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

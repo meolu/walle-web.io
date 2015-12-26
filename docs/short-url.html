@@ -41,20 +41,26 @@
   <!-- Open Graph -->
   <meta name="description" content="本 SDK 由 Overtrue\Wechat\Url 提供微信链接转换服务。
 主要使用场景： 开发者用于生成二维码的原链接（商品、支付二维码等）太长导致扫码速度和成功率下降，将原长链接通过此接口转成短链接再生成二维码将大大提升扫码速度和成功率。
-获取实例&amp;lt;?phpuse Overtrue\Wechat\Url;$appId  = &apos;wx3cf0f39249eb0e60&apos;;$secret =">
+获取实例&amp;lt;?php// ...$app = new Application($options);$url = $app[&apos;url&apos;];
+API
+s">
 <meta property="og:type" content="website">
 <meta property="og:title" content="短网址服务">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/short-url.html">
 <meta property="og:site_name" content="Easy We Chat">
 <meta property="og:description" content="本 SDK 由 Overtrue\Wechat\Url 提供微信链接转换服务。
 主要使用场景： 开发者用于生成二维码的原链接（商品、支付二维码等）太长导致扫码速度和成功率下降，将原长链接通过此接口转成短链接再生成二维码将大大提升扫码速度和成功率。
-获取实例&amp;lt;?phpuse Overtrue\Wechat\Url;$appId  = &apos;wx3cf0f39249eb0e60&apos;;$secret =">
-<meta property="og:updated_time" content="2015-12-25T16:25:37.332Z">
+获取实例&amp;lt;?php// ...$app = new Application($options);$url = $app[&apos;url&apos;];
+API
+s">
+<meta property="og:updated_time" content="2015-12-26T14:55:26.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="短网址服务">
 <meta name="twitter:description" content="本 SDK 由 Overtrue\Wechat\Url 提供微信链接转换服务。
 主要使用场景： 开发者用于生成二维码的原链接（商品、支付二维码等）太长导致扫码速度和成功率下降，将原长链接通过此接口转成短链接再生成二维码将大大提升扫码速度和成功率。
-获取实例&amp;lt;?phpuse Overtrue\Wechat\Url;$appId  = &apos;wx3cf0f39249eb0e60&apos;;$secret =">
+获取实例&amp;lt;?php// ...$app = new Application($options);$url = $app[&apos;url&apos;];
+API
+s">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="短网址服务">
@@ -123,9 +129,9 @@
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 <p>本 SDK 由 <code>Overtrue\Wechat\Url</code> 提供微信链接转换服务。</p>
 <p>主要使用场景： 开发者用于生成二维码的原链接（商品、支付二维码等）太长导致扫码速度和成功率下降，将原长链接通过此接口转成短链接再生成二维码将大大提升扫码速度和成功率。</p>
-<h3 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Url</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$appId</span>  = <span class="string">'wx3cf0f39249eb0e60'</span>;</span><br><span class="line"><span class="variable">$secret</span> = <span class="string">'f1c242f4f28f735d4687abb469072a29'</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$url</span> = <span class="keyword">new</span> Url(<span class="variable">$appId</span>, <span class="variable">$secret</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$url</span> = <span class="variable">$app</span>[<span class="string">'url'</span>];</span><br></pre></td></tr></table></figure>
 <h2 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h2><ul>
-<li><code>string short($url)</code> 长链接转短链接</li>
+<li><code>short($url)</code> 长链接转短链接</li>
 </ul>
 <p>example:</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$shortUrl</span> = <span class="variable">$url</span>-&gt;short(<span class="string">'http://overtrue.me/open-source'</span>);</span><br><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
@@ -135,7 +141,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-25T16:25:37.332Z" itemprop="dateModified">上次更新：2015-12-26</time>
+                <time class="article-footer-updated" datetime="2015-12-26T14:55:26.452Z" itemprop="dateModified">上次更新：2015-12-26</time>
                 <a href="qrcode.html" class="article-footer-prev" title="二维码"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="semantic.html" class="article-footer-next" title="语义理解"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
