@@ -49,7 +49,7 @@
 <meta property="og:description" content="我们在入门小教程一节以服务端为例讲解了一个基本的消息的处理，这里就不再讲服务器验证的流程了，请直接参考前面的入门实例即可。
 服务端的作用呢，在整个微信开发中主要是负责 接收用户发送过来的消息，还有 用户触发的一系列事件。
 首先我们得厘清一下消息与事件的回复，当你收到用户消息后（消息由微信服务器推送到你的服务器），在你对消息进行一些处理后，不管是选择回复一个消息还是什么不都回给用户，你也应该给微信服">
-<meta property="og:updated_time" content="2015-12-26T14:55:26.452Z">
+<meta property="og:updated_time" content="2015-12-27T10:17:56.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务端">
 <meta name="twitter:description" content="我们在入门小教程一节以服务端为例讲解了一个基本的消息的处理，这里就不再讲服务器验证的流程了，请直接参考前面的入门实例即可。
@@ -154,13 +154,13 @@ Description  消息描述
 Url          消息链接
 </code></pre><h2 id="u56DE_u590D_u6D88_u606F" class="article-heading"><a href="#u56DE_u590D_u6D88_u606F" class="headerlink" title="回复消息"></a>回复消息<a class="article-anchor" href="#u56DE_u590D_u6D88_u606F" aria-hidden="true"></a></h2><p>回复的消息可以为 <code>null</code>，此时 SDK 会返回给微信一个 “SUCCESS”，你也可以回复一个普通字符串，比如：<code>欢迎关注 overtrue.</code>，此时 SDK 会对它进行一个封装，产生一个 <a href="https://github.com/EasyWeChat/message/blob/master/src/Text.php" target="_blank" rel="external"><code>EasyWeChat\Message\Text</code></a> 类型的消息并在最后的 <code>$server-&gt;serve();</code> 时生成对应的消息 XML 格式。</p>
 <p>如果你想返回一个自己手动拼的原生 XML 格式消息，请返回一个 <a href="https://github.com/EasyWeChat/message/blob/master/src/Raw.php" target="_blank" rel="external"><code>EasyWeChat\Message\Raw</code></a> 实例即可。</p>
-<p>关于消息的使用，我们会在 <a href="messages.html"><code>消息</code></a> 章节。</p>
+<p>关于消息的使用，我们会在 <a href="/messages.html"><code>消息</code></a> 章节。</p>
 
 
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-26T14:55:26.452Z" itemprop="dateModified">上次更新：2015-12-26</time>
+                <time class="article-footer-updated" datetime="2015-12-27T10:17:56.401Z" itemprop="dateModified">上次更新：2015-12-27</time>
                 <a href="configuration.html" class="article-footer-prev" title="配置"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="messages.html" class="article-footer-next" title="消息"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
