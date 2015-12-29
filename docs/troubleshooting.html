@@ -50,7 +50,7 @@
 这，是我们不愿看到的。
 所以在这里，我们将陆续将微信开发中可能遇到的各种疑难问题进行汇总，并给出对应的解决办法。一般情况下，这些问题都可以对号入座，轻松地解决。但也不排除特殊情况，这时候你遇到的问题与文中某一个症状一致，但文中所给的解决方案并不凑效，这">
 <meta property="og:image" content="http://easywechat.org/images/emoji/smile.png">
-<meta property="og:updated_time" content="2015-12-29T14:00:26.476Z">
+<meta property="og:updated_time" content="2015-12-29T14:04:23.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="疑难解答">
 <meta name="twitter:description" content="在微信公众平台开发的道路上，遍布着各种大大小小的坑，有的人掉坑里，几经折腾又爬出来了，然后拍拍屁股走人。然而坑还在那里，还会继续有后来人掉进去……
@@ -141,28 +141,28 @@
 </li>
 </ol>
 <p>其它修改 HTTP 类源文件的方式是不允许的。</p>
-<h3 id="u652F_u4ED8_u5931_u8D25_uFF01_u5F53_u524D_u9875_u9762_u7684_URL__u672A_u6CE8_u518C" class="article-heading"><a href="#u652F_u4ED8_u5931_u8D25_uFF01_u5F53_u524D_u9875_u9762_u7684_URL__u672A_u6CE8_u518C" class="headerlink" title="支付失败！当前页面的 URL 未注册"></a>支付失败！当前页面的 URL 未注册<a class="article-anchor" href="#u652F_u4ED8_u5931_u8D25_uFF01_u5F53_u524D_u9875_u9762_u7684_URL__u672A_u6CE8_u518C" aria-hidden="true"></a></h3><p>这是由于微信支付授权目录未正确配置引起的。此时开发者应该登录微信公众平台，进入【微信支付】-&gt;【开发设置】进行设置。</p>
+<h3 id="u652F_u4ED8_u5931_u8D25_uFF01_u5F53_u524D_u9875_u9762_u7684_URL__u672A_u6CE8_u518C" class="article-heading"><a href="#u652F_u4ED8_u5931_u8D25_uFF01_u5F53_u524D_u9875_u9762_u7684_URL__u672A_u6CE8_u518C" class="headerlink" title="支付失败！当前页面的 URL 未注册"></a>支付失败！当前页面的 URL 未注册<a class="article-anchor" href="#u652F_u4ED8_u5931_u8D25_uFF01_u5F53_u524D_u9875_u9762_u7684_URL__u672A_u6CE8_u518C" aria-hidden="true"></a></h3><p>这是由于微信支付授权目录未正确配置引起的。此时开发者应该登录微信公众平台，进入<strong>【微信支付】-&gt;【开发设置】</strong>进行设置。</p>
 <ol>
 <li><p>公众号可添加3个支付授权目录，满足不同应用使用同一个公众号进行支付的业务需求。</p>
 </li>
-<li><p>正确的支付授权目录应以 http:// 或 https:// 开头，并以正斜杠 / 结尾，授权目录所包含的域名必须经过 ICP 备案。</p>
+<li><p>正确的<strong>【支付授权目录】</strong>应以 <code>http://</code> 或 <code>https://</code> 开头，并以正斜杠 <code>/</code> 结尾，授权目录所包含的域名<strong>必须经过 ICP 备案</strong>。</p>
 </li>
-<li><p>支付授权目录需细化至二级或三级目录。</p>
+<li><p>支付授权目录需<strong>细化至二级或三级目录</strong>。</p>
 </li>
-<li><p>所有实际调起微信支付请求的页面都必须要所配置的支付授权目录之下。</p>
+<li><p>所有<strong>实际调起微信支付请求的页面都必须要所配置的支付授权目录之下</strong>。</p>
 </li>
-<li><p>在开发过程中，也可以使用测试授权目录进行开发测试，此时还应该将参与测试的个人微信号添加到测试白名单中，否则将出现对应的错误提示……  </p>
+<li><p>在开发过程中，也可以使用测试授权目录进行开发测试，此时还<strong>应该将参与测试的个人微信号添加到测试白名单中</strong>，否则将出现对应的错误提示……</p>
 </li>
 </ol>
 <blockquote>
-<p>配置前请先理解页面、目录、URL 以及域名等几个基本概念，并对自己所使用的框架的路由机制有一个大致了解。这样你才会知道自己正在配置的参数是个啥玩意儿，有什么卵用……<img title=":smile:" class="emoji" src="/images/emoji/smile.png" align="absmiddle"></p>
+<p>配置前请先理解<strong>页面</strong>、<strong>目录</strong>、<strong>URL </strong>以及<strong>域名</strong>等几个基本概念，并对自己所使用的框架的路由机制有一个大致了解。这样你才会知道自己正在配置的参数是个啥玩意儿，有什么卵用…… <img title=":smile:" class="emoji" src="/images/emoji/smile.png" align="absmiddle"></p>
 </blockquote>
 
 
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-12-29T14:00:26.476Z" itemprop="dateModified">上次更新：2015-12-29</time>
+                <time class="article-footer-updated" datetime="2015-12-29T14:04:23.173Z" itemprop="dateModified">上次更新：2015-12-29</time>
                 <a href="cache.html" class="article-footer-prev" title="缓存"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="contributing.html" class="article-footer-next" title="贡献"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
