@@ -38,21 +38,21 @@
   <link rel="alternative" href="/atom.xml" title="Easy We Chat" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="微信的群发消息接口有各种乱七八糟的注意事项及限制，具体请阅读微信官方文档：http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html
-本 SDK 由 Overtrue\Wechat\Broadcast 提供微信群发相关服务。
-获取实例&amp;lt;?php// ...$app = new Application($optio">
+获取实例&amp;lt;?php// ...$app = new Application($options);$broadcast = $app[&apos;broadcast&apos;];
+API群发消息给所有">
 <meta property="og:type" content="website">
 <meta property="og:title" content="群发">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/broadcast.html">
 <meta property="og:site_name" content="Easy We Chat">
 <meta property="og:description" content="微信的群发消息接口有各种乱七八糟的注意事项及限制，具体请阅读微信官方文档：http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html
-本 SDK 由 Overtrue\Wechat\Broadcast 提供微信群发相关服务。
-获取实例&amp;lt;?php// ...$app = new Application($optio">
-<meta property="og:updated_time" content="2016-01-01T10:49:49.685Z">
+获取实例&amp;lt;?php// ...$app = new Application($options);$broadcast = $app[&apos;broadcast&apos;];
+API群发消息给所有">
+<meta property="og:updated_time" content="2016-01-01T12:33:24.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="群发">
 <meta name="twitter:description" content="微信的群发消息接口有各种乱七八糟的注意事项及限制，具体请阅读微信官方文档：http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html
-本 SDK 由 Overtrue\Wechat\Broadcast 提供微信群发相关服务。
-获取实例&amp;lt;?php// ...$app = new Application($optio">
+获取实例&amp;lt;?php// ...$app = new Application($options);$broadcast = $app[&apos;broadcast&apos;];
+API群发消息给所有">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="群发">
@@ -120,25 +120,23 @@
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 <p>微信的群发消息接口有各种乱七八糟的注意事项及限制，具体请阅读微信官方文档：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a></p>
-<p>本 SDK 由 <code>Overtrue\Wechat\Broadcast</code> 提供微信群发相关服务。</p>
-<h3 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$broadcast</span> = <span class="variable">$app</span>[<span class="string">'broadcast'</span>];</span><br></pre></td></tr></table></figure>
-<h3 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h3><ul>
-<li><code>$broadcast-&gt;send($messageType, $message);</code> 群发消息给所有粉丝</li>
-<li><code>$broadcast-&gt;send($messageType, $message, $groupId);</code> 群发消息给指定组</li>
-<li><code>$broadcast-&gt;send($messageType, $message, array($openId1, $openId2));</code> 群发消息给指定用户，可以是一个用户，也可以是多个用户，但必须是数组</li>
-<li><code>$broadcast-&gt;preview($messageType, $message, $openId);</code> 发送预览群发消息给指定的 openid 用户</li>
-<li><code>$broadcast-&gt;preview($messageType, $message, $wxname, Broadcast::PREVIEW_BY_WXH);</code> 发送预览群发消息给指定的微信号用户</li>
-<li><code>$broadcast-&gt;delete($msgId);</code> 删除群发消息</li>
-<li><code>$broadcast-&gt;status($msgId);</code> 查询群发消息发送状态</li>
-</ul>
-<p>这里的 <code>$messageType</code> 、<code>$message</code>可以是：</p>
+<h2 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$broadcast</span> = <span class="variable">$app</span>[<span class="string">'broadcast'</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h2><h3 id="u7FA4_u53D1_u6D88_u606F_u7ED9_u6240_u6709_u7C89_u4E1D" class="article-heading"><a href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6240_u6709_u7C89_u4E1D" class="headerlink" title="群发消息给所有粉丝"></a>群发消息给所有粉丝<a class="article-anchor" href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6240_u6709_u7C89_u4E1D" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;send(<span class="variable">$messageType</span>, <span class="variable">$message</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7EC4" class="article-heading"><a href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7EC4" class="headerlink" title="群发消息给指定组"></a>群发消息给指定组<a class="article-anchor" href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7EC4" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;send(<span class="variable">$messageType</span>, <span class="variable">$message</span>, <span class="variable">$groupId</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7528_u6237" class="article-heading"><a href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7528_u6237" class="headerlink" title="群发消息给指定用户"></a>群发消息给指定用户<a class="article-anchor" href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7528_u6237" aria-hidden="true"></a></h3><p>可以是一个用户，也可以是多个用户，但必须是数组。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;send(<span class="variable">$messageType</span>, <span class="variable">$message</span>, <span class="keyword">array</span>(<span class="variable">$openId1</span>, <span class="variable">$openId2</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_openId__u7528_u6237" class="article-heading"><a href="#u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_openId__u7528_u6237" class="headerlink" title="发送预览群发消息给指定的 openId 用户"></a>发送预览群发消息给指定的 <code>openId</code> 用户<a class="article-anchor" href="#u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_openId__u7528_u6237" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;preview(<span class="variable">$messageType</span>, <span class="variable">$message</span>, <span class="variable">$openId</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_u5FAE_u4FE1_u53F7_u7528_u6237" class="article-heading"><a href="#u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_u5FAE_u4FE1_u53F7_u7528_u6237" class="headerlink" title="发送预览群发消息给指定的微信号用户"></a>发送预览群发消息给指定的微信号用户<a class="article-anchor" href="#u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_u5FAE_u4FE1_u53F7_u7528_u6237" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;preview(<span class="variable">$messageType</span>, <span class="variable">$message</span>, <span class="variable">$wxname</span>, Broadcast::PREVIEW_BY_WXH);</span><br></pre></td></tr></table></figure>
+<h3 id="u5220_u9664_u7FA4_u53D1_u6D88_u606F" class="article-heading"><a href="#u5220_u9664_u7FA4_u53D1_u6D88_u606F" class="headerlink" title="删除群发消息"></a>删除群发消息<a class="article-anchor" href="#u5220_u9664_u7FA4_u53D1_u6D88_u606F" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;delete(<span class="variable">$msgId</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="u67E5_u8BE2_u7FA4_u53D1_u6D88_u606F_u53D1_u9001_u72B6_u6001" class="article-heading"><a href="#u67E5_u8BE2_u7FA4_u53D1_u6D88_u606F_u53D1_u9001_u72B6_u6001" class="headerlink" title="查询群发消息发送状态"></a>查询群发消息发送状态<a class="article-anchor" href="#u67E5_u8BE2_u7FA4_u53D1_u6D88_u606F_u53D1_u9001_u72B6_u6001" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$broadcast</span>-&gt;status(<span class="variable">$msgId</span>);</span><br></pre></td></tr></table></figure>
+<p>上面提到的 <code>$messageType</code> 、<code>$message</code> 可以是：</p>
 <ul>
 <li><code>$messageType = Broadcast::MSG_TYPE_NEWS;</code> 图文消息类型，所对应的 <code>$message</code> 为 media_id</li>
 <li><code>$messageType = Broadcast::MSG_TYPE_TEXT;</code> 文本消息类型，所对应的 <code>$message</code> 为一个文本字符串</li>
 <li><code>$messageType = Broadcast::MSG_TYPE_VOICE;</code> 语音消息类型，所对应的 <code>$message</code> 为 media_id</li>
 <li><code>$messageType = Broadcast::MSG_TYPE_IMAGE;</code> 图片消息类型，所对应的 <code>$message</code> 为 media_id</li>
 <li><code>$messageType = Broadcast::MSG_TYPE_CARD;</code> 卡券消息类型，所对应的 <code>$message</code> 为 card_id</li>
-<li><code>$messageType = Broadcast::MSG_TYPE_VIDEO;</code> 视频消息类型，群发视频消息给组或预览群发视频消息给用户时所对应的 <code>$message</code> 为 media_id，群发视频消息给指定用户时所对应的 <code>$message</code> 为一个数组 <code>array( &#39;MEDIA_ID&#39;, &#39;TITLE&#39;, &#39;DESCRIPTION&#39;)</code></li>
+<li><code>$messageType = Broadcast::MSG_TYPE_VIDEO;</code> 视频消息类型，群发视频消息给组或预览群发视频消息给用户时所对应的 <code>$message</code> 为<br><code>media_id</code>，群发视频消息给指定用户时所对应的 <code>$message</code> 为一个数组 <code>array(&#39;MEDIA_ID&#39;, &#39;TITLE&#39;, &#39;DESCRIPTION&#39;)</code></li>
 </ul>
 <p>有关群发信息的更多细节请参考微信官方文档：<a href="http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html" target="_blank" rel="external">http://mp.weixin.qq.com/wiki/15/5380a4e6f02f2ffdc7981a8ed7a40753.html</a></p>
 
@@ -146,7 +144,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-01T10:49:49.685Z" itemprop="dateModified">上次更新：2016-01-01</time>
+                <time class="article-footer-updated" datetime="2016-01-01T12:33:24.410Z" itemprop="dateModified">上次更新：2016-01-01</time>
                 <a href="payment.html" class="article-footer-prev" title="支付"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="notice.html" class="article-footer-next" title="模板消息"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -155,7 +153,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u83B7_u53D6_u5B9E_u4F8B"><span class="toc-text">获取实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API"><span class="toc-text">API</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u83B7_u53D6_u5B9E_u4F8B"><span class="toc-text">获取实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6240_u6709_u7C89_u4E1D"><span class="toc-text">群发消息给所有粉丝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7EC4"><span class="toc-text">群发消息给指定组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7528_u6237"><span class="toc-text">群发消息给指定用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_openId__u7528_u6237"><span class="toc-text">发送预览群发消息给指定的 openId 用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u53D1_u9001_u9884_u89C8_u7FA4_u53D1_u6D88_u606F_u7ED9_u6307_u5B9A_u7684_u5FAE_u4FE1_u53F7_u7528_u6237"><span class="toc-text">发送预览群发消息给指定的微信号用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5220_u9664_u7FA4_u53D1_u6D88_u606F"><span class="toc-text">删除群发消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u67E5_u8BE2_u7FA4_u53D1_u6D88_u606F_u53D1_u9001_u72B6_u6001"><span class="toc-text">查询群发消息发送状态</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
