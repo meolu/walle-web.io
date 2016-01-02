@@ -49,7 +49,7 @@
 关于使用规则，请注意：
 1. 所有服务号都可以在功能-&amp;gt;添加功能插件处看到申请模板消息功能的入口，但只有认证后的服务号才可以申请模板消息的使用权限并获得该权限；
 2. 需要选择公众账号服务所处的2个行业，每月可更改1">
-<meta property="og:updated_time" content="2016-01-02T13:16:32.840Z">
+<meta property="og:updated_time" content="2016-01-02T13:27:31.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模板消息">
 <meta name="twitter:description" content="模板消息仅用于公众号向用户发送重要的服务通知，只能用于符合其要求的服务场景中，如信用卡刷卡通知，商品购买成功通知等。不支持广告等营销类消息以及其它所有可能对用户造成骚扰的消息。
@@ -133,8 +133,7 @@
 <pre><code>1. 模板消息调用时主要需要模板 ID 和模板中各参数的赋值内容；
 2. 模板中参数内容必须以 &quot;.DATA&quot; 结尾，否则视为保留字；
 3. 模板保留符号 &quot;\{\{ \}\}&quot;。
-</code></pre><p>本 SDK 中由 <code>Overtrue\Wechat\Notice</code> 类完成模板消息的功能。</p>
-<h2 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$notice</span> = <span class="variable">$app</span>[<span class="string">'notice'</span>];</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$notice</span> = <span class="variable">$app</span>[<span class="string">'notice'</span>];</span><br></pre></td></tr></table></figure>
 <h3 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h3><ul>
 <li><code>boolean setIndustry($industryId1, $industryId2)</code> 修改账号所属行业；</li>
 <li><code>array industries()</code> 返回所有支持的行业列表，用于做下拉选择行业可视化更新；</li>
@@ -177,7 +176,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-02T13:16:32.840Z" itemprop="dateModified">上次更新：2016-01-02</time>
+                <time class="article-footer-updated" datetime="2016-01-02T13:27:31.039Z" itemprop="dateModified">上次更新：2016-01-02</time>
                 <a href="broadcast.html" class="article-footer-prev" title="群发消息"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="card.html" class="article-footer-next" title="卡券"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

@@ -47,7 +47,7 @@
 <meta property="og:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
 在阅读以下内容时请忽略是接收消息还是回复消息，后面我会给你讲它们的区别。
 消息类型消息分为以下几种：文本、图片、视频、声音、链接、坐标、图文、文章">
-<meta property="og:updated_time" content="2016-01-02T13:16:32.840Z">
+<meta property="og:updated_time" content="2016-01-02T13:27:31.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="消息">
 <meta name="twitter:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
@@ -161,13 +161,13 @@
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Image</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="variable">$server</span>-&gt;setMessageHandler(<span class="function"><span class="keyword">function</span> <span class="params">(<span class="variable">$message</span>)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Image([<span class="string">'media_id'</span> =&gt; <span class="string">'........'</span>]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
 <h3 id="u4F5C_u4E3A_u5BA2_u670D_u6D88_u606F_u53D1_u9001" class="article-heading"><a href="#u4F5C_u4E3A_u5BA2_u670D_u6D88_u606F_u53D1_u9001" class="headerlink" title="作为客服消息发送"></a>作为客服消息发送<a class="article-anchor" href="#u4F5C_u4E3A_u5BA2_u670D_u6D88_u606F_u53D1_u9001" aria-hidden="true"></a></h3><p>在客服消息里的使用也一样，都是直接传入消息实例即可：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Text</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$message</span> = <span class="keyword">new</span> Text([<span class="string">'content'</span> =&gt; <span class="string">'Hello world!'</span>]);</span><br><span class="line"></span><br><span class="line"><span class="variable">$result</span> = <span class="variable">$app</span>[<span class="string">'staff'</span>]-&gt;message(<span class="variable">$message</span>)-&gt;to(<span class="variable">$openId</span>)-&gt;send();</span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure>
-<h3 id="u7FA4_u53D1_u6D88_u606F" class="article-heading"><a href="#u7FA4_u53D1_u6D88_u606F" class="headerlink" title="群发消息"></a>群发消息<a class="article-anchor" href="#u7FA4_u53D1_u6D88_u606F" aria-hidden="true"></a></h3><p>TODO</p>
+<h3 id="u7FA4_u53D1_u6D88_u606F" class="article-heading"><a href="#u7FA4_u53D1_u6D88_u606F" class="headerlink" title="群发消息"></a>群发消息<a class="article-anchor" href="#u7FA4_u53D1_u6D88_u606F" aria-hidden="true"></a></h3><p>请参考：<a href="/docs/broadcast.html">群发消息</a></p>
 
 
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-02T13:16:32.840Z" itemprop="dateModified">上次更新：2016-01-02</time>
+                <time class="article-footer-updated" datetime="2016-01-02T13:27:31.039Z" itemprop="dateModified">上次更新：2016-01-02</time>
                 <a href="server.html" class="article-footer-prev" title="服务端"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="events.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               

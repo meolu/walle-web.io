@@ -37,25 +37,22 @@
   <!-- RSS -->
   <link rel="alternative" href="/atom.xml" title="Easy We Chat" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="本 SDK 由 Overtrue\Wechat\Card 提供微信卡券等服务。
-获取实例&amp;lt;?phpuse Overtrue\Wechat\Card;$appId  = &apos;wx3cf0f39249eb0e60&apos;;$secret = &apos;f1c242f4f28f735d4687abb469072a29&apos;;$card = new Card($appId, $secret);
+  <meta name="description" content="获取实例&amp;lt;?php// ... 前面部分省略$app = new Application($options);$group = $app[&apos;card&apos;];
 API
-string c">
+string create(array $base, array $properties = array(), $type = self::GENERAL_COUPON) 创建卡券，$base 为微信文档上的 $baseInfo,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="卡券">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/card.html">
 <meta property="og:site_name" content="Easy We Chat">
-<meta property="og:description" content="本 SDK 由 Overtrue\Wechat\Card 提供微信卡券等服务。
-获取实例&amp;lt;?phpuse Overtrue\Wechat\Card;$appId  = &apos;wx3cf0f39249eb0e60&apos;;$secret = &apos;f1c242f4f28f735d4687abb469072a29&apos;;$card = new Card($appId, $secret);
+<meta property="og:description" content="获取实例&amp;lt;?php// ... 前面部分省略$app = new Application($options);$group = $app[&apos;card&apos;];
 API
-string c">
-<meta property="og:updated_time" content="2016-01-02T13:16:32.840Z">
+string create(array $base, array $properties = array(), $type = self::GENERAL_COUPON) 创建卡券，$base 为微信文档上的 $baseInfo,">
+<meta property="og:updated_time" content="2016-01-02T13:27:31.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="卡券">
-<meta name="twitter:description" content="本 SDK 由 Overtrue\Wechat\Card 提供微信卡券等服务。
-获取实例&amp;lt;?phpuse Overtrue\Wechat\Card;$appId  = &apos;wx3cf0f39249eb0e60&apos;;$secret = &apos;f1c242f4f28f735d4687abb469072a29&apos;;$card = new Card($appId, $secret);
+<meta name="twitter:description" content="获取实例&amp;lt;?php// ... 前面部分省略$app = new Application($options);$group = $app[&apos;card&apos;];
 API
-string c">
+string create(array $base, array $properties = array(), $type = self::GENERAL_COUPON) 创建卡券，$base 为微信文档上的 $baseInfo,">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="卡券">
@@ -122,8 +119,7 @@ string c">
                 <a href="https://github.com/EasyWeChat/docs/edit/zh-cn/card.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
-                <p>本 SDK 由 <code>Overtrue\Wechat\Card</code> 提供微信卡券等服务。</p>
-<h3 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Overtrue</span>\<span class="title">Wechat</span>\<span class="title">Card</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$appId</span>  = <span class="string">'wx3cf0f39249eb0e60'</span>;</span><br><span class="line"><span class="variable">$secret</span> = <span class="string">'f1c242f4f28f735d4687abb469072a29'</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$card</span> = <span class="keyword">new</span> Card(<span class="variable">$appId</span>, <span class="variable">$secret</span>);</span><br></pre></td></tr></table></figure>
+                <h2 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ... 前面部分省略</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$group</span> = <span class="variable">$app</span>[<span class="string">'card'</span>];</span><br></pre></td></tr></table></figure>
 <h2 id="API" class="article-heading"><a href="#API" class="headerlink" title="API"></a>API<a class="article-anchor" href="#API" aria-hidden="true"></a></h2><ul>
 <li><code>string create(array $base, array $properties = array(), $type = self::GENERAL_COUPON)</code> 创建卡券，<code>$base</code> 为微信文档上的 <code>$baseInfo</code>, <code>$properties</code> 为类型 <code>$type</code> 的其它属性；</li>
 <li><code>Bag get($cardId)</code> 卡券详情</li>
@@ -192,7 +188,7 @@ string c">
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-02T13:16:32.840Z" itemprop="dateModified">上次更新：2016-01-02</time>
+                <time class="article-footer-updated" datetime="2016-01-02T13:27:31.035Z" itemprop="dateModified">上次更新：2016-01-02</time>
                 <a href="notice.html" class="article-footer-prev" title="模板消息"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="store.html" class="article-footer-next" title="小店"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -201,7 +197,7 @@ string c">
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">目录</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u83B7_u53D6_u5B9E_u4F8B"><span class="toc-text">获取实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u76F8_u5173_u6587_u6863"><span class="toc-text">相关文档</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u83B7_u53D6_u5B9E_u4F8B"><span class="toc-text">获取实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u76F8_u5173_u6587_u6863"><span class="toc-text">相关文档</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
