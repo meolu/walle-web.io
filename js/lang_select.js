@@ -4,7 +4,11 @@
   function changeLang(){
     var lang = this.value;
     if (lang === 'zh-cn') lang = '';
-    location.href = window.location.href.replace(/(zh-cn|en)/g, lang);
+    if (window.location.pathname == '/' && lang.length) {
+        return window.location.pathname = '/en';
+    }
+
+    window.location.pathname = window.location.pathname.replace(/(zh-cn|en)/g, lang).replace('//', '/');
   }
 
   document.getElementById('lang-select').addEventListener('change', changeLang);
