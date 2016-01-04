@@ -46,7 +46,7 @@
 <meta property="og:description" content="关于 OAuth2.0OAuth是一个关于授权（authorization）的开放网络标准，在全世界得到广泛应用，目前的版本是2.0版。
 &amp;#10;+--------+                               +---------------+&amp;#10;|        |--(A)- Authorization Request -&amp;#62;|   Resource    |&amp;">
 <meta property="og:image" content="http://easywechat.org/images/emoji/smile.png">
-<meta property="og:updated_time" content="2016-01-04T10:54:44.573Z">
+<meta property="og:updated_time" content="2016-01-04T13:15:53.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网页授权">
 <meta name="twitter:description" content="关于 OAuth2.0OAuth是一个关于授权（authorization）的开放网络标准，在全世界得到广泛应用，目前的版本是2.0版。
@@ -163,14 +163,14 @@
 </ol>
 <h2 id="u5F00_u59CB_u4E4B_u524D" class="article-heading"><a href="#u5F00_u59CB_u4E4B_u524D" class="headerlink" title="开始之前"></a>开始之前<a class="article-anchor" href="#u5F00_u59CB_u4E4B_u524D" aria-hidden="true"></a></h2><p>在开始之前请一定要记住，先登录公众号后台，找到<strong>边栏 “开发”</strong> 模块下的 <strong>“接口权限”</strong>，点击 <strong>“网页授权获取用户基本信息”</strong> 后面的修改，添加你的网页授权域名。</p>
 <blockquote>
-<p>如果你的授权地址为：<a href="http://www.abc.com/xxxxx，那么请填写" target="_blank" rel="external">http://www.abc.com/xxxxx，那么请填写</a> www.abc.com，也就是说请填写与网址匹配的域名，前者如果填写abc.com是通过不了的。</p>
+<p>如果你的授权地址为：<code>http://www.abc.com/xxxxx</code>，那么请填写 <code>www.abc.com</code>，也就是说请填写与网址匹配的域名，前者如果填写 <code>abc.com</code> 是通过不了的。</p>
 </blockquote>
 <h2 id="SDK__u4E2D_OAuth__u6A21_u5757_u7684_API" class="article-heading"><a href="#SDK__u4E2D_OAuth__u6A21_u5757_u7684_API" class="headerlink" title="SDK 中 OAuth 模块的 API"></a>SDK 中 OAuth 模块的 API<a class="article-anchor" href="#SDK__u4E2D_OAuth__u6A21_u5757_u7684_API" aria-hidden="true"></a></h2><p>  在 SDK 中，我们使用名称为 <code>oauth</code> 的模块来完成授权服务，我们主要用到以下两个 API：</p>
 <h3 id="u53D1_u8D77_u6388_u6743" class="article-heading"><a href="#u53D1_u8D77_u6388_u6743" class="headerlink" title="发起授权"></a>发起授权<a class="article-anchor" href="#u53D1_u8D77_u6388_u6743" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$response</span> = <span class="variable">$app</span>[<span class="string">'oauth'</span>]-&gt;scope([<span class="string">'snsapi_userinfo'</span>])</span><br><span class="line">                          -&gt;redirect();</span><br></pre></td></tr></table></figure>
 <p>它的返回值 <code>$response</code> 是一个 <a href="http://api.symfony.com/3.0/Symfony/Component/HttpFoundation/RedirectResponse.html" target="_blank" rel="external">Symfony\Component\HttpFoundation\RedirectResponse</a> 实例。</p>
-<p>你可以选择在框架中做一些正确的响应，比如在 [Laravel] 框架中控制器方法是要求返回响应值的，那么你就直接:</p>
+<p>你可以选择在框架中做一些正确的响应，比如在 <a href="http://laravel.com" target="_blank" rel="external">Laravel</a> 框架中控制器方法是要求返回响应值的，那么你就直接:</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="variable">$response</span>;</span><br></pre></td></tr></table></figure>
-<p>在有一些框架中是直接 <code>echo</code> 或者 <code>$this-&gt;display()</code> 这种的时候，你就直接：</p>
+<p>在有的框架中是直接 <code>echo</code> 或者 <code>$this-&gt;display()</code> 这种的时候，你就直接：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="variable">$response</span>; <span class="comment">// 或者  $response-&gt;send(); exit();</span></span><br></pre></td></tr></table></figure>
 <h3 id="u83B7_u53D6_u5DF2_u6388_u6743_u7528_u6237" class="article-heading"><a href="#u83B7_u53D6_u5DF2_u6388_u6743_u7528_u6237" class="headerlink" title="获取已授权用户"></a>获取已授权用户<a class="article-anchor" href="#u83B7_u53D6_u5DF2_u6388_u6743_u7528_u6237" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$user</span> = <span class="variable">$app</span>[<span class="string">'oauth'</span>]-&gt;user();</span><br></pre></td></tr></table></figure>
 <p>返回的 <code>$user</code> 是 <a href="https://github.com/overtrue/socialite/blob/master/src/User.php" target="_blank" rel="external">Overtrue\Socialite\User</a> 对象，你可以从该对象拿到<a href="https://github.com/overtrue/socialite#user-interface" target="_blank" rel="external">更多的信息</a>。</p>
@@ -186,7 +186,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-04T10:54:44.573Z" itemprop="dateModified">上次更新：2016-01-04</time>
+                <time class="article-footer-updated" datetime="2016-01-04T13:15:53.666Z" itemprop="dateModified">上次更新：2016-01-04</time>
                 <a href="user-group.html" class="article-footer-prev" title="用户组"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="material.html" class="article-footer-next" title="素材管理"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
