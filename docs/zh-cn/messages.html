@@ -47,7 +47,7 @@
 <meta property="og:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
 在阅读以下内容时请忽略是接收消息还是回复消息，后面我会给你讲它们的区别。
 消息类型消息分为以下几种：文本、图片、视频、声音、链接、坐标、图文、文章">
-<meta property="og:updated_time" content="2016-01-05T14:08:16.769Z">
+<meta property="og:updated_time" content="2016-01-05T14:15:21.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="消息">
 <meta name="twitter:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
@@ -153,7 +153,7 @@
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Article</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$article</span> = <span class="keyword">new</span> Article([</span><br><span class="line">        <span class="string">'title'</span>   =&gt; <span class="string">'EasyWeChat'</span>,</span><br><span class="line">        <span class="string">'author'</span>  =&gt; <span class="string">'overtrue'</span>,</span><br><span class="line">        <span class="string">'content'</span> =&gt; <span class="string">'EasyWeChat 是一个开源的微信 SDK，它... ...'</span>,</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"><span class="variable">$article</span> = <span class="keyword">new</span> Article();</span><br><span class="line"><span class="variable">$article</span>-&gt;title   = <span class="string">'EasyWeChat'</span>;</span><br><span class="line"><span class="variable">$article</span>-&gt;author  = <span class="string">'overtrue'</span>;</span><br><span class="line"><span class="variable">$article</span>-&gt;content = <span class="string">'微信 SDK ...'</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
 <h3 id="u7D20_u6750_u6D88_u606F" class="article-heading"><a href="#u7D20_u6750_u6D88_u606F" class="headerlink" title="素材消息"></a>素材消息<a class="article-anchor" href="#u7D20_u6750_u6D88_u606F" aria-hidden="true"></a></h3><p>素材消息用于群发与客服消息时使用。</p>
 <p>属性就一个：<code>media_id</code>。</p>
-<p>在构造时有两处参数：</p>
+<p>在构造时有两个参数：</p>
 <ul>
 <li><code>$type</code> 素材类型，目前只支持：<code>mpnews</code>、 <code>mpvideo</code>、<code>voice</code>、<code>image</code> 等。</li>
 <li><code>$mediaId</code> 素材 ID，从接口查询或者上传后得到。</li>
@@ -176,7 +176,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-05T14:08:16.769Z" itemprop="dateModified">上次更新：2016-01-05</time>
+                <time class="article-footer-updated" datetime="2016-01-05T14:15:21.622Z" itemprop="dateModified">上次更新：2016-01-05</time>
                 <a href="server.html" class="article-footer-prev" title="服务端"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="events.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
