@@ -40,7 +40,8 @@
   <meta name="description" content="本项目使用 doctrine/cache 来完成缓存工作，它支持基本目前所有的缓存引擎。
 在我们的 SDK 中的所有缓存默认使用文件缓存，缓存路径取决于 PHP 的临时目录，如果你需要自定义缓存，那么你需要做如下的事情：
 你可以参考doctrine/cache官方文档来替换掉应用中默认的缓存配置：
-// 以 redis 为例// 先安装 redis 拓展：https://github.com/ph">
+
+以 redis 为例请先安装 redis 拓展：https://github.com/phpred">
 <meta property="og:type" content="website">
 <meta property="og:title" content="缓存">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/cache.html">
@@ -48,14 +49,16 @@
 <meta property="og:description" content="本项目使用 doctrine/cache 来完成缓存工作，它支持基本目前所有的缓存引擎。
 在我们的 SDK 中的所有缓存默认使用文件缓存，缓存路径取决于 PHP 的临时目录，如果你需要自定义缓存，那么你需要做如下的事情：
 你可以参考doctrine/cache官方文档来替换掉应用中默认的缓存配置：
-// 以 redis 为例// 先安装 redis 拓展：https://github.com/ph">
-<meta property="og:updated_time" content="2016-01-07T14:18:40.265Z">
+
+以 redis 为例请先安装 redis 拓展：https://github.com/phpred">
+<meta property="og:updated_time" content="2016-01-08T01:45:01.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="缓存">
 <meta name="twitter:description" content="本项目使用 doctrine/cache 来完成缓存工作，它支持基本目前所有的缓存引擎。
 在我们的 SDK 中的所有缓存默认使用文件缓存，缓存路径取决于 PHP 的临时目录，如果你需要自定义缓存，那么你需要做如下的事情：
 你可以参考doctrine/cache官方文档来替换掉应用中默认的缓存配置：
-// 以 redis 为例// 先安装 redis 拓展：https://github.com/ph">
+
+以 redis 为例请先安装 redis 拓展：https://github.com/phpred">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="缓存">
@@ -125,7 +128,9 @@
                 <p>本项目使用 <a href="https://github.com/doctrine/cache" target="_blank" rel="external">doctrine/cache</a> 来完成缓存工作，它支持基本目前所有的缓存引擎。</p>
 <p>在我们的 SDK 中的所有缓存默认使用文件缓存，缓存路径取决于 PHP 的临时目录，如果你需要自定义缓存，那么你需要做如下的事情：</p>
 <p>你可以参考<a href="http://doctrine-orm.readthedocs.org/projects/doctrine-orm/en/latest/reference/caching.html" target="_blank" rel="external">doctrine/cache官方文档</a>来替换掉应用中默认的缓存配置：</p>
-<p>// 以 redis 为例<br>// 先安装 redis 拓展：<a href="https://github.com/phpredis/phpredis" target="_blank" rel="external">https://github.com/phpredis/phpredis</a></p>
+<blockquote>
+<p>以 redis 为例<br>请先安装 redis 拓展：<a href="https://github.com/phpredis/phpredis" target="_blank" rel="external">https://github.com/phpredis/phpredis</a></p>
+</blockquote>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Doctrine</span>\<span class="title">Common</span>\<span class="title">Cache</span>\<span class="title">RedisCache</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$cacheDriver</span> = <span class="keyword">new</span> RedisCache();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建 redis 实例</span></span><br><span class="line"><span class="variable">$redis</span> = <span class="keyword">new</span> Redis();</span><br><span class="line"><span class="variable">$redis</span>-&gt;connect(<span class="string">'redis_host'</span>, <span class="number">6379</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$cacheDriver</span>-&gt;setRedis(<span class="variable">$redis</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span>[<span class="string">'cache'</span>] = <span class="variable">$cacheDriver</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="Laravel__u4E2D_u4F7F_u7528" class="article-heading"><a href="#Laravel__u4E2D_u4F7F_u7528" class="headerlink" title="Laravel 中使用"></a>Laravel 中使用<a class="article-anchor" href="#Laravel__u4E2D_u4F7F_u7528" aria-hidden="true"></a></h3><p>在 Laravel 中框架使用 <a href="https://github.com/nrk/predis" target="_blank" rel="external">predis/predis</a>，那么我们就得使用 <code>Doctrine\Common\Cache\PredisCache</code>：</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Doctrine</span>\<span class="title">Common</span>\<span class="title">Cache</span>\<span class="title">PredisCache</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$predis</span> = app(<span class="string">'redis'</span>)-&gt;connection();<span class="comment">// connection($name), $name 默认为 `default`</span></span><br><span class="line"><span class="variable">$cacheDriver</span> = <span class="keyword">new</span> PredisCache(<span class="variable">$predis</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span>[<span class="string">'cache'</span>] = <span class="variable">$cacheDriver</span>;</span><br></pre></td></tr></table></figure>
@@ -137,7 +142,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-07T14:18:40.265Z" itemprop="dateModified">上次更新：2016-01-07</time>
+                <time class="article-footer-updated" datetime="2016-01-08T01:45:01.843Z" itemprop="dateModified">上次更新：2016-01-08</time>
                 <a href="errors.html" class="article-footer-prev" title="错误处理"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="troubleshooting.html" class="article-footer-next" title="问题解答"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
