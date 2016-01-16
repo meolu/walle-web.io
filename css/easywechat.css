@@ -137,7 +137,6 @@ select {
   html,
   body {
     height: 100%;
-    overflow-x: hidden;
   }
 }
 body {
@@ -634,6 +633,7 @@ body.home {
   float: left;
   width: 100%;
   padding: 40px 0;
+  word-break: break-word;
 }
 @media print {
   .article {
