@@ -38,18 +38,18 @@
   <link rel="alternative" href="/atom.xml" title="Easy We Chat" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="用户信息的获取是微信开发中比较常用的一个功能了，以下所有的用户信息的获取与更新，都是基于微信的 openid 的，并且是已关注当前账号的，其它情况可能无法正常使用。
-获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;// ...$app = new Application($options);$userService = $app[&apos;user&apos;];">
+获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;// ...$app = new Application($options);$userService = $app-&amp;gt;user">
 <meta property="og:type" content="website">
 <meta property="og:title" content="用户">
 <meta property="og:url" content="http://easywechat.org/docs/zh-cn/user.html">
 <meta property="og:site_name" content="Easy We Chat">
 <meta property="og:description" content="用户信息的获取是微信开发中比较常用的一个功能了，以下所有的用户信息的获取与更新，都是基于微信的 openid 的，并且是已关注当前账号的，其它情况可能无法正常使用。
-获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;// ...$app = new Application($options);$userService = $app[&apos;user&apos;];">
-<meta property="og:updated_time" content="2016-01-25T10:08:15.113Z">
+获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;// ...$app = new Application($options);$userService = $app-&amp;gt;user">
+<meta property="og:updated_time" content="2016-01-27T14:42:14.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用户">
 <meta name="twitter:description" content="用户信息的获取是微信开发中比较常用的一个功能了，以下所有的用户信息的获取与更新，都是基于微信的 openid 的，并且是已关注当前账号的，其它情况可能无法正常使用。
-获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;// ...$app = new Application($options);$userService = $app[&apos;user&apos;];">
+获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;// ...$app = new Application($options);$userService = $app-&amp;gt;user">
 <meta name="twitter:site" content="anzhengchao">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="用户">
@@ -117,7 +117,7 @@
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 <p>用户信息的获取是微信开发中比较常用的一个功能了，以下所有的用户信息的获取与更新，都是<strong>基于微信的 <code>openid</code> 的，并且是已关注当前账号的</strong>，其它情况可能无法正常使用。</p>
-<h2 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Foundation</span>\<span class="title">Application</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$userService</span> = <span class="variable">$app</span>[<span class="string">'user'</span>];</span><br></pre></td></tr></table></figure>
+<h2 id="u83B7_u53D6_u5B9E_u4F8B" class="article-heading"><a href="#u83B7_u53D6_u5B9E_u4F8B" class="headerlink" title="获取实例"></a>获取实例<a class="article-anchor" href="#u83B7_u53D6_u5B9E_u4F8B" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Foundation</span>\<span class="title">Application</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$app</span> = <span class="keyword">new</span> Application(<span class="variable">$options</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$userService</span> = <span class="variable">$app</span>-&gt;user;</span><br></pre></td></tr></table></figure>
 <h2 id="API__u5217_u8868" class="article-heading"><a href="#API__u5217_u8868" class="headerlink" title="API 列表"></a>API 列表<a class="article-anchor" href="#API__u5217_u8868" aria-hidden="true"></a></h2><h3 id="u83B7_u53D6_u7528_u6237_u4FE1_u606F" class="article-heading"><a href="#u83B7_u53D6_u7528_u6237_u4FE1_u606F" class="headerlink" title="获取用户信息"></a>获取用户信息<a class="article-anchor" href="#u83B7_u53D6_u7528_u6237_u4FE1_u606F" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$userService</span>-&gt;get(<span class="variable">$openId</span>);</span><br></pre></td></tr></table></figure>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$user</span> = <span class="variable">$userService</span>-&gt;get(<span class="variable">$openId</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$user</span>-&gt;nickname; <span class="comment">// or $user['nickname']</span></span><br></pre></td></tr></table></figure>
 <h3 id="u83B7_u53D6_u7528_u6237_u5217_u8868" class="article-heading"><a href="#u83B7_u53D6_u7528_u6237_u5217_u8868" class="headerlink" title="获取用户列表"></a>获取用户列表<a class="article-anchor" href="#u83B7_u53D6_u7528_u6237_u5217_u8868" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$userService</span>-&gt;lists(<span class="variable">$nextOpenId</span> = <span class="keyword">null</span>);  <span class="comment">// $nextOpenId 可选</span></span><br></pre></td></tr></table></figure>
@@ -135,7 +135,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-01-25T10:08:15.113Z" itemprop="dateModified">上次更新：2016-01-25</time>
+                <time class="article-footer-updated" datetime="2016-01-27T14:42:14.512Z" itemprop="dateModified">上次更新：2016-01-27</time>
                 <a href="notice.html" class="article-footer-prev" title="模板消息"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="user-group.html" class="article-footer-next" title="用户组"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
