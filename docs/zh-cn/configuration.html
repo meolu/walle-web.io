@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>配置 | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/zh-cn/configuration.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/zh-cn/configuration.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/zh-cn/configuration.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/walle-5811935ca4.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="在前面我们已经讲过，初始化 SDK 的时候方法就是创建一个 EasyWeChat\Foundation\Application 实例：
+use EasyWeChat\Foundation\Application;$options = [   // ...];$app = new Application($options);
+那么配置的具体选项有哪些，下面是一个完整的列表：
+&amp;lt;?phpretu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="配置">
+<meta property="og:url" content="https://walle-web.io/docs/zh-cn/configuration.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="在前面我们已经讲过，初始化 SDK 的时候方法就是创建一个 EasyWeChat\Foundation\Application 实例：
+use EasyWeChat\Foundation\Application;$options = [   // ...];$app = new Application($options);
+那么配置的具体选项有哪些，下面是一个完整的列表：
+&amp;lt;?phpretu">
+<meta property="og:updated_time" content="2016-03-05T17:03:31.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="配置">
+<meta name="twitter:description" content="在前面我们已经讲过，初始化 SDK 的时候方法就是创建一个 EasyWeChat\Foundation\Application 实例：
+use EasyWeChat\Foundation\Application;$options = [   // ...];$app = new Application($options);
+那么配置的具体选项有哪些，下面是一个完整的列表：
+&amp;lt;?phpretu">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="配置">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64156348-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body class="">
+  <div id="container">
+    
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">EasyWeChat</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/donate.html" class="main-nav-link">打赏</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">配置</h1>
+                <a href="https://github.com/EasyWeChat/docs/edit/zh-cn/configuration.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <p>在前面我们已经讲过，初始化 SDK 的时候方法就是创建一个 <code>EasyWeChat\Foundation\Application</code> 实例：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Foundation</span>\<span class="title">Application</span>;</span><br><span class="line"></span><br><span class="line">$options = [</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">$app = <span class="keyword">new</span> Application($options);</span><br></pre></td></tr></table></figure>
+<p>那么配置的具体选项有哪些，下面是一个完整的列表：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> [</span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * Debug 模式，bool 值：true/false</span><br><span class="line">     *</span><br><span class="line">     * 当值为 false 时，所有的日志都不会记录</span><br><span class="line">     */</span></span><br><span class="line">    <span class="string">'debug'</span>  =&gt; <span class="keyword">true</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 账号基本信息，请从微信公众平台/开放平台获取</span><br><span class="line">     */</span></span><br><span class="line">    <span class="string">'app_id'</span>  =&gt; <span class="string">'your-app-id'</span>,         <span class="comment">// AppID</span></span><br><span class="line">    <span class="string">'secret'</span>  =&gt; <span class="string">'your-app-secret'</span>,     <span class="comment">// AppSecret</span></span><br><span class="line">    <span class="string">'token'</span>   =&gt; <span class="string">'your-token'</span>,          <span class="comment">// Token</span></span><br><span class="line">    <span class="string">'aes_key'</span> =&gt; <span class="string">''</span>,                    <span class="comment">// EncodingAESKey</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 日志配置</span><br><span class="line">     *</span><br><span class="line">     * level: 日志级别, 可选为：</span><br><span class="line">     *         debug/info/notice/warning/error/critical/alert/emergency</span><br><span class="line">     * file：日志文件位置(绝对路径!!!)，要求可写权限</span><br><span class="line">     */</span></span><br><span class="line">    <span class="string">'log'</span> =&gt; [</span><br><span class="line">        <span class="string">'level'</span> =&gt; <span class="string">'debug'</span>,</span><br><span class="line">        <span class="string">'file'</span>  =&gt; <span class="string">'/tmp/walle.log'</span>,</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * OAuth 配置</span><br><span class="line">     *</span><br><span class="line">     * scopes：公众平台（snsapi_userinfo / snsapi_base），开放平台：snsapi_login</span><br><span class="line">     * callback：OAuth授权完成后的回调页地址</span><br><span class="line">     */</span></span><br><span class="line">    <span class="string">'oauth'</span> =&gt; [</span><br><span class="line">        <span class="string">'scopes'</span>   =&gt; [<span class="string">'snsapi_userinfo'</span>],</span><br><span class="line">        <span class="string">'callback'</span> =&gt; <span class="string">'/examples/oauth_callback.php'</span>,</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * 微信支付</span><br><span class="line">     */</span></span><br><span class="line">    <span class="string">'payment'</span> =&gt; [</span><br><span class="line">        <span class="string">'merchant_id'</span>        =&gt; <span class="string">'your-mch-id'</span>,</span><br><span class="line">        <span class="string">'key'</span>                =&gt; <span class="string">'key-for-signature'</span>,</span><br><span class="line">        <span class="string">'cert_path'</span>          =&gt; <span class="string">'path/to/your/cert.pem'</span>, <span class="comment">// <span class="doctag">XXX:</span> 绝对路径！！！！</span></span><br><span class="line">        <span class="string">'key_path'</span>           =&gt; <span class="string">'path/to/your/key'</span>,      <span class="comment">// <span class="doctag">XXX:</span> 绝对路径！！！！</span></span><br><span class="line">        <span class="comment">// 'device_info'     =&gt; '013467007045764',</span></span><br><span class="line">        <span class="comment">// 'sub_app_id'      =&gt; '',</span></span><br><span class="line">        <span class="comment">// 'sub_merchant_id' =&gt; '',</span></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    ],</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<h2 id="日志文件" class="article-heading"><a href="#日志文件" class="headerlink" title="日志文件"></a>日志文件<a class="article-anchor" href="#日志文件" aria-hidden="true"></a></h2><p>配置文件里的<code>/tmp/...</code>是绝对路径</p>
+<p>如果在 windows 下，去把它改成<code>C:\foo\bar</code>的形式，<br>如查是 Linux ，你已经懂了……</p>
+<p>如查需要按日独立存储，可以配置成<code>&#39;file&#39;  =&gt; storage_path(&#39;/tmp/walle/walle_&#39;.date(&#39;Ymd&#39;).&#39;.log&#39;),</code></p>
+<p>其它同理……</p>
+
+
+                <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-03-05T17:03:31.178Z" itemprop="dateModified">上次更新：2016-03-06</time>
+                <a href="tutorial.html" class="article-footer-prev" title="小教程"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="integration.html" class="article-footer-next" title="在框架中使用"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#日志文件"><span class="toc-text">日志文件</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="installation.html" class="sidebar-link">安装</a><a href="tutorial.html" class="sidebar-link">小教程</a><a href="configuration.html" class="sidebar-link current">配置</a><a href="integration.html" class="sidebar-link">在框架中使用</a><strong class="sidebar-title">基本使用</strong><a href="server.html" class="sidebar-link">服务端</a><a href="messages.html" class="sidebar-link">消息</a><a href="events.html" class="sidebar-link">事件</a><a href="broadcast.html" class="sidebar-link">群发消息</a><a href="notice.html" class="sidebar-link">模板消息</a><a href="user.html" class="sidebar-link">用户</a><a href="user-group.html" class="sidebar-link">用户组</a><a href="oauth.html" class="sidebar-link">网页授权</a><a href="material.html" class="sidebar-link">素材管理</a><a href="menu.html" class="sidebar-link">菜单</a><a href="js.html" class="sidebar-link">JSSDK</a><a href="payment.html" class="sidebar-link">支付</a><a href="lucky-money.html" class="sidebar-link">红包</a><a href="card.html" class="sidebar-link">卡券</a><a href="store.html" class="sidebar-link">小店</a><a href="poi.html" class="sidebar-link">门店</a><a href="staff.html" class="sidebar-link">客服</a><a href="anaylsis.html" class="sidebar-link">数据统计与分析</a><a href="qrcode.html" class="sidebar-link">二维码</a><a href="short-url.html" class="sidebar-link">短网址</a><a href="semantic.html" class="sidebar-link">语义理解</a><a href="reply.html" class="sidebar-link">自动回复</a><strong class="sidebar-title">自定义</strong><a href="errors.html" class="sidebar-link">sidebar.docs.errors</a><a href="cache.html" class="sidebar-link">缓存</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a><a href="roadmap.html" class="sidebar-link">路线图</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2016 <a href="http://overtrue.me/" target="_blank">wushuiyong@huamanshu.com</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/donate.html" class="mobile-nav-link">打赏</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="installation.html" class="mobile-nav-link">安装</a><a href="tutorial.html" class="mobile-nav-link">小教程</a><a href="configuration.html" class="mobile-nav-link current">配置</a><a href="integration.html" class="mobile-nav-link">在框架中使用</a><strong class="mobile-nav-title">基本使用</strong><a href="server.html" class="mobile-nav-link">服务端</a><a href="messages.html" class="mobile-nav-link">消息</a><a href="events.html" class="mobile-nav-link">事件</a><a href="broadcast.html" class="mobile-nav-link">群发消息</a><a href="notice.html" class="mobile-nav-link">模板消息</a><a href="user.html" class="mobile-nav-link">用户</a><a href="user-group.html" class="mobile-nav-link">用户组</a><a href="oauth.html" class="mobile-nav-link">网页授权</a><a href="material.html" class="mobile-nav-link">素材管理</a><a href="menu.html" class="mobile-nav-link">菜单</a><a href="js.html" class="mobile-nav-link">JSSDK</a><a href="payment.html" class="mobile-nav-link">支付</a><a href="lucky-money.html" class="mobile-nav-link">红包</a><a href="card.html" class="mobile-nav-link">卡券</a><a href="store.html" class="mobile-nav-link">小店</a><a href="poi.html" class="mobile-nav-link">门店</a><a href="staff.html" class="mobile-nav-link">客服</a><a href="anaylsis.html" class="mobile-nav-link">数据统计与分析</a><a href="qrcode.html" class="mobile-nav-link">二维码</a><a href="short-url.html" class="mobile-nav-link">短网址</a><a href="semantic.html" class="mobile-nav-link">语义理解</a><a href="reply.html" class="mobile-nav-link">自动回复</a><strong class="mobile-nav-title">自定义</strong><a href="errors.html" class="mobile-nav-link">sidebar.docs.errors</a><a href="cache.html" class="mobile-nav-link">缓存</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a><a href="roadmap.html" class="mobile-nav-link">路线图</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-c408272d8b.js"></script>
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>

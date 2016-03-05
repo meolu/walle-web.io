@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>消息 | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/zh-cn/messages.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/zh-cn/messages.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/zh-cn/messages.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/build/css/walle-5811935ca4.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
+在阅读以下内容时请忽略是接收消息还是回复消息，后面我会给你讲它们的区别。
+消息类型消息分为以下几种：文本、图片、视频、声音、链接、坐标、图文、文章">
+<meta property="og:type" content="website">
+<meta property="og:title" content="消息">
+<meta property="og:url" content="https://walle-web.io/docs/zh-cn/messages.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
+在阅读以下内容时请忽略是接收消息还是回复消息，后面我会给你讲它们的区别。
+消息类型消息分为以下几种：文本、图片、视频、声音、链接、坐标、图文、文章">
+<meta property="og:updated_time" content="2016-03-05T17:03:31.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="消息">
+<meta name="twitter:description" content="我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。
+在阅读以下内容时请忽略是接收消息还是回复消息，后面我会给你讲它们的区别。
+消息类型消息分为以下几种：文本、图片、视频、声音、链接、坐标、图文、文章">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="消息">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64156348-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body class="">
+  <div id="container">
+    
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">EasyWeChat</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/donate.html" class="main-nav-link">打赏</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">消息</h1>
+                <a href="https://github.com/EasyWeChat/docs/edit/zh-cn/messages.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <p>我把微信的 API 里的所有“消息”都按类型抽象出来了，也就是说，你不用区分它是回复消息还是主动推送消息，免去了你去手动拼装微信那帮 SB 那么恶心的 XML 以及乱七八糟命名不统一的 JSON 了，我替你承受这份苦，不要问是谁，我是雷锋他弟弟，雷管。</p>
+<p>在阅读以下内容时请忽略是<strong>接收消息</strong>还是<strong>回复消息</strong>，后面我会给你讲它们的区别。</p>
+<h2 id="消息类型" class="article-heading"><a href="#消息类型" class="headerlink" title="消息类型"></a>消息类型<a class="article-anchor" href="#消息类型" aria-hidden="true"></a></h2><p>消息分为以下几种：<code>文本</code>、<code>图片</code>、<code>视频</code>、<code>声音</code>、<code>链接</code>、<code>坐标</code>、<code>图文</code>、<code>文章</code> 和一种特殊的 <code>原始消息</code>。</p>
+<p>另外还有一种特殊的消息类型：<strong>素材消息</strong>，用于群发或者客服时发送已有素材用。</p>
+<blockquote>
+<p>注意：回复消息与客服消息里的图文类型为：<strong>图文</strong>，群发与素材中的图文为<strong>文章</strong></p>
+</blockquote>
+<p>所有的消息类都在 <code>EasyWeChat\Message</code> 这个命名空间下， 下面我们来分开讲解：</p>
+<h3 id="文本消息" class="article-heading"><a href="#文本消息" class="headerlink" title="文本消息"></a>文本消息<a class="article-anchor" href="#文本消息" aria-hidden="true"></a></h3><p>属性列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- content 文本内容</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Text</span>;</span><br><span class="line"></span><br><span class="line">$text = <span class="keyword">new</span> Text([<span class="string">'content'</span> =&gt; <span class="string">'您好！overtrue。'</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$text = <span class="keyword">new</span> Text();</span><br><span class="line">$text-&gt;content = <span class="string">'您好！overtrue。'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$text = <span class="keyword">new</span> Text();</span><br><span class="line">$text-&gt;setAttribute(<span class="string">'content'</span>, <span class="string">'您好！overtrue。'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="图片消息" class="article-heading"><a href="#图片消息" class="headerlink" title="图片消息"></a>图片消息<a class="article-anchor" href="#图片消息" aria-hidden="true"></a></h3><p>属性列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- media_id 媒体资源 ID</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Image</span>;</span><br><span class="line"></span><br><span class="line">$text = <span class="keyword">new</span> Image([<span class="string">'media_id'</span> =&gt; $mediaId]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$text = <span class="keyword">new</span> Image();</span><br><span class="line">$text-&gt;media_id = $mediaId; <span class="comment">// or $text-&gt;mediaId = $media;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$text = <span class="keyword">new</span> Image();</span><br><span class="line">$text-&gt;setAttribute(<span class="string">'media_id'</span>, $mediaId);</span><br></pre></td></tr></table></figure>
+<h3 id="视频消息" class="article-heading"><a href="#视频消息" class="headerlink" title="视频消息"></a>视频消息<a class="article-anchor" href="#视频消息" aria-hidden="true"></a></h3><p>属性列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- title 标题</span><br><span class="line">- description 描述</span><br><span class="line">- media_id 媒体资源 ID</span><br><span class="line">- thumb_media_id 封面资源 ID</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Video</span>;</span><br><span class="line"></span><br><span class="line">$video = <span class="keyword">new</span> Video([</span><br><span class="line">        <span class="string">'title'</span> =&gt; $title,</span><br><span class="line">        <span class="string">'media_id'</span> =&gt; $mediaId,</span><br><span class="line">        <span class="string">'description'</span> =&gt; <span class="string">'...'</span>,</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$video = <span class="keyword">new</span> Video();</span><br><span class="line">$video-&gt;media_id = $mediaId; <span class="comment">// or $video-&gt;mediaId = $media;</span></span><br><span class="line">$video-&gt;description = <span class="string">'video description...'</span>; <span class="comment">// or $video-&gt;description = $description;</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$video = <span class="keyword">new</span> Video();</span><br><span class="line">$video-&gt;setAttribute(<span class="string">'media_id'</span>, $mediaId);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="声音消息" class="article-heading"><a href="#声音消息" class="headerlink" title="声音消息"></a>声音消息<a class="article-anchor" href="#声音消息" aria-hidden="true"></a></h3><p>属性列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- media_id 媒体资源 ID</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Voice</span>;</span><br><span class="line"></span><br><span class="line">$voice = <span class="keyword">new</span> Voice([<span class="string">'media_id'</span> =&gt; $mediaId]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$voice = <span class="keyword">new</span> Voice();</span><br><span class="line">$voice-&gt;media_id = $mediaId; <span class="comment">// or $voice-&gt;mediaId = $media;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$voice = <span class="keyword">new</span> Voice();</span><br><span class="line">$voice-&gt;setAttribute(<span class="string">'media_id'</span>, $mediaId);</span><br></pre></td></tr></table></figure>
+<h3 id="链接消息" class="article-heading"><a href="#链接消息" class="headerlink" title="链接消息"></a>链接消息<a class="article-anchor" href="#链接消息" aria-hidden="true"></a></h3><blockquote>
+<p>微信目前不支持回复链接消息</p>
+</blockquote>
+<h3 id="坐标消息" class="article-heading"><a href="#坐标消息" class="headerlink" title="坐标消息"></a>坐标消息<a class="article-anchor" href="#坐标消息" aria-hidden="true"></a></h3><blockquote>
+<p>微信目前不支持回复坐标消息</p>
+</blockquote>
+<h3 id="图文消息" class="article-heading"><a href="#图文消息" class="headerlink" title="图文消息"></a>图文消息<a class="article-anchor" href="#图文消息" aria-hidden="true"></a></h3><p>属性列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- title 标题</span><br><span class="line">- description 描述</span><br><span class="line">- image 图片链接</span><br><span class="line">- url 链接 URL</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">News</span>;</span><br><span class="line"></span><br><span class="line">$news = <span class="keyword">new</span> News([</span><br><span class="line">        <span class="string">'title'</span>       =&gt; $title,</span><br><span class="line">        <span class="string">'description'</span> =&gt; <span class="string">'...'</span>,</span><br><span class="line">        <span class="string">'url'</span>         =&gt; $url,</span><br><span class="line">        <span class="string">'image'</span>       =&gt; $image,</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$news = <span class="keyword">new</span> News();</span><br><span class="line">$news-&gt;title = <span class="string">'EasyWeChat'</span>;</span><br><span class="line">$news-&gt;description = <span class="string">'微信 SDK ...'</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="文章消息" class="article-heading"><a href="#文章消息" class="headerlink" title="文章消息"></a>文章消息<a class="article-anchor" href="#文章消息" aria-hidden="true"></a></h3><p>属性列表：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- title 标题</span><br><span class="line">- author 作者</span><br><span class="line">- content 具体内容</span><br><span class="line">- thumb_media_id 图文消息的封面图片素材id（必须是永久mediaID）</span><br><span class="line">- digest 图文消息的摘要，仅有单图文消息才有摘要，多图文此处为空</span><br><span class="line">- source_url 来源 URL</span><br><span class="line">- show_cover 是否显示封面，0 为 false，即不显示，1 为 true，即显示</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Article</span>;</span><br><span class="line"></span><br><span class="line">$article = <span class="keyword">new</span> Article([</span><br><span class="line">        <span class="string">'title'</span>   =&gt; <span class="string">'EasyWeChat'</span>,</span><br><span class="line">        <span class="string">'author'</span>  =&gt; <span class="string">'overtrue'</span>,</span><br><span class="line">        <span class="string">'content'</span> =&gt; <span class="string">'EasyWeChat 是一个开源的微信 SDK，它... ...'</span>,</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    ]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$article = <span class="keyword">new</span> Article();</span><br><span class="line">$article-&gt;title   = <span class="string">'EasyWeChat'</span>;</span><br><span class="line">$article-&gt;author  = <span class="string">'overtrue'</span>;</span><br><span class="line">$article-&gt;content = <span class="string">'微信 SDK ...'</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="素材消息" class="article-heading"><a href="#素材消息" class="headerlink" title="素材消息"></a>素材消息<a class="article-anchor" href="#素材消息" aria-hidden="true"></a></h3><p>素材消息用于群发与客服消息时使用。</p>
+<p>属性就一个：<code>media_id</code>。</p>
+<p>在构造时有两个参数：</p>
+<ul>
+<li><code>$type</code> 素材类型，目前只支持：<code>mpnews</code>、 <code>mpvideo</code>、<code>voice</code>、<code>image</code> 等。</li>
+<li><code>$mediaId</code> 素材 ID，从接口查询或者上传后得到。</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Material</span>;</span><br><span class="line"></span><br><span class="line">$material = <span class="keyword">new</span> Material(<span class="string">'mpnews'</span>, $mediaId);</span><br></pre></td></tr></table></figure>
+<p>以上呢，是所有微信支持的基本消息类型。</p>
+<blockquote>
+<p>需要注意的是，你不需要关心微信的消息字段叫啥，因为这里我们使用了更标准的命名，然后最终在中间做了转换，所以你不需要关注。</p>
+</blockquote>
+<h3 id="原始消息" class="article-heading"><a href="#原始消息" class="headerlink" title="原始消息"></a>原始消息<a class="article-anchor" href="#原始消息" aria-hidden="true"></a></h3><p>原始消息是一种特殊的消息，它的场景是：<strong>你不想使用其它消息类型，你想自己手动拼消息</strong>。比如，回复消息时，你想自己拼 XML，那么你就直接用它就可以了：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Raw</span>;</span><br><span class="line"></span><br><span class="line">$message = <span class="keyword">new</span> Raw(<span class="string">'&lt;xml&gt;</span><br><span class="line">&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;</span><br><span class="line">&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;</span><br><span class="line">&lt;CreateTime&gt;12345678&lt;/CreateTime&gt;</span><br><span class="line">&lt;MsgType&gt;&lt;![CDATA[image]]&gt;&lt;/MsgType&gt;</span><br><span class="line">&lt;Image&gt;</span><br><span class="line">&lt;MediaId&gt;&lt;![CDATA[media_id]]&gt;&lt;/MediaId&gt;</span><br><span class="line">&lt;/Image&gt;</span><br><span class="line">&lt;/xml&gt;'</span>);</span><br></pre></td></tr></table></figure>
+<p>比如，你要用于客服消息(客服消息是JSON结构)：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Raw</span>;</span><br><span class="line"></span><br><span class="line">$message = <span class="keyword">new</span> Raw(<span class="string">'&#123;</span><br><span class="line">    "touser":"OPENID",</span><br><span class="line">    "msgtype":"text",</span><br><span class="line">    "text":</span><br><span class="line">    &#123;</span><br><span class="line">         "content":"Hello World"</span><br><span class="line">    &#125;</span><br><span class="line">&#125;'</span>);</span><br></pre></td></tr></table></figure>
+<p>总之，就是直接写微信接口要求的格式内容就好，此类型消息在 SDK 中不存在转换行为，所以请注意不要写错格式。</p>
+<h2 id="在-SDK-中使用消息" class="article-heading"><a href="#在-SDK-中使用消息" class="headerlink" title="在 SDK 中使用消息"></a>在 SDK 中使用消息<a class="article-anchor" href="#在-SDK-中使用消息" aria-hidden="true"></a></h2><h3 id="在服务端回复消息" class="article-heading"><a href="#在服务端回复消息" class="headerlink" title="在服务端回复消息"></a>在服务端回复消息<a class="article-anchor" href="#在服务端回复消息" aria-hidden="true"></a></h3><p>在 <a href="server.html">服务端</a> 一节中，我们讲了回复消息的写法：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ... 前面部分省略</span></span><br><span class="line">$app = <span class="keyword">new</span> Application($options);</span><br><span class="line">$server = $app-&gt;server;</span><br><span class="line"></span><br><span class="line">$server-&gt;setMessageHandler(<span class="function"><span class="keyword">function</span> <span class="params">($message)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"您好！欢迎关注我!"</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$server-&gt;serve()-&gt;send();</span><br></pre></td></tr></table></figure>
+<p>上面 <code>return</code> 了一句普通的文本内容，这里只是为了方便大家，实际上最后会有一个隐式转换为 <code>Text</code> 类型的动作。</p>
+<p>如果你要回复其它类型的消息，就需要返回一个具体的实例了，比如回复一个图片类型的消息：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Image</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">$server-&gt;setMessageHandler(<span class="function"><span class="keyword">function</span> <span class="params">($message)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Image([<span class="string">'media_id'</span> =&gt; <span class="string">'........'</span>]);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<h4 id="回复多图文消息" class="article-heading"><a href="#回复多图文消息" class="headerlink" title="回复多图文消息"></a>回复多图文消息<a class="article-anchor" href="#回复多图文消息" aria-hidden="true"></a></h4><p>多图文消息其实就是单图文消息的一个数组而已了：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">News</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">$server-&gt;setMessageHandler(<span class="function"><span class="keyword">function</span> <span class="params">($message)</span> </span>&#123;</span><br><span class="line">    $news1 = <span class="keyword">new</span> News(...);</span><br><span class="line">    $news2 = <span class="keyword">new</span> News(...);</span><br><span class="line">    $news3 = <span class="keyword">new</span> News(...);</span><br><span class="line">    $news4 = <span class="keyword">new</span> News(...);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> [$news1, $news2, $news3, $news4];</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+<h3 id="作为客服消息发送" class="article-heading"><a href="#作为客服消息发送" class="headerlink" title="作为客服消息发送"></a>作为客服消息发送<a class="article-anchor" href="#作为客服消息发送" aria-hidden="true"></a></h3><p>在客服消息里的使用也一样，都是直接传入消息实例即可：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">EasyWeChat</span>\<span class="title">Message</span>\<span class="title">Text</span>;</span><br><span class="line"></span><br><span class="line">$message = <span class="keyword">new</span> Text([<span class="string">'content'</span> =&gt; <span class="string">'Hello world!'</span>]);</span><br><span class="line"></span><br><span class="line">$result = $app-&gt;staff-&gt;message($message)-&gt;to($openId)-&gt;send();</span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure>
+<h4 id="发送多图文消息" class="article-heading"><a href="#发送多图文消息" class="headerlink" title="发送多图文消息"></a>发送多图文消息<a class="article-anchor" href="#发送多图文消息" aria-hidden="true"></a></h4><p>多图文消息其实就是单图文消息的一个数组而已了：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$news1 = <span class="keyword">new</span> News(...);</span><br><span class="line">$news2 = <span class="keyword">new</span> News(...);</span><br><span class="line">$news3 = <span class="keyword">new</span> News(...);</span><br><span class="line">$news4 = <span class="keyword">new</span> News(...);</span><br><span class="line"></span><br><span class="line">$app-&gt;staff-&gt;message([$news1, $news2, $news3, $news4])-&gt;to($openId)-&gt;send();</span><br></pre></td></tr></table></figure>
+<h3 id="群发消息" class="article-heading"><a href="#群发消息" class="headerlink" title="群发消息"></a>群发消息<a class="article-anchor" href="#群发消息" aria-hidden="true"></a></h3><p>请参考：<a href="docs/broadcast.html">群发消息</a></p>
+
+
+                <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2016-03-05T17:03:31.178Z" itemprop="dateModified">上次更新：2016-03-06</time>
+                <a href="server.html" class="article-footer-prev" title="服务端"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="events.html" class="article-footer-next" title="事件"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#消息类型"><span class="toc-text">消息类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文本消息"><span class="toc-text">文本消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图片消息"><span class="toc-text">图片消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视频消息"><span class="toc-text">视频消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声音消息"><span class="toc-text">声音消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接消息"><span class="toc-text">链接消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#坐标消息"><span class="toc-text">坐标消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#图文消息"><span class="toc-text">图文消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章消息"><span class="toc-text">文章消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#素材消息"><span class="toc-text">素材消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原始消息"><span class="toc-text">原始消息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在-SDK-中使用消息"><span class="toc-text">在 SDK 中使用消息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在服务端回复消息"><span class="toc-text">在服务端回复消息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#回复多图文消息"><span class="toc-text">回复多图文消息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作为客服消息发送"><span class="toc-text">作为客服消息发送</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#发送多图文消息"><span class="toc-text">发送多图文消息</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#群发消息"><span class="toc-text">群发消息</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="installation.html" class="sidebar-link">安装</a><a href="tutorial.html" class="sidebar-link">小教程</a><a href="configuration.html" class="sidebar-link">配置</a><a href="integration.html" class="sidebar-link">在框架中使用</a><strong class="sidebar-title">基本使用</strong><a href="server.html" class="sidebar-link">服务端</a><a href="messages.html" class="sidebar-link current">消息</a><a href="events.html" class="sidebar-link">事件</a><a href="broadcast.html" class="sidebar-link">群发消息</a><a href="notice.html" class="sidebar-link">模板消息</a><a href="user.html" class="sidebar-link">用户</a><a href="user-group.html" class="sidebar-link">用户组</a><a href="oauth.html" class="sidebar-link">网页授权</a><a href="material.html" class="sidebar-link">素材管理</a><a href="menu.html" class="sidebar-link">菜单</a><a href="js.html" class="sidebar-link">JSSDK</a><a href="payment.html" class="sidebar-link">支付</a><a href="lucky-money.html" class="sidebar-link">红包</a><a href="card.html" class="sidebar-link">卡券</a><a href="store.html" class="sidebar-link">小店</a><a href="poi.html" class="sidebar-link">门店</a><a href="staff.html" class="sidebar-link">客服</a><a href="anaylsis.html" class="sidebar-link">数据统计与分析</a><a href="qrcode.html" class="sidebar-link">二维码</a><a href="short-url.html" class="sidebar-link">短网址</a><a href="semantic.html" class="sidebar-link">语义理解</a><a href="reply.html" class="sidebar-link">自动回复</a><strong class="sidebar-title">自定义</strong><a href="errors.html" class="sidebar-link">sidebar.docs.errors</a><a href="cache.html" class="sidebar-link">缓存</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a><a href="roadmap.html" class="sidebar-link">路线图</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2016 <a href="http://overtrue.me/" target="_blank">wushuiyong@huamanshu.com</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/donate.html" class="mobile-nav-link">打赏</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="installation.html" class="mobile-nav-link">安装</a><a href="tutorial.html" class="mobile-nav-link">小教程</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="integration.html" class="mobile-nav-link">在框架中使用</a><strong class="mobile-nav-title">基本使用</strong><a href="server.html" class="mobile-nav-link">服务端</a><a href="messages.html" class="mobile-nav-link current">消息</a><a href="events.html" class="mobile-nav-link">事件</a><a href="broadcast.html" class="mobile-nav-link">群发消息</a><a href="notice.html" class="mobile-nav-link">模板消息</a><a href="user.html" class="mobile-nav-link">用户</a><a href="user-group.html" class="mobile-nav-link">用户组</a><a href="oauth.html" class="mobile-nav-link">网页授权</a><a href="material.html" class="mobile-nav-link">素材管理</a><a href="menu.html" class="mobile-nav-link">菜单</a><a href="js.html" class="mobile-nav-link">JSSDK</a><a href="payment.html" class="mobile-nav-link">支付</a><a href="lucky-money.html" class="mobile-nav-link">红包</a><a href="card.html" class="mobile-nav-link">卡券</a><a href="store.html" class="mobile-nav-link">小店</a><a href="poi.html" class="mobile-nav-link">门店</a><a href="staff.html" class="mobile-nav-link">客服</a><a href="anaylsis.html" class="mobile-nav-link">数据统计与分析</a><a href="qrcode.html" class="mobile-nav-link">二维码</a><a href="short-url.html" class="mobile-nav-link">短网址</a><a href="semantic.html" class="mobile-nav-link">语义理解</a><a href="reply.html" class="mobile-nav-link">自动回复</a><strong class="mobile-nav-title">自定义</strong><a href="errors.html" class="mobile-nav-link">sidebar.docs.errors</a><a href="cache.html" class="mobile-nav-link">缓存</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a><a href="roadmap.html" class="mobile-nav-link">路线图</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<script src="/build/js/main-c408272d8b.js"></script>
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
