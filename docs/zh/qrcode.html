@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <title>二维码 | walle 瓦力 - 部署系统</title>
@@ -10,7 +10,7 @@
   <!-- Alternative links -->
   
     
-      <link rel="alternative" hreflang="zh" href="https://walle-web.io/zh/docs/zh/qrcode.html">
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/zh/qrcode.html">
     
       <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/zh/qrcode.html">
     
@@ -53,7 +53,7 @@
 永久二维码，是无过期时间的，但数量较少（目前为最多10万个）。永久二维码主要用于适用于帐号绑定、用户来源统计等场景。
 
 获取实例&amp;lt;?phpuse EasyWeChat\Foundation\Application;">
-<meta property="og:updated_time" content="2016-03-05T14:16:10.811Z">
+<meta property="og:updated_time" content="2016-03-05T14:58:54.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维码">
 <meta name="twitter:description" content="目前有2种类型的二维码：
@@ -88,7 +88,7 @@
     </h1>
     <nav id="main-nav">
       <ul>
-        <li class="main-nav-item"><a href="/zh" class="main-nav-link">Home</a></li><li class="main-nav-item"><a href="/docs/zh" class="main-nav-link">Docs</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">News</a></li><li class="main-nav-item"><a href="/donate.html" class="main-nav-link">Donate</a></li>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/donate.html" class="main-nav-link">打赏</a></li>
         <li class="main-nav-item">
           <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
         </li>
@@ -98,7 +98,7 @@
       <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
       <select id="lang-select">
         
-          <option value="zh" selected>简体中文</option>
+          <option value="zh-cn" selected>简体中文</option>
         
           <option value="en">English</option>
         
@@ -125,7 +125,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">二维码</h1>
-                <a href="https://github.com/EasyWeChat/docs/edit/zh/zh/qrcode.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i> Improve this doc</a>
+                <a href="https://github.com/EasyWeChat/docs/edit/zh-cn/zh/qrcode.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 <p>目前有2种类型的二维码：</p>
@@ -147,26 +147,26 @@
 <h3 id="获取二维码内容" class="article-heading"><a href="#获取二维码内容" class="headerlink" title="获取二维码内容"></a>获取二维码内容<a class="article-anchor" href="#获取二维码内容" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$url = $qrcode-&gt;url($ticket);</span><br><span class="line"></span><br><span class="line">$content = file_get_contents($url); <span class="comment">// 得到二进制图片内容</span></span><br><span class="line"></span><br><span class="line">file_put_contents(<span class="keyword">__DIR__</span> . <span class="string">'/code.jpg'</span>, $content); <span class="comment">// 写入文件</span></span><br></pre></td></tr></table></figure>
 
 
-                <div class="donate-btn text-center"><a href="/donate.html" target="_blank">Donate</a></div>
+                <div class="donate-btn text-center"><a href="/donate.html" target="_blank">我要打赏支持</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-03-05T14:16:10.811Z" itemprop="dateModified">Last updated: 2016-03-05</time>
-                <a href="anaylsis.html" class="article-footer-prev" title="Anaylsis"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="short-url.html" class="article-footer-next" title="Short Url"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+                <time class="article-footer-updated" datetime="2016-03-05T14:58:54.149Z" itemprop="dateModified">上次更新：2016-03-05</time>
+                <a href="anaylsis.html" class="article-footer-prev" title="数据统计与分析"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="short-url.html" class="article-footer-next" title="短网址"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
-              <strong class="sidebar-title">Contents</strong>
+              <strong class="sidebar-title">目录</strong>
               <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取实例"><span class="toc-text">获取实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建临时二维码"><span class="toc-text">创建临时二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建永久二维码"><span class="toc-text">创建永久二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取二维码网址"><span class="toc-text">获取二维码网址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建卡券二维码"><span class="toc-text">创建卡券二维码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取二维码内容"><span class="toc-text">获取二维码内容</span></a></li></ol></li></ol>
-              <a href="#" id="article-toc-top">Back to Top</a>
+              <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
         </div>
       </article>
       <aside id="sidebar" role="navigation">
-  <div class="inner"><strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="installation.html" class="sidebar-link">Installation</a><a href="tutorial.html" class="sidebar-link">Tutorial</a><a href="configuration.html" class="sidebar-link">Configuration</a><a href="integration.html" class="sidebar-link">Integration</a><strong class="sidebar-title">Basic Usage</strong><a href="server.html" class="sidebar-link">Server</a><a href="messages.html" class="sidebar-link">Messages</a><a href="events.html" class="sidebar-link">Events</a><a href="broadcast.html" class="sidebar-link">Broadcast</a><a href="notice.html" class="sidebar-link">Notice</a><a href="user.html" class="sidebar-link">User</a><a href="user-group.html" class="sidebar-link">User Group</a><a href="oauth.html" class="sidebar-link">Oauth</a><a href="material.html" class="sidebar-link">Materials</a><a href="menu.html" class="sidebar-link">Menu</a><a href="js.html" class="sidebar-link">Javascript</a><a href="payment.html" class="sidebar-link">Payment</a><a href="lucky-money.html" class="sidebar-link">Lucky Money</a><a href="card.html" class="sidebar-link">Card</a><a href="store.html" class="sidebar-link">Store</a><a href="poi.html" class="sidebar-link">POI</a><a href="staff.html" class="sidebar-link">Staff</a><a href="anaylsis.html" class="sidebar-link">Anaylsis</a><a href="qrcode.html" class="sidebar-link current">Qrcode</a><a href="short-url.html" class="sidebar-link">Short Url</a><a href="semantic.html" class="sidebar-link">Semantic</a><a href="reply.html" class="sidebar-link">Auto Reply</a><strong class="sidebar-title">Customization</strong><a href="errors.html" class="sidebar-link">sidebar.docs.errors</a><a href="cache.html" class="sidebar-link">Cache</a><strong class="sidebar-title">Miscellaneous</strong><a href="troubleshooting.html" class="sidebar-link">Troubleshooting</a><a href="contributing.html" class="sidebar-link">Contributing</a><a href="releases.html" class="sidebar-link">Releases Notes</a><a href="roadmap.html" class="sidebar-link">Roadmap</a></div>
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="installation.html" class="sidebar-link">安装</a><a href="tutorial.html" class="sidebar-link">小教程</a><a href="configuration.html" class="sidebar-link">配置</a><a href="integration.html" class="sidebar-link">在框架中使用</a><strong class="sidebar-title">基本使用</strong><a href="server.html" class="sidebar-link">服务端</a><a href="messages.html" class="sidebar-link">消息</a><a href="events.html" class="sidebar-link">事件</a><a href="broadcast.html" class="sidebar-link">群发消息</a><a href="notice.html" class="sidebar-link">模板消息</a><a href="user.html" class="sidebar-link">用户</a><a href="user-group.html" class="sidebar-link">用户组</a><a href="oauth.html" class="sidebar-link">网页授权</a><a href="material.html" class="sidebar-link">素材管理</a><a href="menu.html" class="sidebar-link">菜单</a><a href="js.html" class="sidebar-link">JSSDK</a><a href="payment.html" class="sidebar-link">支付</a><a href="lucky-money.html" class="sidebar-link">红包</a><a href="card.html" class="sidebar-link">卡券</a><a href="store.html" class="sidebar-link">小店</a><a href="poi.html" class="sidebar-link">门店</a><a href="staff.html" class="sidebar-link">客服</a><a href="anaylsis.html" class="sidebar-link">数据统计与分析</a><a href="qrcode.html" class="sidebar-link current">二维码</a><a href="short-url.html" class="sidebar-link">短网址</a><a href="semantic.html" class="sidebar-link">语义理解</a><a href="reply.html" class="sidebar-link">自动回复</a><strong class="sidebar-title">自定义</strong><a href="errors.html" class="sidebar-link">sidebar.docs.errors</a><a href="cache.html" class="sidebar-link">缓存</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a><a href="roadmap.html" class="sidebar-link">路线图</a></div>
 </aside>
     </div>
   </div>
@@ -191,20 +191,20 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <li class="mobile-nav-item"><a href="/zh" class="mobile-nav-link">Home</a></li><li class="mobile-nav-item"><a href="/docs/zh" class="mobile-nav-link">Docs</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">News</a></li><li class="mobile-nav-item"><a href="/donate.html" class="mobile-nav-link">Donate</a></li>
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/donate.html" class="mobile-nav-link">打赏</a></li>
       <li class="mobile-nav-item">
         <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
     </ul>
     
-      <strong class="mobile-nav-title">Getting Started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="installation.html" class="mobile-nav-link">Installation</a><a href="tutorial.html" class="mobile-nav-link">Tutorial</a><a href="configuration.html" class="mobile-nav-link">Configuration</a><a href="integration.html" class="mobile-nav-link">Integration</a><strong class="mobile-nav-title">Basic Usage</strong><a href="server.html" class="mobile-nav-link">Server</a><a href="messages.html" class="mobile-nav-link">Messages</a><a href="events.html" class="mobile-nav-link">Events</a><a href="broadcast.html" class="mobile-nav-link">Broadcast</a><a href="notice.html" class="mobile-nav-link">Notice</a><a href="user.html" class="mobile-nav-link">User</a><a href="user-group.html" class="mobile-nav-link">User Group</a><a href="oauth.html" class="mobile-nav-link">Oauth</a><a href="material.html" class="mobile-nav-link">Materials</a><a href="menu.html" class="mobile-nav-link">Menu</a><a href="js.html" class="mobile-nav-link">Javascript</a><a href="payment.html" class="mobile-nav-link">Payment</a><a href="lucky-money.html" class="mobile-nav-link">Lucky Money</a><a href="card.html" class="mobile-nav-link">Card</a><a href="store.html" class="mobile-nav-link">Store</a><a href="poi.html" class="mobile-nav-link">POI</a><a href="staff.html" class="mobile-nav-link">Staff</a><a href="anaylsis.html" class="mobile-nav-link">Anaylsis</a><a href="qrcode.html" class="mobile-nav-link current">Qrcode</a><a href="short-url.html" class="mobile-nav-link">Short Url</a><a href="semantic.html" class="mobile-nav-link">Semantic</a><a href="reply.html" class="mobile-nav-link">Auto Reply</a><strong class="mobile-nav-title">Customization</strong><a href="errors.html" class="mobile-nav-link">sidebar.docs.errors</a><a href="cache.html" class="mobile-nav-link">Cache</a><strong class="mobile-nav-title">Miscellaneous</strong><a href="troubleshooting.html" class="mobile-nav-link">Troubleshooting</a><a href="contributing.html" class="mobile-nav-link">Contributing</a><a href="releases.html" class="mobile-nav-link">Releases Notes</a><a href="roadmap.html" class="mobile-nav-link">Roadmap</a>
+      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="installation.html" class="mobile-nav-link">安装</a><a href="tutorial.html" class="mobile-nav-link">小教程</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="integration.html" class="mobile-nav-link">在框架中使用</a><strong class="mobile-nav-title">基本使用</strong><a href="server.html" class="mobile-nav-link">服务端</a><a href="messages.html" class="mobile-nav-link">消息</a><a href="events.html" class="mobile-nav-link">事件</a><a href="broadcast.html" class="mobile-nav-link">群发消息</a><a href="notice.html" class="mobile-nav-link">模板消息</a><a href="user.html" class="mobile-nav-link">用户</a><a href="user-group.html" class="mobile-nav-link">用户组</a><a href="oauth.html" class="mobile-nav-link">网页授权</a><a href="material.html" class="mobile-nav-link">素材管理</a><a href="menu.html" class="mobile-nav-link">菜单</a><a href="js.html" class="mobile-nav-link">JSSDK</a><a href="payment.html" class="mobile-nav-link">支付</a><a href="lucky-money.html" class="mobile-nav-link">红包</a><a href="card.html" class="mobile-nav-link">卡券</a><a href="store.html" class="mobile-nav-link">小店</a><a href="poi.html" class="mobile-nav-link">门店</a><a href="staff.html" class="mobile-nav-link">客服</a><a href="anaylsis.html" class="mobile-nav-link">数据统计与分析</a><a href="qrcode.html" class="mobile-nav-link current">二维码</a><a href="short-url.html" class="mobile-nav-link">短网址</a><a href="semantic.html" class="mobile-nav-link">语义理解</a><a href="reply.html" class="mobile-nav-link">自动回复</a><strong class="mobile-nav-title">自定义</strong><a href="errors.html" class="mobile-nav-link">sidebar.docs.errors</a><a href="cache.html" class="mobile-nav-link">缓存</a><strong class="mobile-nav-title">其他</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a><a href="roadmap.html" class="mobile-nav-link">路线图</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
     <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
     <select id="mobile-lang-select">
       
-        <option value="zh" selected>简体中文</option>
+        <option value="zh-cn" selected>简体中文</option>
       
         <option value="en">English</option>
       
