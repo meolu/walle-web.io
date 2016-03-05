@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://walle-web.io/"/>
-  <updated>2016-03-05T07:25:57.178Z</updated>
+  <updated>2016-03-05T07:34:41.142Z</updated>
   <id>https://walle-web.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://walle-web.io/news/2016/02/16/3.0-released/"/>
     <id>https://walle-web.io/news/2016/02/16/3.0-released/</id>
     <published>2016-02-16T16:00:00.000Z</published>
-    <updated>2016-03-05T07:25:57.178Z</updated>
+    <updated>2016-03-05T07:34:41.142Z</updated>
     
     <content type="html">&lt;p&gt;终于，在经过了快一年的开发，大半年的无数次跳票后，EasyWeChat 3.0 终于在今天发布了。&lt;/p&gt;
 &lt;p&gt;不敢说完美，一是违反广告法，二者，它确实是在阉割了一些不常用模块的情况下发布了，比如：微信小店与设备管理，卡券。&lt;/p&gt;
@@ -58,7 +58,7 @@
     <link href="https://walle-web.io/news/2015/06/15/hello-world/"/>
     <id>https://walle-web.io/news/2015/06/15/hello-world/</id>
     <published>2015-06-15T16:00:00.000Z</published>
-    <updated>2016-03-05T07:25:57.178Z</updated>
+    <updated>2016-03-05T07:34:41.142Z</updated>
     
     <content type="html">&lt;p&gt;我们终于，开启了 3.0 时代，新的开始。&lt;/p&gt;
 </content>
