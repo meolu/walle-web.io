@@ -26,7 +26,7 @@
   <meta name="msapplication-TileColor" content="#2f83cd">
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/easywechat-5811935ca4.css">
+  <link rel="stylesheet" href="/build/css/walle-5811935ca4.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
@@ -125,7 +125,7 @@
 <li>单元测试，除个别模块较难测试且代码不易变动未覆盖外，基本代码都做了高覆盖度的单元测试。</li>
 <li>使用了类似 Laravel 框架的容器模式来组织各模块，降低耦合。</li>
 </ol>
-<p>如果你说我没有支持企业号，开放平台等，你先不要着急遗憾，请原谅我的时间不够来做这些事情，但是我在做公共模块的时候已经考虑到了，虽然我没有直接支持，但是你完全可以在 <a href="https://github.com/easywechat" target="_blank" rel="external">https://github.com/easywechat</a> 下找到一些公共的模块来拼装，便完成了企业号的支持了。比如 <a href="https://github.com/EasyWeChat/core" target="_blank" rel="external"><code>core</code></a> 模块，里面的 <a href="https://github.com/EasyWeChat/core/blob/develop/AccessToken.php" target="_blank" rel="external">AccessToken</a> 类，我提供了 <a href="https://github.com/EasyWeChat/core/blob/develop/AccessToken.php#L164" target="_blank" rel="external"><code>setQueryName($name)</code></a> 方法，因为在公众平台，<code>access token</code> 在传递时使用 <code>access_token=xxx</code> 这样的名称在使用，而在开放平台它不叫这个，但是内容一样。你便可以使用这个方法来改掉它。</p>
+<p>如果你说我没有支持企业号，开放平台等，你先不要着急遗憾，请原谅我的时间不够来做这些事情，但是我在做公共模块的时候已经考虑到了，虽然我没有直接支持，但是你完全可以在 <a href="https://github.com/walle" target="_blank" rel="external">https://github.com/walle</a> 下找到一些公共的模块来拼装，便完成了企业号的支持了。比如 <a href="https://github.com/EasyWeChat/core" target="_blank" rel="external"><code>core</code></a> 模块，里面的 <a href="https://github.com/EasyWeChat/core/blob/develop/AccessToken.php" target="_blank" rel="external">AccessToken</a> 类，我提供了 <a href="https://github.com/EasyWeChat/core/blob/develop/AccessToken.php#L164" target="_blank" rel="external"><code>setQueryName($name)</code></a> 方法，因为在公众平台，<code>access token</code> 在传递时使用 <code>access_token=xxx</code> 这样的名称在使用，而在开放平台它不叫这个，但是内容一样。你便可以使用这个方法来改掉它。</p>
 <p>其它模块有些也是可以直接拿来用的，这里就不一一举例了，当然，你肯定需要阅读代码的。</p>
 <p>这里要感谢大家的支持，尤其感谢贡献代码的同学！</p>
 

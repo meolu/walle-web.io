@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://walle-web.io/"/>
-  <updated>2016-03-05T07:34:41.142Z</updated>
+  <updated>2016-03-05T14:16:10.771Z</updated>
   <id>https://walle-web.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://walle-web.io/news/2016/02/16/3.0-released/"/>
     <id>https://walle-web.io/news/2016/02/16/3.0-released/</id>
     <published>2016-02-16T16:00:00.000Z</published>
-    <updated>2016-03-05T07:34:41.142Z</updated>
+    <updated>2016-03-05T14:16:10.771Z</updated>
     
     <content type="html">&lt;p&gt;终于，在经过了快一年的开发，大半年的无数次跳票后，EasyWeChat 3.0 终于在今天发布了。&lt;/p&gt;
 &lt;p&gt;不敢说完美，一是违反广告法，二者，它确实是在阉割了一些不常用模块的情况下发布了，比如：微信小店与设备管理，卡券。&lt;/p&gt;
@@ -37,7 +37,7 @@
 &lt;li&gt;单元测试，除个别模块较难测试且代码不易变动未覆盖外，基本代码都做了高覆盖度的单元测试。&lt;/li&gt;
 &lt;li&gt;使用了类似 Laravel 框架的容器模式来组织各模块，降低耦合。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;如果你说我没有支持企业号，开放平台等，你先不要着急遗憾，请原谅我的时间不够来做这些事情，但是我在做公共模块的时候已经考虑到了，虽然我没有直接支持，但是你完全可以在 &lt;a href=&quot;https://github.com/easywechat&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/easywechat&lt;/a&gt; 下找到一些公共的模块来拼装，便完成了企业号的支持了。比如 &lt;a href=&quot;https://github.com/EasyWeChat/core&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;core&lt;/code&gt;&lt;/a&gt; 模块，里面的 &lt;a href=&quot;https://github.com/EasyWeChat/core/blob/develop/AccessToken.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AccessToken&lt;/a&gt; 类，我提供了 &lt;a href=&quot;https://github.com/EasyWeChat/core/blob/develop/AccessToken.php#L164&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;setQueryName($name)&lt;/code&gt;&lt;/a&gt; 方法，因为在公众平台，&lt;code&gt;access token&lt;/code&gt; 在传递时使用 &lt;code&gt;access_token=xxx&lt;/code&gt; 这样的名称在使用，而在开放平台它不叫这个，但是内容一样。你便可以使用这个方法来改掉它。&lt;/p&gt;
+&lt;p&gt;如果你说我没有支持企业号，开放平台等，你先不要着急遗憾，请原谅我的时间不够来做这些事情，但是我在做公共模块的时候已经考虑到了，虽然我没有直接支持，但是你完全可以在 &lt;a href=&quot;https://github.com/walle&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/walle&lt;/a&gt; 下找到一些公共的模块来拼装，便完成了企业号的支持了。比如 &lt;a href=&quot;https://github.com/EasyWeChat/core&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;core&lt;/code&gt;&lt;/a&gt; 模块，里面的 &lt;a href=&quot;https://github.com/EasyWeChat/core/blob/develop/AccessToken.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AccessToken&lt;/a&gt; 类，我提供了 &lt;a href=&quot;https://github.com/EasyWeChat/core/blob/develop/AccessToken.php#L164&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;setQueryName($name)&lt;/code&gt;&lt;/a&gt; 方法，因为在公众平台，&lt;code&gt;access token&lt;/code&gt; 在传递时使用 &lt;code&gt;access_token=xxx&lt;/code&gt; 这样的名称在使用，而在开放平台它不叫这个，但是内容一样。你便可以使用这个方法来改掉它。&lt;/p&gt;
 &lt;p&gt;其它模块有些也是可以直接拿来用的，这里就不一一举例了，当然，你肯定需要阅读代码的。&lt;/p&gt;
 &lt;p&gt;这里要感谢大家的支持，尤其感谢贡献代码的同学！&lt;/p&gt;
 </content>
@@ -58,7 +58,7 @@
     <link href="https://walle-web.io/news/2015/06/15/hello-world/"/>
     <id>https://walle-web.io/news/2015/06/15/hello-world/</id>
     <published>2015-06-15T16:00:00.000Z</published>
-    <updated>2016-03-05T07:34:41.142Z</updated>
+    <updated>2016-03-05T14:16:10.771Z</updated>
     
     <content type="html">&lt;p&gt;我们终于，开启了 3.0 时代，新的开始。&lt;/p&gt;
 </content>

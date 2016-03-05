@@ -32,7 +32,7 @@
   <meta name="msapplication-TileColor" content="#2f83cd">
   <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
   <!-- CSS -->
-  <link rel="stylesheet" href="/build/css/easywechat-5811935ca4.css">
+  <link rel="stylesheet" href="/build/css/walle-5811935ca4.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
@@ -47,7 +47,7 @@
 <meta property="og:description" content="你在阅读本文之前确认你已经仔细阅读了：微信支付 | 商户平台开发文档。
 配置配置在前面的例子中已经提到过了，支付的相关配置如下：
 &amp;lt;?phpuse EasyWeChat\Foundation\Application;$options = [    // payment    &apos;payment&apos; =&amp;gt; [        &apos;merchant_id&apos;        =&amp;gt; &apos;your-m">
-<meta property="og:updated_time" content="2016-03-05T07:34:41.186Z">
+<meta property="og:updated_time" content="2016-03-05T14:16:10.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="支付">
 <meta name="twitter:description" content="你在阅读本文之前确认你已经仔细阅读了：微信支付 | 商户平台开发文档。
@@ -189,7 +189,7 @@
 <li><strong>REVOKED</strong>：已撤销的订单</li>
 </ul>
 <h2 id="测速上报" class="article-heading"><a href="#测速上报" class="headerlink" title="测速上报"></a>测速上报<a class="article-anchor" href="#测速上报" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$payment-&gt;report($api, $timeConsuming, $resultCode, $returnCode);</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">$payment-&gt;report($api, $timeConsuming, $resultCode, $returnCode, [</span><br><span class="line">        <span class="string">'err_code'</span>     =&gt; <span class="string">'xxxx'</span>,</span><br><span class="line">        <span class="string">'err_code_des'</span> =&gt; <span class="string">'...'</span>,</span><br><span class="line">        <span class="string">'out_trade_no'</span> =&gt; <span class="string">'...'</span>,</span><br><span class="line">        <span class="string">'user_ip'</span>      =&gt; <span class="string">'...'</span>,</span><br><span class="line">    ]);</span><br></pre></td></tr></table></figure>
-<h2 id="转换短链接" class="article-heading"><a href="#转换短链接" class="headerlink" title="转换短链接"></a>转换短链接<a class="article-anchor" href="#转换短链接" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$shortUrl = $payment-&gt;urlShorten(<span class="string">'http://easywechat.org'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="转换短链接" class="article-heading"><a href="#转换短链接" class="headerlink" title="转换短链接"></a>转换短链接<a class="article-anchor" href="#转换短链接" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$shortUrl = $payment-&gt;urlShorten(<span class="string">'http://walle.org'</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="授权码查询OPENID接口" class="article-heading"><a href="#授权码查询OPENID接口" class="headerlink" title="授权码查询OPENID接口"></a>授权码查询OPENID接口<a class="article-anchor" href="#授权码查询OPENID接口" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$response = $payment-&gt;authCodeToOpenId($authCode);</span><br><span class="line">$response-&gt;openid;</span><br></pre></td></tr></table></figure>
 <h2 id="生成支付-JS-配置" class="article-heading"><a href="#生成支付-JS-配置" class="headerlink" title="生成支付 JS 配置"></a>生成支付 JS 配置<a class="article-anchor" href="#生成支付-JS-配置" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$json = $payment-&gt;configForPayment($prepayId);</span><br></pre></td></tr></table></figure>
 <h2 id="生成共享收货地址-JS-配置" class="article-heading"><a href="#生成共享收货地址-JS-配置" class="headerlink" title="生成共享收货地址 JS 配置"></a>生成共享收货地址 JS 配置<a class="article-anchor" href="#生成共享收货地址-JS-配置" aria-hidden="true"></a></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$json = $payment-&gt;configForShareAddress($app-&gt;access_token);</span><br></pre></td></tr></table></figure>
@@ -200,7 +200,7 @@
                 <div class="donate-btn text-center"><a href="/donate.html" target="_blank">Donate</a></div>
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-03-05T07:34:41.186Z" itemprop="dateModified">Last updated: 2016-03-05</time>
+                <time class="article-footer-updated" datetime="2016-03-05T14:16:10.811Z" itemprop="dateModified">Last updated: 2016-03-05</time>
                 <a href="js.html" class="article-footer-prev" title="Javascript"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="lucky-money.html" class="article-footer-next" title="Lucky Money"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
