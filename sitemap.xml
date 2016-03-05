@@ -2,555 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://walle-web.io/docs/zh-cn/messages.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/user.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/tutorial.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/troubleshooting.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/store.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/staff.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/short-url.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/server.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/semantic.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/roadmap.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/reply.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/releases.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/qrcode.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/poi.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/payment.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/oauth.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/notice.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/miscellaneous.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/user-group.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/message-transfer.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/merchant_pay.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/menu.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/material.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/lucky-money.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/js.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/integration.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/installation.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/index.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/events.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/contributing.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/configuration.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/card.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/cache.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/broadcast.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/README.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/accounts.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/zh-cn/anaylsis.html</loc>
-    
-    <lastmod>2016-03-05T03:56:57.900Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/troubleshooting.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/tutorial.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://walle-web.io/index.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/user.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/en/index.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/user-group.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/donate.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/store.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/menu.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/news/2016/02/16/3.0-released/</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/short-url.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/server.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/semantic.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/roadmap.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/oauth.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/reply.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/releases.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/qrcode.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/poi.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/payment.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/notice.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/miscellaneous.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/messages.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/message-transfer.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.767Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/merchant_pay.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/donate.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/index.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/en/index.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/user.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/user-group.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/tutorial.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/troubleshooting.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/store.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/staff.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/material.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/lucky-money.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/js.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/integration.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/installation.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/index.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/events.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://walle-web.io/docs/contributing.html</loc>
-    
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/configuration.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://walle-web.io/docs/cache.html</loc>
+    <loc>https://walle-web.io/docs/contributing.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/events.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/index.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/installation.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/integration.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/js.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/lucky-money.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/material.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/menu.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/short-url.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/message-transfer.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/messages.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/miscellaneous.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/notice.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/oauth.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/payment.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/poi.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/qrcode.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/releases.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/reply.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/roadmap.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/semantic.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/server.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.703Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/news/2016/02/16/3.0-released/</loc>
+    
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/card.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://walle-web.io/docs/cache.html</loc>
+    
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/broadcast.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/anaylsis.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/accounts.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/docs/README.html</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://walle-web.io/news/2015/06/15/hello-world/</loc>
     
-    <lastmod>2016-03-05T03:55:58.665Z</lastmod>
+    <lastmod>2016-03-05T06:54:31.699Z</lastmod>
     
   </url>
   
