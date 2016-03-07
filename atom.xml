@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>walle 瓦力 - 部署系统</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://walle-web.io/"/>
+  <updated>2016-03-07T05:54:40.955Z</updated>
+  <id>https://walle-web.io/</id>
+  
+  <author>
+    <name>walle</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>walle 1.0.0 Released</title>
+    <link href="https://walle-web.io/news/2016/02/16/3.0-released/"/>
+    <id>https://walle-web.io/news/2016/02/16/3.0-released/</id>
+    <published>2016-02-16T16:00:00.000Z</published>
+    <updated>2016-03-07T05:54:40.955Z</updated>
+    
+    <content type="html">&lt;p&gt;经过大家的使用和反馈，更新至1.0.0版本，足够成熟到&lt;/p&gt;
+&lt;p&gt;这里要感谢大家的支持，尤其感谢贡献代码的同学！&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经过大家的使用和反馈，更新至1.0.0版本，足够成熟到&lt;/p&gt;
+&lt;p&gt;这里要感谢大家的支持，尤其感谢贡献代码的同学！&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://walle-web.io/news/2015/06/15/hello-world/"/>
+    <id>https://walle-web.io/news/2015/06/15/hello-world/</id>
+    <published>2015-06-15T16:00:00.000Z</published>
+    <updated>2016-03-07T05:54:40.955Z</updated>
+    
+    <content type="html">&lt;p&gt;我们终于，开启了 3.0 时代，新的开始。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们终于，开启了 3.0 时代，新的开始。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
