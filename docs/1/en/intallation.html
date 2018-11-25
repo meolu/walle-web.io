@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>Installation | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/1/en/intallation.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/1/en/intallation.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/1/en/intallation.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/walle.css -->
+  <link rel="stylesheet" href="/css/walle.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to Q&amp;amp;A Requirements Bash(git、ssh、rsync) LNMP、LAMP(php5.4+) Composer  1.Clone Repomkdir -p /data/www/walle-web">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Installation">
+<meta property="og:url" content="https://walle-web.io/docs/1/en/intallation.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to Q&amp;amp;A Requirements Bash(git、ssh、rsync) LNMP、LAMP(php5.4+) Composer  1.Clone Repomkdir -p /data/www/walle-web">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-11-25T16:59:20.011Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Installation">
+<meta name="twitter:description" content="A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to Q&amp;amp;A Requirements Bash(git、ssh、rsync) LNMP、LAMP(php5.4+) Composer  1.Clone Repomkdir -p /data/www/walle-web">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="Installation">
+  <!-- baidu Analytics -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e33cdb698107fe42dbc2af5745ab3c82";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body class="">
+  <div id="container">
+    
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap" class="">
+      
+        <img id="logo-img" src="/images/user/logo.blue.png">
+      
+      <a href="/" id="logo">Walle</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/2/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/about" class="main-nav-link">关于我们</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>walle-1.0</span></label>
+      <select id="version-select">
+        
+          <option value="1" selected>walle-1.0</option>
+        
+          <option value="2">walle-2.0</option>
+        
+      </select>
+    </div>
+    
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Installation</h1>
+                <a href="https://github.com/meolu/docs/edit/master/walle-web.io/docs/1/en/intallation.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <html><head><meta name="generator" content="Hexo 3.8.0"></head><body><p>A linux server which configures LAMP/LNMP and git/svn, this is all. Any question refer to <a href="https://github.com/meolu/walle-web/blob/master/docs/faq.md" target="_blank" rel="noopener">Q&A</a></p>
+<h2 id="Requirements" class="article-heading"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements<a class="article-anchor" href="#Requirements" aria-hidden="true"></a></h2><ul>
+<li>Bash(git、ssh、rsync)</li>
+<li>LNMP、LAMP(php5.4+)</li>
+<li>Composer</li>
+</ul>
+<h2 id="1-Clone-Repo" class="article-heading"><a href="#1-Clone-Repo" class="headerlink" title="1.Clone Repo"></a>1.Clone Repo<a class="article-anchor" href="#1-Clone-Repo" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">mkdir -p /data/www/walle-web && cd /data/www/walle-web  # A place to store</span><br><span class="line">git clone git@github.com:meolu/walle-web.git .          # clone is easy for update</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="2-Setup-Mysql-Connection" class="article-heading"><a href="#2-Setup-Mysql-Connection" class="headerlink" title="2.Setup Mysql Connection"></a>2.Setup Mysql Connection<a class="article-anchor" href="#2-Setup-Mysql-Connection" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vi config/local.php +14</span><br><span class="line">'db' => [</span><br><span class="line">    'dsn'       => 'mysql:host=127.0.0.1;dbname=walle', # Create a db first</span><br><span class="line">    'username'  => 'username',                          # username</span><br><span class="line">    'password'  => 'password',                          # password</span><br><span class="line">],</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="3-Install-Composer-skip-if-uou-have-composer" class="article-heading"><a href="#3-Install-Composer-skip-if-uou-have-composer" class="headerlink" title="3.Install Composer(skip if uou have composer)"></a>3.Install Composer(skip if uou have composer)<a class="article-anchor" href="#3-Install-Composer-skip-if-uou-have-composer" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">curl -sS https://getcomposer.org/installer | php</span><br><span class="line">mv composer.phar /usr/local/bin/composer  # Add to the PATH</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="4-Composer-Install-For-Vendor" class="article-heading"><a href="#4-Composer-Install-For-Vendor" class="headerlink" title="4.Composer Install For Vendor"></a>4.Composer Install For Vendor<a class="article-anchor" href="#4-Composer-Install-For-Vendor" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cd walle-web</span><br><span class="line">composer install --prefer-dist --no-dev --optimize-autoloader -vvvv</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="5-Init-Walle" class="article-heading"><a href="#5-Init-Walle" class="headerlink" title="5.Init Walle"></a>5.Init Walle<a class="article-anchor" href="#5-Init-Walle" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cd walle-web</span><br><span class="line">./yii walle/setup # yes</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Upgrade-Walle" class="article-heading"><a href="#Upgrade-Walle" class="headerlink" title="Upgrade Walle"></a>Upgrade Walle<a class="article-anchor" href="#Upgrade-Walle" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cd walle-web</span><br><span class="line">./yii walle/upgrade</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="6-Configure-Nginx-Apache" class="article-heading"><a href="#6-Configure-Nginx-Apache" class="headerlink" title="6.Configure Nginx/Apache"></a>6.Configure Nginx/Apache<a class="article-anchor" href="#6-Configure-Nginx-Apache" aria-hidden="true"></a></h2><p><strong>50x maybe caused by the incomplete of step 1-5, check up yourself: )</strong></p>
+<p><strong>if nginx/apache’s configuration is not corect, you may see 40x page on step 7, check up yourself: )</strong></p>
+<p><strong>nginx example</strong><br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">server {</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  walle.huamanshu.com; # change to your host</span><br><span class="line">    root /the/dir/of/walle-web/web;   # root is walle-web/web</span><br><span class="line">    index index.php;</span><br><span class="line"></span><br><span class="line">    # suggest access</span><br><span class="line">    # allow 192.168.0.0/24;</span><br><span class="line">    # deny all;</span><br><span class="line"></span><br><span class="line">    location / {</span><br><span class="line">        try_files $uri $uri/ /index.php$is_args$args;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ {</span><br><span class="line">        try_files $uri = 404;</span><br><span class="line">        fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">        include        fastcgi_params;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="7-Congratulations：）" class="article-heading"><a href="#7-Congratulations：）" class="headerlink" title="7.Congratulations：）"></a>7.Congratulations：）<a class="article-anchor" href="#7-Congratulations：）" aria-hidden="true"></a></h2><p>visit：localhost</p>
+<p>of course, it would be nginx’s server_name, such as walle.huamanshu.com, just visit walle.huamanshu.com.</p>
+</body></html>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-11-25T16:59:20.011Z" itemprop="dateModified">上次更新：2018-11-26</time>
+                <a href="index.html" class="article-footer-next" title="概述"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Requirements"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Clone-Repo"><span class="toc-text">1.Clone Repo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Setup-Mysql-Connection"><span class="toc-text">2.Setup Mysql Connection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Install-Composer-skip-if-uou-have-composer"><span class="toc-text">3.Install Composer(skip if uou have composer)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Composer-Install-For-Vendor"><span class="toc-text">4.Composer Install For Vendor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Init-Walle"><span class="toc-text">5.Init Walle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Upgrade-Walle"><span class="toc-text">Upgrade Walle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Configure-Nginx-Apache"><span class="toc-text">6.Configure Nginx/Apache</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Congratulations：）"><span class="toc-text">7.Congratulations：）</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">快速开始</strong><a href="index.html" class="sidebar-link">概述</a><a href="architecture.html" class="sidebar-link">原理分析</a><a href="dependency.html" class="sidebar-link">依赖</a><a href="installation.html" class="sidebar-link">安装</a><a href="upgrade.html" class="sidebar-link">升级</a><a href="install-error.html" class="sidebar-link">安装错误</a><strong class="sidebar-title">配置项目</strong><a href="git-configuration.html" class="sidebar-link">Git项目配置</a><a href="svn-configuration.html" class="sidebar-link">Svn项目配置</a><a href="task-configuration.html" class="sidebar-link">高级任务配置</a><a href="user-configuration.html" class="sidebar-link">项目用户配置</a><a href="configuration-error.html" class="sidebar-link">检测错误</a><strong class="sidebar-title">上线使用</strong><a href="submit-bill.html" class="sidebar-link">提交上线单</a><a href="deploying.html" class="sidebar-link">部署上线</a><a href="deploy-error.html" class="sidebar-link">部署出错</a><strong class="sidebar-title">自定义</strong><a href="local.html" class="sidebar-link">各种自定义</a><strong class="sidebar-title">其它</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2018 <a href="https://walle-web.io/" target="_blank">walle</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/2/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">关于我们</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速开始</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="architecture.html" class="mobile-nav-link">原理分析</a><a href="dependency.html" class="mobile-nav-link">依赖</a><a href="installation.html" class="mobile-nav-link">安装</a><a href="upgrade.html" class="mobile-nav-link">升级</a><a href="install-error.html" class="mobile-nav-link">安装错误</a><strong class="mobile-nav-title">配置项目</strong><a href="git-configuration.html" class="mobile-nav-link">Git项目配置</a><a href="svn-configuration.html" class="mobile-nav-link">Svn项目配置</a><a href="task-configuration.html" class="mobile-nav-link">高级任务配置</a><a href="user-configuration.html" class="mobile-nav-link">项目用户配置</a><a href="configuration-error.html" class="mobile-nav-link">检测错误</a><strong class="mobile-nav-title">上线使用</strong><a href="submit-bill.html" class="mobile-nav-link">提交上线单</a><a href="deploying.html" class="mobile-nav-link">部署上线</a><a href="deploy-error.html" class="mobile-nav-link">部署出错</a><strong class="mobile-nav-title">自定义</strong><a href="local.html" class="mobile-nav-link">各种自定义</a><strong class="mobile-nav-title">其它</strong><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+
+<script src="/js/version_select.js"></script>
+
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
