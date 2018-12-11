@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>依赖 | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/1/zh-cn/dependency.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/1/zh-cn/dependency.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/1/zh-cn/dependency.html">
+    
+  
+  <!-- Icon -->
+  <link rel="icon" href="/./favicon.ico">
+  <!-- CSS -->
+  <!-- build:css build/css/walle.css -->
+  <link rel="stylesheet" href="/css/walle.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="Bash(git、ssh) 意味着不支持win、mac的zsh   LNMP/LAMP(php5.4+) php需要开启pdo_mysql，exec函数执行   Composer 如果国内环境安装极慢，可以直接下载vendor解压到项目根目录   ansible  安装1、宿主机安装 ansible yum install ansible # RHEL/CentOS/Fedoraapt-get">
+<meta property="og:type" content="website">
+<meta property="og:title" content="依赖">
+<meta property="og:url" content="https://walle-web.io/docs/1/zh-cn/dependency.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="Bash(git、ssh) 意味着不支持win、mac的zsh   LNMP/LAMP(php5.4+) php需要开启pdo_mysql，exec函数执行   Composer 如果国内环境安装极慢，可以直接下载vendor解压到项目根目录   ansible  安装1、宿主机安装 ansible yum install ansible # RHEL/CentOS/Fedoraapt-get">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-12-11T04:50:24.838Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="依赖">
+<meta name="twitter:description" content="Bash(git、ssh) 意味着不支持win、mac的zsh   LNMP/LAMP(php5.4+) php需要开启pdo_mysql，exec函数执行   Composer 如果国内环境安装极慢，可以直接下载vendor解压到项目根目录   ansible  安装1、宿主机安装 ansible yum install ansible # RHEL/CentOS/Fedoraapt-get">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="依赖">
+  <!-- baidu Analytics -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e33cdb698107fe42dbc2af5745ab3c82";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body class="">
+  <div id="container">
+    
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap" class="">
+      
+        <img id="logo-img" src="/images/user/logo.blue.png">
+      
+      <a href="/" id="logo">Walle</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/about" class="main-nav-link">关于我们</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>walle-1.0</span></label>
+      <select id="version-select">
+        
+          <option value="1" selected>walle-1.0</option>
+        
+          <option value="2">walle-2.0</option>
+        
+      </select>
+    </div>
+    
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">依赖</h1>
+                <a href="https://github.com/meolu/docs/edit/master/walle-web.io/docs/1/zh-cn/dependency.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <html><head><meta name="generator" content="Hexo 3.8.0"></head><body><ul>
+<li>Bash(git、ssh)<ul>
+<li>意味着不支持win、mac的zsh</li>
+</ul>
+</li>
+<li>LNMP/LAMP(php5.4+)<ul>
+<li>php需要开启pdo_mysql，exec函数执行</li>
+</ul>
+</li>
+<li>Composer<ul>
+<li>如果国内环境安装极慢，可以直接下载<a href="http://pan.baidu.com/s/1c0wiuyc" target="_blank" rel="noopener">vendor</a>解压到项目根目录</li>
+</ul>
+</li>
+<li>ansible</li>
+</ul>
+<h2 id="安装" class="article-heading"><a href="#安装" class="headerlink" title="安装"></a>安装<a class="article-anchor" href="#安装" aria-hidden="true"></a></h2><p>1、宿主机安装 ansible</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">yum install ansible # RHEL/CentOS/Fedora</span><br><span class="line"></span><br><span class="line">apt-get install ansible # Debian/Ubuntu</span><br><span class="line"></span><br><span class="line">emerge -avt ansible  # Gentoo/Funtoo</span><br><span class="line"></span><br><span class="line">pip install ansible # will also install  paramiko PyYAML jinja2</span><br></pre></td></tr></tbody></table></figure>
+<p>2、宿主机无需其他配置，兼容 ~/.ssh/config 名称、证书配置</p>
+<p>3、目标机无需额外配置</p>
+<h2 id="walle" class="article-heading"><a href="#walle" class="headerlink" title="walle"></a>walle<a class="article-anchor" href="#walle" aria-hidden="true"></a></h2><ol>
+<li>项目配置 中 开启Ansible</li>
+<li>(可选) config/params.php 配置 ansible_hosts 文件存放路径</li>
+<li>按正常流程发布、上线代码，传输文件、远程执行命令均会通过ansible并发执行</li>
+</ol>
+<h2 id="php5-6环境CentOS安装" class="article-heading"><a href="#php5-6环境CentOS安装" class="headerlink" title="php5.6环境CentOS安装"></a>php5.6环境CentOS安装<a class="article-anchor" href="#php5-6环境CentOS安装" aria-hidden="true"></a></h2><ul>
+<li><p>删除老的安装包</p>
+  <figure class="highlight plain"><figcaption><span>remove php.x86_64 php-cli.x86_64 php-common.x86_64 php-gd.x86_64 php-ldap.x86_64 php-mbstring.x86_64 php-mcrypt.x86_64 php-mysql.x86_64 php-pdo.x86_64```</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 更新源</span><br></pre></td></tr></tbody></table></figure>
+<p>  CentOs 6.x<br>  rpm -Uvh <a href="http://mirror.webtatic.com/yum/el6/latest.rpm" target="_blank" rel="noopener">http://mirror.webtatic.com/yum/el6/latest.rpm</a><br>  CentOs 7.X<br>  rpm -Uvh <a href="https://mirror.webtatic.com/yum/el7/epel-release.rpm" target="_blank" rel="noopener">https://mirror.webtatic.com/yum/el7/epel-release.rpm</a></p>
+  <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 安装php 5.6相关组件</span><br><span class="line"></span><br><span class="line">    ```yum install php56w.x86_64 php56w-cli.x86_64 php56w-common.x86_64 php56w-gd.x86_64 php56w-ldap.x86_64 php56w-mbstring.x86_64 php56w-mcrypt.x86_64 php56w-mysql.x86_64 php56w-pdo.x86_64</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>安装php-fpm 5.6</p>
+<p>  <code>yum install php56w-fpm</code></p>
+</li>
+</ul>
+</body></html>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-12-11T04:50:24.838Z" itemprop="dateModified">上次更新：2018-12-11</time>
+                <a href="permission.html" class="article-footer-prev" title="权限模型"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="installation.html" class="article-footer-next" title="安装"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#walle"><span class="toc-text">walle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php5-6环境CentOS安装"><span class="toc-text">php5.6环境CentOS安装</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">快速开始</strong><a href="index.html" class="sidebar-link">概述</a><a href="architecture.html" class="sidebar-link">原理分析</a><a href="permission.html" class="sidebar-link">权限模型</a><a href="dependency.html" class="sidebar-link current">依赖</a><a href="installation.html" class="sidebar-link">安装</a><a href="upgrade.html" class="sidebar-link">升级</a><a href="install-error.html" class="sidebar-link">安装错误</a><a href="troubleshooting.html" class="sidebar-link">问题解答</a><strong class="sidebar-title">配置项目</strong><a href="git-configuration.html" class="sidebar-link">Git项目配置</a><a href="svn-configuration.html" class="sidebar-link">svn Configuration</a><a href="task-configuration.html" class="sidebar-link">高级任务配置</a><a href="user-configuration.html" class="sidebar-link">项目用户配置</a><a href="configuration-error.html" class="sidebar-link">检测错误</a><strong class="sidebar-title">上线使用</strong><a href="submit-bill.html" class="sidebar-link">提交上线单</a><a href="deploying.html" class="sidebar-link">部署上线</a><a href="deploy-error.html" class="sidebar-link">部署出错</a><strong class="sidebar-title">自定义</strong><a href="local.html" class="sidebar-link">各种自定义</a><strong class="sidebar-title">其它</strong><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2018 <a href="https://walle-web.io/" target="_blank">walle</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">关于我们</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速开始</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="architecture.html" class="mobile-nav-link">原理分析</a><a href="permission.html" class="mobile-nav-link">权限模型</a><a href="dependency.html" class="mobile-nav-link current">依赖</a><a href="installation.html" class="mobile-nav-link">安装</a><a href="upgrade.html" class="mobile-nav-link">升级</a><a href="install-error.html" class="mobile-nav-link">安装错误</a><a href="troubleshooting.html" class="mobile-nav-link">问题解答</a><strong class="mobile-nav-title">配置项目</strong><a href="git-configuration.html" class="mobile-nav-link">Git项目配置</a><a href="svn-configuration.html" class="mobile-nav-link">svn Configuration</a><a href="task-configuration.html" class="mobile-nav-link">高级任务配置</a><a href="user-configuration.html" class="mobile-nav-link">项目用户配置</a><a href="configuration-error.html" class="mobile-nav-link">检测错误</a><strong class="mobile-nav-title">上线使用</strong><a href="submit-bill.html" class="mobile-nav-link">提交上线单</a><a href="deploying.html" class="mobile-nav-link">部署上线</a><a href="deploy-error.html" class="mobile-nav-link">部署出错</a><strong class="mobile-nav-title">自定义</strong><a href="local.html" class="mobile-nav-link">各种自定义</a><strong class="mobile-nav-title">其它</strong><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+
+<script src="/js/version_select.js"></script>
+
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<!--  <script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script> -->
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
