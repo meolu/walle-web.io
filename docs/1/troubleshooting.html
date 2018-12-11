@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>问题解答 | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/1/zh-cn/troubleshooting.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/1/zh-cn/troubleshooting.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/1/zh-cn/troubleshooting.html">
+    
+  
+  <!-- Icon -->
+  <link rel="icon" href="/./favicon.ico">
+  <!-- CSS -->
+  <!-- build:css build/css/walle.css -->
+  <link rel="stylesheet" href="/css/walle.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="提问之前 懂得配置lnmp，不懂请百度google，莫在群里提问lnmp相关问题 具备 PHP 基础知识：php 5.4与5.3基本区别，composer  会使用 git 操作：git pull, git stash 熟悉 PHP 常见的知识：composer 的使用 了解基本的 HTTP 协议，Header 头、请求方式（GET\POST\PUT\PATCH\DELETE）等 基本的 Debu">
+<meta property="og:type" content="website">
+<meta property="og:title" content="问题解答">
+<meta property="og:url" content="https://walle-web.io/docs/1/zh-cn/troubleshooting.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="提问之前 懂得配置lnmp，不懂请百度google，莫在群里提问lnmp相关问题 具备 PHP 基础知识：php 5.4与5.3基本区别，composer  会使用 git 操作：git pull, git stash 熟悉 PHP 常见的知识：composer 的使用 了解基本的 HTTP 协议，Header 头、请求方式（GET\POST\PUT\PATCH\DELETE）等 基本的 Debu">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://walle-web.io/images/emoji/pray.png">
+<meta property="og:updated_time" content="2018-12-11T02:14:47.789Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="问题解答">
+<meta name="twitter:description" content="提问之前 懂得配置lnmp，不懂请百度google，莫在群里提问lnmp相关问题 具备 PHP 基础知识：php 5.4与5.3基本区别，composer  会使用 git 操作：git pull, git stash 熟悉 PHP 常见的知识：composer 的使用 了解基本的 HTTP 协议，Header 头、请求方式（GET\POST\PUT\PATCH\DELETE）等 基本的 Debu">
+<meta name="twitter:image" content="https://walle-web.io/images/emoji/pray.png">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="问题解答">
+  <!-- baidu Analytics -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e33cdb698107fe42dbc2af5745ab3c82";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body class="">
+  <div id="container">
+    
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap" class="">
+      
+        <img id="logo-img" src="/images/user/logo.blue.png">
+      
+      <a href="/" id="logo">Walle</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/about" class="main-nav-link">关于我们</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>walle-1.0</span></label>
+      <select id="version-select">
+        
+          <option value="1" selected>walle-1.0</option>
+        
+          <option value="2">walle-2.0</option>
+        
+      </select>
+    </div>
+    
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">问题解答</h1>
+                <a href="https://github.com/meolu/docs/edit/master/walle-web.io/docs/1/zh-cn/troubleshooting.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <html><head><meta name="generator" content="Hexo 3.8.0"></head><body><h3 id="提问之前" class="article-heading"><a href="#提问之前" class="headerlink" title="提问之前"></a>提问之前<a class="article-anchor" href="#提问之前" aria-hidden="true"></a></h3><ul>
+<li>懂得配置lnmp，不懂请百度google，莫在群里提问lnmp相关问题</li>
+<li>具备 PHP 基础知识：php 5.4与5.3基本区别，composer </li>
+<li>会使用 git 操作：git pull, git stash</li>
+<li>熟悉 PHP 常见的知识：composer 的使用</li>
+<li>了解基本的 HTTP 协议，Header 头、请求方式（GET\POST\PUT\PATCH\DELETE）等</li>
+<li>基本的 Debug 技能，查看 php_error 日志，nginx 4xx 5xx日志等</li>
+<li>基于上一条，40x、50x错误，一律不回答，请按<a href="installation.html">最详细nginx php配置</a>一一检查。</li>
+</ul>
+<p>如果你不具备这些知识，请不要使用，因为这是开源项目，没有义务每天帮你解决一些常识性的问题，毕竟我们都要工作。</p>
+<p>我们能保证你提的问题，90%可能都在常见错误列表里给列出来了，或者是太低级的问题。所以发问之前先看完所有错误列表（Ctr + F），如果没有，带上你的代码，去群：482939318里发个问题，重现流程，大家有空的会帮忙你解答。谢谢合作！<img title=":pray:" class="emoji" src="/images/emoji/pray.png" align="absmiddle"></p>
+<p>最后，请 <strong>不要在QQ单独找我提问</strong>，除非你是企业身份或者服务费。</p>
+<h3 id="检测、上线出错" class="article-heading"><a href="#检测、上线出错" class="headerlink" title="检测、上线出错"></a>检测、上线出错<a class="article-anchor" href="#检测、上线出错" aria-hidden="true"></a></h3><p>检测、上线出错，想知道到底发生了什么事情？我能告诉你的就是，有些错误walle捕捉不到，默认操作日志在<code>/tmp/walle/</code>下，具体可在<code>config/local.php</code>里<code>log.dir</code>配置路径，<code>tail -f /tmp/walle/walle-YYYYmmdd.log</code>着日志，部署看日志。<strong>一切检测、上线的错误均可被发现和解决。</strong></p>
+<h3 id="宿主机检测出错" class="article-heading"><a href="#宿主机检测出错" class="headerlink" title="宿主机检测出错"></a>宿主机检测出错<a class="article-anchor" href="#宿主机检测出错" aria-hidden="true"></a></h3><ul>
+<li><p>宿主机代码检出检测出错，请确认php进程用户{user}有代码存储仓库{path}读写权限，且把ssh-key加入git的deploy-keys列表。详细错误：{error}</p>
+<ul>
+<li><p>问题：<strong>请确认php进程用户{user}有代码存储仓库{path}读写权限</strong></p>
+  <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">没有权限，是因为用户{user}对目录{path}没有读写权限，给权限即可</span><br><span class="line">ll {path}</span><br><span class="line">chown {user} -R {path}</span><br><span class="line">chmod 755 -R {path}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>问题：<strong>把ssh-key加入git的deploy-keys列表</strong></p>
+  <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">su {user} && cat ~/.ssh/id_rsa.pub</span><br><span class="line">打开 github/gitlab/bitbucket 网站, 添加 ssh-key 到ssh-keys列表</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="目标机检测出错" class="article-heading"><a href="#目标机检测出错" class="headerlink" title="目标机检测出错"></a>目标机检测出错<a class="article-anchor" href="#目标机检测出错" aria-hidden="true"></a></h3><ul>
+<li><p>目标机器部署出错，请确认php进程{local_user}用户ssh-key加入目标机器的{remote_user}用户ssh-key信任列表，且{remote_user}有目标机器发布版本库{path}写入权限。详细错误：{error}</p>
+<ul>
+<li><p>问题：<strong>请确认php进程{local_user}用户ssh-key加入目标机器的{remote_user}用户ssh-key信任列表</strong></p>
+  <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">添加机器信任，还是没理解请百度吧（因为太多的同学问这问题，实在没办法只能这么啰嗦）</span><br><span class="line">su {local_user} && ssh-copy-id -i ~/.ssh/id_rsa.pub remote_user@remote_server</span><br><span class="line"># need remote_user's password</span><br><span class="line"># 为什么我把{local_user}的ssh-key加到远程机器的{remote_user}下的~/.ssh/authorized_keys还是不能免密码登录</span><br><span class="line"># 免密码登录需要远程机器权限满足以下三个条件：</span><br><span class="line">   /home/{remote_user} 755</span><br><span class="line">   ~/.ssh 700</span><br><span class="line">   ~/.ssh/authorized_keys 644 或 600</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>问题：<strong>{remote_user}有目标机器发布版本库{path}写入权限</strong></p>
+  <figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">su remote_user</span><br><span class="line">ll {path}</span><br><span class="line">chown {remote_user} -R {path}</span><br><span class="line">chmod 755 -R {path}</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="上线至全量更新服务器时出错：mv-无法以非目录来覆盖目录-fT-a-b-c-d-e-f" class="article-heading"><a href="#上线至全量更新服务器时出错：mv-无法以非目录来覆盖目录-fT-a-b-c-d-e-f" class="headerlink" title="上线至全量更新服务器时出错：mv: 无法以非目录来覆盖目录 -fT /a/b/c /d/e/f"></a>上线至全量更新服务器时出错：<code>mv: 无法以非目录来覆盖目录 -fT /a/b/c /d/e/f</code><a class="article-anchor" href="#上线至全量更新服务器时出错：mv-无法以非目录来覆盖目录-fT-a-b-c-d-e-f" aria-hidden="true"></a></h3><p>原因分析：更新目标机群是以软链方式来更新webroot，如果提前在目标机群创建了webroot目录，软链覆盖将会失败。</p>
+<p>解决办法：直接删除目标机群webroot目录: <code>rm -rf /d/e/f</code>，确定其父目录有读写的权限即可，由瓦力系统生成webroot软链接。</p>
+<h3 id="初始化walle时失败：could-not-find-driver" class="article-heading"><a href="#初始化walle时失败：could-not-find-driver" class="headerlink" title="初始化walle时失败：could not find driver"></a>初始化walle时失败：could not find driver<a class="article-anchor" href="#初始化walle时失败：could-not-find-driver" aria-hidden="true"></a></h3><p>缺少pdo扩展，解决办法：添加pdo扩展<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">ubuntu</span><br><span class="line">apt-get install php5 php5-fpm php5-mysql</span><br><span class="line"></span><br><span class="line">或者在源码包里编译</span><br><span class="line">cd php-src/ext/pdo_mysql</span><br><span class="line">phpize</span><br><span class="line">./configure --with-php-config=/php/install/dir/bin/php-config</span><br><span class="line">make && make install</span><br><span class="line">vi php.ini # 添加pdo_mysql.so</span><br><span class="line">restart php-fpm</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="composer安装速度慢" class="article-heading"><a href="#composer安装速度慢" class="headerlink" title="composer安装速度慢"></a>composer安装速度慢<a class="article-anchor" href="#composer安装速度慢" aria-hidden="true"></a></h3><p>好吧，我已经猜到会有人问有没有现成的，有！</p>
+<p>下载<a href="http://pan.baidu.com/s/1c0wiuyc" target="_blank" rel="noopener">百度网盘</a>，解压vendor放到walle-web根目录即可。</p>
+<h3 id="第一次使用composer可能会出现的问题：1-没有添加git的token" class="article-heading"><a href="#第一次使用composer可能会出现的问题：1-没有添加git的token" class="headerlink" title="第一次使用composer可能会出现的问题：1 没有添加git的token"></a>第一次使用composer可能会出现的问题：1 没有添加git的token<a class="article-anchor" href="#第一次使用composer可能会出现的问题：1-没有添加git的token" aria-hidden="true"></a></h3><blockquote>
+<p>Could not fetch <a href="https://api.github.com/repos/jquery/jquery" target="_blank" rel="noopener">https://api.github.com/repos/jquery/jquery</a>, please create a GitHub OAuth token to go over the API rate limit<br>Head to <a href="https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123" target="_blank" rel="noopener">https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123</a><br>to retrieve a token. It will be stored in “/root/.composer/auth.json” for future use by Composer.<br>Token (hidden):</p>
+</blockquote>
+<p><strong>解决办法：</strong></p>
+<ul>
+<li>复制提示里的地址到浏览器，点击生成git token，如上面的：<a href="https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123" target="_blank" rel="noopener">https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123</a></li>
+<li>复制token到命令行，认证，继续</li>
+</ul>
+<h3 id="第一次使用composer可能会出现的问题：2-composer-install-可能会出现的错误" class="article-heading"><a href="#第一次使用composer可能会出现的问题：2-composer-install-可能会出现的错误" class="headerlink" title="第一次使用composer可能会出现的问题：2 composer install 可能会出现的错误"></a>第一次使用composer可能会出现的问题：2 composer install 可能会出现的错误<a class="article-anchor" href="#第一次使用composer可能会出现的问题：2-composer-install-可能会出现的错误" aria-hidden="true"></a></h3><blockquote>
+<p>Loading composer repositories with package information<br>Installing dependencies (including require-dev)<br>Your requirements could not be resolved to an installable set of packages.</p>
+<p> Problem 1</p>
+<ul>
+<li>yiisoft/yii2 2.0.x-dev requires bower-asset/jquery 2.1.<em>@stable | 1.11.</em>@stable -> no matching package found.<br>….</li>
+</ul>
+</blockquote>
+<p><strong>解决办法</strong>：<code>composer global require "fxp/composer-asset-plugin:*"</code></p>
+<h3 id="如何添加用户key到git的ssh-keys列表" class="article-heading"><a href="#如何添加用户key到git的ssh-keys列表" class="headerlink" title="如何添加用户key到git的ssh-keys列表"></a>如何添加用户key到git的ssh-keys列表<a class="article-anchor" href="#如何添加用户key到git的ssh-keys列表" aria-hidden="true"></a></h3><hr>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">su - www                 # 假如www为你的php进程用户</span><br><span class="line">ssh-keygen -t rsa        # 如果你都没有生成过rsa_key的话</span><br><span class="line">cat ~/.ssh/id_rsa.pub    # 复制</span><br><span class="line">打开github/gitlab添加到你的ssh-keys或者deploy-keys里</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="如何添加用户ssh-key到目标机群部署用户ssh-key信任" class="article-heading"><a href="#如何添加用户ssh-key到目标机群部署用户ssh-key信任" class="headerlink" title="如何添加用户ssh-key到目标机群部署用户ssh-key信任"></a>如何添加用户ssh-key到目标机群部署用户ssh-key信任<a class="article-anchor" href="#如何添加用户ssh-key到目标机群部署用户ssh-key信任" aria-hidden="true"></a></h3><p><strong>宿主机操作</strong><br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">ps aux|grep php          # 假如www_php为你的php进程用户</span><br><span class="line">su - www_php             # 切换用户</span><br><span class="line">ssh-keygen -t rsa        # 如果你都没有生成过rsa_key的话，如果有则跳过</span><br><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub www_remote@remote_host  # 加入目标机群信任，需要输入www_remote密码</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="nginx简单配置" class="article-heading"><a href="#nginx简单配置" class="headerlink" title="nginx简单配置"></a>nginx简单配置<a class="article-anchor" href="#nginx简单配置" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">server {</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  walle.company.com; # 改你的host</span><br><span class="line">    root /the/dir/of/walle-web/web; # 根目录为web</span><br><span class="line">    index index.php;</span><br><span class="line"></span><br><span class="line">    # 建议放内网</span><br><span class="line">    allow 192.168.0.0/24;</span><br><span class="line">    deny all;</span><br><span class="line"></span><br><span class="line">    location / {</span><br><span class="line">        try_files $uri $uri/ /index.php$is_args$args;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ {</span><br><span class="line">        try_files $uri =404;</span><br><span class="line">        fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">        include        fastcgi_params;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="切换用户（www）时：this-account-is-currently-not-available" class="article-heading"><a href="#切换用户（www）时：this-account-is-currently-not-available" class="headerlink" title="切换用户（www）时：this account is currently not available"></a>切换用户（www）时：this account is currently not available<a class="article-anchor" href="#切换用户（www）时：this-account-is-currently-not-available" aria-hidden="true"></a></h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">cat /etc/passwd | grep www # 查看是否为 /sbin/nolgin</span><br></pre></td></tr></tbody></table></figure>
+<p>解决办法：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vipw /etc/passwd</span><br><span class="line">修改/sbin/nolgin为/bin/bash</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="The-file-or-directory-to-be-published-does-not-exists-data-www-walle-web-vendor-bower-jquery-dist" class="article-heading"><a href="#The-file-or-directory-to-be-published-does-not-exists-data-www-walle-web-vendor-bower-jquery-dist" class="headerlink" title="The file or directory to be published does not exists: /data/www/walle-web/vendor/bower/jquery/dist"></a><code>The file or directory to be published does not exists: /data/www/walle-web/vendor/bower/jquery/dist</code><a class="article-anchor" href="#The-file-or-directory-to-be-published-does-not-exists-data-www-walle-web-vendor-bower-jquery-dist" aria-hidden="true"></a></h3><p>新建此目录即可：<code>/data/www/walle-web/vendor/bower/jquery/dist</code></p>
+<h3 id="tmp-walle下无日志文件" class="article-heading"><a href="#tmp-walle下无日志文件" class="headerlink" title="/tmp/walle下无日志文件"></a><code>/tmp/walle</code>下无日志文件<a class="article-anchor" href="#tmp-walle下无日志文件" aria-hidden="true"></a></h3><p>原因centos 7 yum 安装的php-fpm默认<code>/tmp</code>目录不可写：<code>/usr/lib/systemd/system/php-fpm.service</code> 中的 <code>PrivateTmp=true</code> 禁止了向tmp目录写日志</p>
+<p>解决：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/php-fpm.service</span><br><span class="line">PrivateTmp=false</span><br><span class="line"></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl reload php-fpm</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Call-to-undefined-function-yii-web-mb-parse-str" class="article-heading"><a href="#Call-to-undefined-function-yii-web-mb-parse-str" class="headerlink" title="Call to undefined function yii\web\mb_parse_str()"></a>Call to undefined function yii\web\mb_parse_str()<a class="article-anchor" href="#Call-to-undefined-function-yii-web-mb-parse-str" aria-hidden="true"></a></h2><p>缺少mbstring扩展，安装mbstring扩展重启php即可。mbstring扩展：<a href="http://php.net/manual/zh/mbstring.installation.php" target="_blank" rel="noopener">http://php.net/manual/zh/mbstring.installation.php</a></p>
+<h2 id="项目中有配置文件解决方案" class="article-heading"><a href="#项目中有配置文件解决方案" class="headerlink" title="项目中有配置文件解决方案"></a>项目中有配置文件解决方案<a class="article-anchor" href="#项目中有配置文件解决方案" aria-hidden="true"></a></h2><ul>
+<li>config-production 和 config-development 都提交到git仓库。这会存在一些小问题，比如数据库密码会让所有开发人员知道。你需要把数据库藏在服务器内网里，只能通过 ssh 跳板机登录，不给其他开发人员跳板机权限，知道数据库密码也没用。<ul>
+<li>Config::get 类读取配置时，根据 Apache/php-fpm 里面置入的 env 环境变量，判断是生产环境还是开发环境。</li>
+<li>在各环境部署项目的高级任务post-deploy里写相应的<code>mv config-production config</code>或者<code>mv config-development config</code>，代码直接读取<code>config</code>。</li>
+</ul>
+</li>
+<li>整理所有config有关多种环境的差异，其实并不多。大多数配置生产环境和开发环境都是一样的，只有数据库地址、缓存地址、API Secret 这些敏感信息有点不一样，这种不一样的单独放一个配置文件，放在webroot以外，软链一下就好。</li>
+</ul>
+</body></html>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-12-11T02:14:47.789Z" itemprop="dateModified">上次更新：2018-12-11</time>
+                <a href="install-error.html" class="article-footer-prev" title="安装错误"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="git-configuration.html" class="article-footer-next" title="Git项目配置"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#提问之前"><span class="toc-text">提问之前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检测、上线出错"><span class="toc-text">检测、上线出错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#宿主机检测出错"><span class="toc-text">宿主机检测出错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目标机检测出错"><span class="toc-text">目标机检测出错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#上线至全量更新服务器时出错：mv-无法以非目录来覆盖目录-fT-a-b-c-d-e-f"><span class="toc-text">上线至全量更新服务器时出错：mv: 无法以非目录来覆盖目录 -fT /a/b/c /d/e/f</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化walle时失败：could-not-find-driver"><span class="toc-text">初始化walle时失败：could not find driver</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#composer安装速度慢"><span class="toc-text">composer安装速度慢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一次使用composer可能会出现的问题：1-没有添加git的token"><span class="toc-text">第一次使用composer可能会出现的问题：1 没有添加git的token</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第一次使用composer可能会出现的问题：2-composer-install-可能会出现的错误"><span class="toc-text">第一次使用composer可能会出现的问题：2 composer install 可能会出现的错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何添加用户key到git的ssh-keys列表"><span class="toc-text">如何添加用户key到git的ssh-keys列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何添加用户ssh-key到目标机群部署用户ssh-key信任"><span class="toc-text">如何添加用户ssh-key到目标机群部署用户ssh-key信任</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nginx简单配置"><span class="toc-text">nginx简单配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换用户（www）时：this-account-is-currently-not-available"><span class="toc-text">切换用户（www）时：this account is currently not available</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-file-or-directory-to-be-published-does-not-exists-data-www-walle-web-vendor-bower-jquery-dist"><span class="toc-text">The file or directory to be published does not exists: /data/www/walle-web/vendor/bower/jquery/dist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tmp-walle下无日志文件"><span class="toc-text">/tmp/walle下无日志文件</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#Call-to-undefined-function-yii-web-mb-parse-str"><span class="toc-text">Call to undefined function yii\web\mb_parse_str()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目中有配置文件解决方案"><span class="toc-text">项目中有配置文件解决方案</span></a>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </li></div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">快速开始</strong><a href="index.html" class="sidebar-link">概述</a><a href="architecture.html" class="sidebar-link">原理分析</a><a href="permission.html" class="sidebar-link">权限模型</a><a href="dependency.html" class="sidebar-link">依赖</a><a href="installation.html" class="sidebar-link">安装</a><a href="upgrade.html" class="sidebar-link">升级</a><a href="install-error.html" class="sidebar-link">安装错误</a><a href="troubleshooting.html" class="sidebar-link current">问题解答</a><strong class="sidebar-title">配置项目</strong><a href="git-configuration.html" class="sidebar-link">Git项目配置</a><a href="svn-configuration.html" class="sidebar-link">svn Configuration</a><a href="task-configuration.html" class="sidebar-link">高级任务配置</a><a href="user-configuration.html" class="sidebar-link">项目用户配置</a><a href="configuration-error.html" class="sidebar-link">检测错误</a><strong class="sidebar-title">上线使用</strong><a href="submit-bill.html" class="sidebar-link">提交上线单</a><a href="deploying.html" class="sidebar-link">部署上线</a><a href="deploy-error.html" class="sidebar-link">部署出错</a><strong class="sidebar-title">自定义</strong><a href="local.html" class="sidebar-link">各种自定义</a><strong class="sidebar-title">其它</strong><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2018 <a href="https://walle-web.io/" target="_blank">walle</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">关于我们</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速开始</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="architecture.html" class="mobile-nav-link">原理分析</a><a href="permission.html" class="mobile-nav-link">权限模型</a><a href="dependency.html" class="mobile-nav-link">依赖</a><a href="installation.html" class="mobile-nav-link">安装</a><a href="upgrade.html" class="mobile-nav-link">升级</a><a href="install-error.html" class="mobile-nav-link">安装错误</a><a href="troubleshooting.html" class="mobile-nav-link current">问题解答</a><strong class="mobile-nav-title">配置项目</strong><a href="git-configuration.html" class="mobile-nav-link">Git项目配置</a><a href="svn-configuration.html" class="mobile-nav-link">svn Configuration</a><a href="task-configuration.html" class="mobile-nav-link">高级任务配置</a><a href="user-configuration.html" class="mobile-nav-link">项目用户配置</a><a href="configuration-error.html" class="mobile-nav-link">检测错误</a><strong class="mobile-nav-title">上线使用</strong><a href="submit-bill.html" class="mobile-nav-link">提交上线单</a><a href="deploying.html" class="mobile-nav-link">部署上线</a><a href="deploy-error.html" class="mobile-nav-link">部署出错</a><strong class="mobile-nav-title">自定义</strong><a href="local.html" class="mobile-nav-link">各种自定义</a><strong class="mobile-nav-title">其它</strong><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+
+<script src="/js/version_select.js"></script>
+
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<!--  <script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script> -->
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
