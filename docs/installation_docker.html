@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>Docker安装 | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/2/zh-cn/installation_docker.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/2/zh-cn/installation_docker.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/2/zh-cn/installation_docker.html">
+    
+  
+  <!-- Icon -->
+  <link rel="icon" href="/./favicon.ico">
+  <!-- CSS -->
+  <!-- build:css build/css/walle.css -->
+  <link rel="stylesheet" href="/css/walle.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="鸣谢此篇由焦富涛贡献，为社区提供了 Docker 版本。人人为我，我为人人！而且极其注重细节，甚至细腻到中英文之间空格的控制。 About DockerDocker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 Install Docker我们重点说明docker在centos和ubuntu操作系统">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Docker安装">
+<meta property="og:url" content="https://walle-web.io/docs/2/zh-cn/installation_docker.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="鸣谢此篇由焦富涛贡献，为社区提供了 Docker 版本。人人为我，我为人人！而且极其注重细节，甚至细腻到中英文之间空格的控制。 About DockerDocker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 Install Docker我们重点说明docker在centos和ubuntu操作系统">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-12-28T23:01:38.899Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker安装">
+<meta name="twitter:description" content="鸣谢此篇由焦富涛贡献，为社区提供了 Docker 版本。人人为我，我为人人！而且极其注重细节，甚至细腻到中英文之间空格的控制。 About DockerDocker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 Install Docker我们重点说明docker在centos和ubuntu操作系统">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="Docker安装">
+  <!-- baidu Analytics -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e33cdb698107fe42dbc2af5745ab3c82";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body class="">
+  <div id="container">
+    
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap" class="">
+      
+        <img id="logo-img" src="/images/user/logo.blue.png">
+      
+      <a href="/" id="logo">Walle</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/about" class="main-nav-link">关于我们</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>walle-2.0</span></label>
+      <select id="version-select">
+        
+          <option value="1">walle-1.0</option>
+        
+          <option value="2" selected>walle-2.0</option>
+        
+      </select>
+    </div>
+    
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Docker安装</h1>
+                <a href="https://github.com/meolu/docs/edit/master/walle-web.io/docs/2/zh-cn/installation_docker.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <html><head><meta name="generator" content="Hexo 3.8.0"></head><body><h2 id="鸣谢" class="article-heading"><a href="#鸣谢" class="headerlink" title="鸣谢"></a>鸣谢<a class="article-anchor" href="#鸣谢" aria-hidden="true"></a></h2><p>此篇由<a href="https://github.com/owen-carter" target="_blank" rel="noopener">焦富涛</a>贡献，为社区提供了 Docker 版本。人人为我，我为人人！而且极其注重细节，甚至细腻到中英文之间空格的控制。</p>
+<h2 id="About-Docker" class="article-heading"><a href="#About-Docker" class="headerlink" title="About Docker"></a>About Docker<a class="article-anchor" href="#About-Docker" aria-hidden="true"></a></h2><p>Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p>
+<h2 id="Install-Docker" class="article-heading"><a href="#Install-Docker" class="headerlink" title="Install Docker"></a><a href="https://docs.docker.com/install/linux/docker-ce" target="_blank" rel="noopener">Install Docker</a><a class="article-anchor" href="#Install-Docker" aria-hidden="true"></a></h2><p>我们重点说明docker在centos和ubuntu操作系统下的安装和使用，Mac下安装比较简单，直接下载dmg镜像安装即可，使用和centos，ubuntu基本无异，<br>不推荐在windows下部署，会有文件路径问题抽风。</p>
+<ul>
+<li><p><a href="https://docs.docker.com/install/linux/docker-ce/centos" target="_blank" rel="noopener">Centos系统</a></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo yum install -y yum-utils  device-mapper-persistent-data lvm2</span><br><span class="line">sudo yum-config-manager --add-repo  https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo yum install docker-ce -y</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> docker</span><br><span class="line">sudo systemctl start docker</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank" rel="noopener">Ubuntu系统</a></p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo apt-key fingerprint 0EBFCD88</span><br><span class="line">sudo add-apt-repository \</span><br><span class="line">   <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">   <span class="variable">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">   stable"</span></span><br><span class="line">sudo apt-get update   </span><br><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p><a href="https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac" target="_blank" rel="noopener">Mac系统</a></p>
+</li>
+</ul>
+<p><a href="https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac" target="_blank" rel="noopener">https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac</a></p>
+<ul>
+<li><a href="https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows" target="_blank" rel="noopener">Windows</a></li>
+</ul>
+<p><a href="https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows" target="_blank" rel="noopener">https://docs.docker.com/docker-for-windows/install/#start-docker-for-windows</a></p>
+<h2 id="Install-docker-compose" class="article-heading"><a href="#Install-docker-compose" class="headerlink" title="Install docker-compose"></a><a href="https://docs.docker.com/compose/overview/" target="_blank" rel="noopener">Install docker-compose</a><a class="article-anchor" href="#Install-docker-compose" aria-hidden="true"></a></h2><p>install <a href="https://docs.docker.com/compose/overview/" target="_blank" rel="noopener">docker-compose</a><br></p><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">pip install docker-compose -i https://mirrors.aliyun.com/pypi/simple/</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="Prepare-Before-Deploy" class="article-heading"><a href="#Prepare-Before-Deploy" class="headerlink" title="Prepare Before Deploy"></a>Prepare Before Deploy<a class="article-anchor" href="#Prepare-Before-Deploy" aria-hidden="true"></a></h2><p>修改settings_prod.py<br></p><figure class="highlight python"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># walle/config/settings_prod.py:17</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ProdConfig</span><span class="params">(Config)</span>:</span></span><br><span class="line">    <span class="string">"""Production configuration."""</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># .....</span></span><br><span class="line">    <span class="comment"># .....</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># todo 数据库设置</span></span><br><span class="line">    SQLALCHEMY_DATABASE_URI = <span class="string">'mysql://user:password@localhost/walle'</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>修改docker-compose.yml<br></p><figure class="highlight yaml"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3.6"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  mysql:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="attr">mysql:5.7</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:3306:3306</span></span><br><span class="line"><span class="attr">    expose:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">3306</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line">      <span class="comment"># todo 数据库root密码，这个如果需要修改，需要和 walle/config/settings_prod.py 中数据库密码保持一致</span></span><br><span class="line"><span class="attr">      MYSQL_ROOT_PASSWORD:</span> <span class="string">walle</span></span><br><span class="line"><span class="attr">      MYSQL_DATABASE:</span> <span class="string">walle</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">${HOME}/.walle/mysql:/var/lib/mysql</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">./</span></span><br><span class="line"><span class="attr">    links:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">mysql</span></span><br><span class="line"><span class="attr">    expose:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">5000</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">WALLE_SECRET="guess</span> <span class="string">me</span> <span class="string">out"</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  gateway:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    links:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">mysql</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">web</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line">      <span class="comment"># 如果宿主机80端口被占用，可自行修改为其他port(>=1024)</span></span><br><span class="line">      <span class="comment"># 0.0.0.0:要绑定的宿主机端口:docker容器内端口80</span></span><br><span class="line"><span class="bullet">      -</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:80:80</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">./fe/:/data/web/:ro</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">./gateway/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">always</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="Start" class="article-heading"><a href="#Start" class="headerlink" title="Start"></a>Start<a class="article-anchor" href="#Start" aria-hidden="true"></a></h2><ul>
+<li><p>一键启动（快速体验）</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">docker-compose build && docker-compose up -d && docker-compose logs -f</span><br><span class="line"><span class="comment"># 打开浏览器localhost:80</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>常用操作</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># 构建服务</span></span><br><span class="line">docker-compose build</span><br><span class="line"><span class="comment"># 启动服务,启动过程中可以直接查看终端日志，观察启动是否成功</span></span><br><span class="line">docker-compsoe up</span><br><span class="line"><span class="comment"># 启动服务在后台，如果确认部署成功，则可以使用此命令，将应用跑在后台，作用类似 nohup python waller.py &</span></span><br><span class="line">docker-compose up -d</span><br><span class="line"><span class="comment"># 查看日志,效果类似 tail -f waller.log</span></span><br><span class="line">docker-compose logs -f</span><br><span class="line"><span class="comment"># 停止服务,会停止服务的运行，但是不会删除服务所所依附的网络，以及存储等</span></span><br><span class="line">docker-compsoe stop</span><br><span class="line"><span class="comment"># 删除服务，并删除服务产生的网络，存储等，并且会关闭服务的守护</span></span><br><span class="line">docker-compose down</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+</body></html>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2018-12-28T23:01:38.899Z" itemprop="dateModified">上次更新：2018-12-29</time>
+                <a href="installation.html" class="article-footer-prev" title="标准安装"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="upgrade.html" class="article-footer-next" title="升级"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#鸣谢"><span class="toc-text">鸣谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#About-Docker"><span class="toc-text">About Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Docker"><span class="toc-text">Install Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-docker-compose"><span class="toc-text">Install docker-compose</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Prepare-Before-Deploy"><span class="toc-text">Prepare Before Deploy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Start"><span class="toc-text">Start</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">快速开始</strong><a href="index.html" class="sidebar-link">概述</a><a href="architecture.html" class="sidebar-link">原理分析</a><a href="permission.html" class="sidebar-link">权限模型</a><a href="dependency.html" class="sidebar-link">依赖检查</a><a href="installation.html" class="sidebar-link">标准安装</a><a href="installation_docker.html" class="sidebar-link current">Docker安装</a><a href="upgrade.html" class="sidebar-link">升级</a><a href="install-error.html" class="sidebar-link">安装错误</a><a href="troubleshooting.html" class="sidebar-link">常见问题排解</a><strong class="sidebar-title">配置项目</strong><a href="user-configuration.html" class="sidebar-link">项目用户配置</a><a href="configuration_java.html" class="sidebar-link">Java项目配置模板</a><a href="configuration-error.html" class="sidebar-link">检测错误</a><strong class="sidebar-title">上线使用</strong><a href="submit-bill.html" class="sidebar-link">提交上线单</a><a href="deploying.html" class="sidebar-link">部署上线</a><a href="deploy-error.html" class="sidebar-link">部署出错</a><strong class="sidebar-title">自定义</strong><a href="local.html" class="sidebar-link">各种自定义</a><strong class="sidebar-title">其它</strong><a href="contributing.html" class="sidebar-link">贡献</a><a href="releases.html" class="sidebar-link">更新日志</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2018 <a href="https://walle-web.io/" target="_blank">walle</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">关于我们</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速开始</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="architecture.html" class="mobile-nav-link">原理分析</a><a href="permission.html" class="mobile-nav-link">权限模型</a><a href="dependency.html" class="mobile-nav-link">依赖检查</a><a href="installation.html" class="mobile-nav-link">标准安装</a><a href="installation_docker.html" class="mobile-nav-link current">Docker安装</a><a href="upgrade.html" class="mobile-nav-link">升级</a><a href="install-error.html" class="mobile-nav-link">安装错误</a><a href="troubleshooting.html" class="mobile-nav-link">常见问题排解</a><strong class="mobile-nav-title">配置项目</strong><a href="user-configuration.html" class="mobile-nav-link">项目用户配置</a><a href="configuration_java.html" class="mobile-nav-link">Java项目配置模板</a><a href="configuration-error.html" class="mobile-nav-link">检测错误</a><strong class="mobile-nav-title">上线使用</strong><a href="submit-bill.html" class="mobile-nav-link">提交上线单</a><a href="deploying.html" class="mobile-nav-link">部署上线</a><a href="deploy-error.html" class="mobile-nav-link">部署出错</a><strong class="mobile-nav-title">自定义</strong><a href="local.html" class="mobile-nav-link">各种自定义</a><strong class="mobile-nav-title">其它</strong><a href="contributing.html" class="mobile-nav-link">贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+
+<script src="/js/version_select.js"></script>
+
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<!--  <script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script> -->
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
