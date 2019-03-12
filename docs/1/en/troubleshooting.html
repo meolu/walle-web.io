@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/1/en/troubleshooting.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/1/en/troubleshooting.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/1/en/troubleshooting.html">
+    
+  
+  <!-- Icon -->
+  <link rel="icon" href="/./favicon.ico">
+  <!-- CSS -->
+  <!-- build:css build/css/walle.css -->
+  <link rel="stylesheet" href="/css/walle.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="1.Token is need the first time to use github Could not fetch https://api.github.com/repos/jquery/jquery, please create a GitHub OAuth token to go over the API rate limitHead to https://github.com/sett">
+<meta property="og:type" content="website">
+<meta property="og:title" content="walle 瓦力 - 部署系统">
+<meta property="og:url" content="https://walle-web.io/docs/1/en/troubleshooting.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="1.Token is need the first time to use github Could not fetch https://api.github.com/repos/jquery/jquery, please create a GitHub OAuth token to go over the API rate limitHead to https://github.com/sett">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-03-12T15:36:13.145Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="walle 瓦力 - 部署系统">
+<meta name="twitter:description" content="1.Token is need the first time to use github Could not fetch https://api.github.com/repos/jquery/jquery, please create a GitHub OAuth token to go over the API rate limitHead to https://github.com/sett">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="walle 瓦力 - 部署系统">
+  <!-- baidu Analytics -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e33cdb698107fe42dbc2af5745ab3c82";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body class="">
+  <div id="container" class="">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap" class="">
+      
+        <img id="logo-img" src="/images/user/logo.blue.png">
+      
+      <a href="/" id="logo">Walle</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/en" class="main-nav-link">Home</a></li><li class="main-nav-item"><a href="/docs/en" class="main-nav-link">Docs</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">News</a></li><li class="main-nav-item"><a href="/about" class="main-nav-link">关于我们</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn">简体中文</option>
+        
+          <option value="en" selected>English</option>
+        
+      </select>
+    </div>
+    
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>walle-1.0</span></label>
+      <select id="version-select">
+        
+          <option value="1" selected>walle-1.0</option>
+        
+          <option value="2">walle-2.0</option>
+        
+      </select>
+    </div>
+    
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name"></h1>
+                <a href="https://github.com/meolu/docs/edit/master/walle-web.io/docs/1/en/troubleshooting.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i> Improve this doc</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <html><head><meta name="generator" content="Hexo 3.8.0"></head><body><h2 id="1-Token-is-need-the-first-time-to-use-github" class="article-heading"><a href="#1-Token-is-need-the-first-time-to-use-github" class="headerlink" title="1.Token is need the first time to use github"></a>1.Token is need the first time to use github<a class="article-anchor" href="#1-Token-is-need-the-first-time-to-use-github" aria-hidden="true"></a></h2><blockquote>
+<p>Could not fetch <a href="https://api.github.com/repos/jquery/jquery" target="_blank" rel="noopener">https://api.github.com/repos/jquery/jquery</a>, please create a GitHub OAuth token to go over the API rate limit<br>Head to <a href="https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123" target="_blank" rel="noopener">https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123</a><br>to retrieve a token. It will be stored in “/root/.composer/auth.json” for future use by Composer.<br>Token (hidden):</p>
+</blockquote>
+<p><strong>Solution：</strong></p>
+<ul>
+<li>copy the url in the screen to browser，general a git token, such as above：<a href="https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123" target="_blank" rel="noopener">https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+localhost+2015-10-08+1123</a></li>
+<li>pasty the token to command line, go next.</li>
+</ul>
+<h2 id="2-bower-asset-jquery-may-be-need-the-first-time-to-use-composer-when-composer-install" class="article-heading"><a href="#2-bower-asset-jquery-may-be-need-the-first-time-to-use-composer-when-composer-install" class="headerlink" title="2.bower-asset/jquery may be need the first time to use composer when composer install"></a>2.bower-asset/jquery may be need the first time to use composer when composer install<a class="article-anchor" href="#2-bower-asset-jquery-may-be-need-the-first-time-to-use-composer-when-composer-install" aria-hidden="true"></a></h2><blockquote>
+<p>Loading composer repositories with package information<br>Installing dependencies (including require-dev)<br>Your requirements could not be resolved to an installable set of packages.</p>
+<p> Problem 1</p>
+<ul>
+<li>yiisoft/yii2 2.0.x-dev requires bower-asset/jquery 2.1.<em>@stable | 1.11.</em>@stable -> no matching package found.<br>….</li>
+</ul>
+</blockquote>
+<p><strong>Solution</strong>：<code>composer global require "fxp/composer-asset-plugin:*"</code></p>
+<h2 id="3-How-to-add-user’s-ssh-key-to-github-gitlab’s-ssh-keys-list" class="article-heading"><a href="#3-How-to-add-user’s-ssh-key-to-github-gitlab’s-ssh-keys-list" class="headerlink" title="3.How to add user’s ssh-key to github/gitlab’s ssh-keys list"></a>3.How to add user’s ssh-key to github/gitlab’s ssh-keys list<a class="article-anchor" href="#3-How-to-add-user’s-ssh-key-to-github-gitlab’s-ssh-keys-list" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">su - www                 # suppose www is the user of php process</span><br><span class="line">ssh-keygen -t rsa        # skip if you have generaled the rsa key</span><br><span class="line">cat ~/.ssh/id_rsa.pub    # copy</span><br><span class="line">open github/gitlab's website, add your key to ssh-keys or deploy-keys</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="4-How-to-add-user’s-ssh-key-to-server" class="article-heading"><a href="#4-How-to-add-user’s-ssh-key-to-server" class="headerlink" title="4.How to add user’s ssh-key to server"></a>4.How to add user’s ssh-key to server<a class="article-anchor" href="#4-How-to-add-user’s-ssh-key-to-server" aria-hidden="true"></a></h2><p><strong>on host</strong><br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">ps aux|grep php          # suppose www is the user of php process</span><br><span class="line">su - www                 # switch to www</span><br><span class="line">ssh-keygen -t rsa        # skip if you have generaled the rsa key</span><br><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub remote_user@remote_host  # add key to remote authorized_keys, need remote_user's password</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="5-Import-data-failed" class="article-heading"><a href="#5-Import-data-failed" class="headerlink" title="5.Import data failed"></a>5.Import data failed<a class="article-anchor" href="#5-Import-data-failed" aria-hidden="true"></a></h2><p>Dependent on pdo extension. Solution：add pdo extension<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">ubuntu</span><br><span class="line">> apt-get install php5 php5-fpm php5-mysql</span><br><span class="line"></span><br><span class="line">compile in php source</span><br><span class="line">> cd php-src/ext/pdo_mysql</span><br><span class="line">> phpize</span><br><span class="line">> ./configure --with-php-config=/php/install/dir/bin/php-config</span><br><span class="line">> make && make install</span><br><span class="line">> vi php.ini # add new line: extension=pdo_mysql.so</span><br><span class="line">restart php-fpm</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="6-Nginx-configuration-example" class="article-heading"><a href="#6-Nginx-configuration-example" class="headerlink" title="6.Nginx configuration example"></a>6.Nginx configuration example<a class="article-anchor" href="#6-Nginx-configuration-example" aria-hidden="true"></a></h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">server {</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  walle.huamanshu.com; # change to your host</span><br><span class="line">    root /the/dir/of/walle-web/web;   # root is walle-web/web</span><br><span class="line">    index index.php;</span><br><span class="line"></span><br><span class="line">    # suggest access</span><br><span class="line">    # allow 192.168.0.0/24;</span><br><span class="line">    # deny all;</span><br><span class="line"></span><br><span class="line">    location / {</span><br><span class="line">        try_files $uri $uri/ /index.php$is_args$args;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    location ~ \.php$ {</span><br><span class="line">        try_files $uri = 404;</span><br><span class="line">        fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">        include        fastcgi_params;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>
+              </div>
+              <footer class="article-footer">
+                 
+                 <div class="donate"><i class="fa fa-usd"></i><a href="/donate.html">打赏</a> <span>或者</span> <a style="font-size: 18px;" href="https://github.com/meolu/walle-web" target="_blank">star</a></div>
+                 
+                <time class="article-footer-updated" datetime="2019-03-12T15:36:13.145Z" itemprop="dateModified">Last updated: 2019-03-12</time>
+                <a href="install-error.html" class="article-footer-prev" title="Unstall Error"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="git-configuration.html" class="article-footer-next" title="Git Configuration"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Token-is-need-the-first-time-to-use-github"><span class="toc-text">1.Token is need the first time to use github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-bower-asset-jquery-may-be-need-the-first-time-to-use-composer-when-composer-install"><span class="toc-text">2.bower-asset/jquery may be need the first time to use composer when composer install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-How-to-add-user’s-ssh-key-to-github-gitlab’s-ssh-keys-list"><span class="toc-text">3.How to add user’s ssh-key to github/gitlab’s ssh-keys list</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-How-to-add-user’s-ssh-key-to-server"><span class="toc-text">4.How to add user’s ssh-key to server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Import-data-failed"><span class="toc-text">5.Import data failed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Nginx-configuration-example"><span class="toc-text">6.Nginx configuration example</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="architecture.html" class="sidebar-link">Architecture</a><a href="dependency.html" class="sidebar-link">Dependency</a><a href="installation.html" class="sidebar-link">Installation</a><a href="upgrade.html" class="sidebar-link">Upgrade</a><a href="install-error.html" class="sidebar-link">Unstall Error</a><a href="troubleshooting.html" class="sidebar-link current">FQA</a><strong class="sidebar-title">Project Configuration</strong><a href="git-configuration.html" class="sidebar-link">Git Configuration</a><a href="svn-configuration.html" class="sidebar-link">svn Configuration</a><a href="task-configuration.html" class="sidebar-link">Task Configuration</a><a href="configuration-user.html" class="sidebar-link">用户配置</a><a href="configuration-error.html" class="sidebar-link">Configuration Error</a><strong class="sidebar-title">Getting Deploy</strong><a href="submit-bill.html" class="sidebar-link">Submit Bill</a><a href="deploying.html" class="sidebar-link">Deploying</a><a href="deploy-error.html" class="sidebar-link">Deploy Error</a><strong class="sidebar-title">自定义</strong><a href="local.html" class="sidebar-link">各种自定义</a><strong class="sidebar-title">其它</strong><a href="contributing.html" class="sidebar-link">我想贡献</a><a href="releases.html" class="sidebar-link">更新日志</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2019 <a href="https://walle-web.io/" target="_blank">walle</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/en" class="mobile-nav-link">Home</a></li><li class="mobile-nav-item"><a href="/docs/en" class="mobile-nav-link">Docs</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">News</a></li><li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">关于我们</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Getting Started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="architecture.html" class="mobile-nav-link">Architecture</a><a href="dependency.html" class="mobile-nav-link">Dependency</a><a href="installation.html" class="mobile-nav-link">Installation</a><a href="upgrade.html" class="mobile-nav-link">Upgrade</a><a href="install-error.html" class="mobile-nav-link">Unstall Error</a><a href="troubleshooting.html" class="mobile-nav-link current">FQA</a><strong class="mobile-nav-title">Project Configuration</strong><a href="git-configuration.html" class="mobile-nav-link">Git Configuration</a><a href="svn-configuration.html" class="mobile-nav-link">svn Configuration</a><a href="task-configuration.html" class="mobile-nav-link">Task Configuration</a><a href="configuration-user.html" class="mobile-nav-link">用户配置</a><a href="configuration-error.html" class="mobile-nav-link">Configuration Error</a><strong class="mobile-nav-title">Getting Deploy</strong><a href="submit-bill.html" class="mobile-nav-link">Submit Bill</a><a href="deploying.html" class="mobile-nav-link">Deploying</a><a href="deploy-error.html" class="mobile-nav-link">Deploy Error</a><strong class="mobile-nav-title">自定义</strong><a href="local.html" class="mobile-nav-link">各种自定义</a><strong class="mobile-nav-title">其它</strong><a href="contributing.html" class="mobile-nav-link">我想贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn">简体中文</option>
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+
+<script src="/js/version_select.js"></script>
+
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<!--  <script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script> -->
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
