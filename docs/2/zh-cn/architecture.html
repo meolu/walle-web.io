@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>原理分析 | walle 瓦力 - 部署系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://walle-web.io/docs/2/zh-cn/architecture.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="https://walle-web.io/docs/2/zh-cn/architecture.html">
+    
+      <link rel="alternative" hreflang="en" href="https://walle-web.io/en/docs/2/zh-cn/architecture.html">
+    
+  
+  <!-- Icon -->
+  <link rel="icon" href="/./favicon.ico">
+  <!-- CSS -->
+  <!-- build:css build/css/walle.css -->
+  <link rel="stylesheet" href="/css/walle.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="walle 瓦力 - 部署系统">
+  <!-- Open Graph -->
+  <meta name="description" content="宿主机、目标机群、操作用户宿主机、目标机群、操作用户关系如下图所示，宿主机（walle所在的机器），是一个中间机器，是代码托管与远程目标机群的纽带。所以宿主机需要与代码托管(github/gitlab)和远程目标机群都建立ssh-key信任。  权限模型权限的角色分为SUPER 超管、OWNER 所有者、MASTER 负责人、DEVELOPER 开发者、REPORTER 访客，操作的资源包括空间、">
+<meta property="og:type" content="website">
+<meta property="og:title" content="原理分析">
+<meta property="og:url" content="https://walle-web.io/docs/2/zh-cn/architecture.html">
+<meta property="og:site_name" content="walle 瓦力 - 部署系统">
+<meta property="og:description" content="宿主机、目标机群、操作用户宿主机、目标机群、操作用户关系如下图所示，宿主机（walle所在的机器），是一个中间机器，是代码托管与远程目标机群的纽带。所以宿主机需要与代码托管(github/gitlab)和远程目标机群都建立ssh-key信任。  权限模型权限的角色分为SUPER 超管、OWNER 所有者、MASTER 负责人、DEVELOPER 开发者、REPORTER 访客，操作的资源包括空间、">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="https://walle-web.io/docs/2/zh-cn/static/walle-flow-relation.jpg">
+<meta property="og:image" content="https://walle-web.io/docs/2/zh-cn/static/permission.png">
+<meta property="og:image" content="https://walle-web.io/docs/2/zh-cn/static/user-relations.png">
+<meta property="og:image" content="https://walle-web.io/docs/2/zh-cn/static/walle-flow-deploy.jpg">
+<meta property="og:updated_time" content="2019-04-08T10:53:08.575Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原理分析">
+<meta name="twitter:description" content="宿主机、目标机群、操作用户宿主机、目标机群、操作用户关系如下图所示，宿主机（walle所在的机器），是一个中间机器，是代码托管与远程目标机群的纽带。所以宿主机需要与代码托管(github/gitlab)和远程目标机群都建立ssh-key信任。  权限模型权限的角色分为SUPER 超管、OWNER 所有者、MASTER 负责人、DEVELOPER 开发者、REPORTER 访客，操作的资源包括空间、">
+<meta name="twitter:image" content="https://walle-web.io/docs/2/zh-cn/static/walle-flow-relation.jpg">
+<meta name="twitter:site" content="wushuiyong">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="原理分析">
+  <!-- baidu Analytics -->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e33cdb698107fe42dbc2af5745ab3c82";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body class="">
+  <div id="container" class="">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap" class="">
+      
+        <img id="logo-img" src="/images/user/logo.blue.png">
+      
+      <a href="/" id="logo">Walle</a>
+    </h1>
+    <nav id="main-nav">
+      <ul>
+        <li class="main-nav-item"><a href="/" class="main-nav-link">首页</a></li><li class="main-nav-item"><a href="/docs/" class="main-nav-link">文档</a></li><li class="main-nav-item"><a href="/news/" class="main-nav-link">动态</a></li><li class="main-nav-item"><a href="/about" class="main-nav-link">关于我们</a></li>
+        <li class="main-nav-item">
+          <a href="https://github.com/meolu/walle-web" class="main-nav-link">GitHub</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+          <option value="en">English</option>
+        
+      </select>
+    </div>
+    
+     <div id="select-version-wrap">
+      <label id="lang-select-label"><span>walle-2.0</span></label>
+      <select id="version-select">
+        
+          <option value="1">walle-1.0</option>
+        
+          <option value="2" selected>walle-2.0</option>
+        
+      </select>
+    </div>
+    
+    
+    <div id="search-btn-wrap" class="main-nav-item">
+      <input type="text" class="st-default-search-input">
+    </div>
+    
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+    
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope="" itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">原理分析</h1>
+                <a href="https://github.com/meolu/docs/edit/master/walle-web.io/docs/2/zh-cn/architecture.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i> 改进本文</a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <html><head><meta name="generator" content="Hexo 3.8.0"></head><body><h2 id="宿主机、目标机群、操作用户" class="article-heading"><a href="#宿主机、目标机群、操作用户" class="headerlink" title="宿主机、目标机群、操作用户"></a>宿主机、目标机群、操作用户<a class="article-anchor" href="#宿主机、目标机群、操作用户" aria-hidden="true"></a></h2><p>宿主机、目标机群、操作用户关系如下图所示，宿主机（walle所在的机器），是一个中间机器，是代码托管与远程目标机群的纽带。所以宿主机需要与代码托管(github/gitlab)和远程目标机群都建立ssh-key信任。</p>
+<p><img src="./static/walle-flow-relation.jpg" alt=""></p>
+<h2 id="权限模型" class="article-heading"><a href="#权限模型" class="headerlink" title="权限模型"></a>权限模型<a class="article-anchor" href="#权限模型" aria-hidden="true"></a></h2><p>权限的角色分为<strong>SUPER 超管</strong>、<strong>OWNER 所有者</strong>、<strong>MASTER 负责人</strong>、<strong>DEVELOPER 开发者</strong>、<strong>REPORTER 访客</strong>，操作的资源包括空间、项目、上线单（任务）、环境、用户等</p>
+<p><img src="/docs/2/zh-cn/static/permission.png" alt="permission"></p>
+<p>更详细的权限模型说明：<a href="https://walle-web.io/docs/2/permission.html">权限模型</a></p>
+<h2 id="用户关系与信任关系" class="article-heading"><a href="#用户关系与信任关系" class="headerlink" title="用户关系与信任关系"></a>用户关系与信任关系<a class="article-anchor" href="#用户关系与信任关系" aria-hidden="true"></a></h2><p><img src="/docs/2/zh-cn/static/user-relations.png" alt="permission"></p>
+<ul>
+<li>A 能密码登录所有服务器（把A的key加入其它机器信任列表）</li>
+<li>A 能拉git代码（把A的key加入git信任列表）</li>
+<li>免密码登录三个条件<ul>
+<li>~ 755</li>
+<li>~/.ssh 700</li>
+<li>~/.ssh/authorized_keys 644 或 600</li>
+</ul>
+</li>
+<li>时间宝贵。不要部署在<strong>mac os</strong>，请直接部署到<strong>Centos 6/7</strong>试用，减少不必要的麻烦</li>
+</ul>
+<p>更详细的信任关系配置手册说明：<a href="http://walle-web.io/docs/troubleshooting.html#Authentication-failed">权限模型</a></p>
+<h4 id="上线流程图" class="article-heading"><a href="#上线流程图" class="headerlink" title="上线流程图"></a>上线流程图<a class="article-anchor" href="#上线流程图" aria-hidden="true"></a></h4><p><img src="./static/walle-flow-deploy.jpg" alt=""></p>
+</body></html>
+              </div>
+              <footer class="article-footer">
+                 
+                 <div class="donate"><i class="fa fa-usd"></i><a href="/donate.html">打赏</a> <span>或者</span> <a style="font-size: 18px;" href="https://github.com/meolu/walle-web" target="_blank">star</a></div>
+                 
+                <time class="article-footer-updated" datetime="2019-04-08T10:53:08.575Z" itemprop="dateModified">上次更新：2019-04-08</time>
+                <a href="index.html" class="article-footer-prev" title="概述"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="permission.html" class="article-footer-next" title="权限模型"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#宿主机、目标机群、操作用户"><span class="toc-text">宿主机、目标机群、操作用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#权限模型"><span class="toc-text">权限模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户关系与信任关系"><span class="toc-text">用户关系与信任关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#上线流程图"><span class="toc-text">上线流程图</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">快速开始</strong><a href="index.html" class="sidebar-link">概述</a><a href="architecture.html" class="sidebar-link current">原理分析</a><a href="permission.html" class="sidebar-link">权限模型</a><a href="dependency.html" class="sidebar-link">依赖检查</a><a href="installation.html" class="sidebar-link">标准安装</a><a href="installation_docker.html" class="sidebar-link">Docker安装</a><a href="upgrade.html" class="sidebar-link">升级</a><a href="install-error.html" class="sidebar-link">安装错误</a><a href="troubleshooting.html" class="sidebar-link">常见问题排解</a><strong class="sidebar-title">配置项目</strong><a href="configuration-user.html" class="sidebar-link">用户配置</a><a href="configuration-project.html" class="sidebar-link">项目配置</a><a href="configuration-project-java.html" class="sidebar-link">Java项目配置模板</a><a href="configuration-project-php.html" class="sidebar-link">PHP项目配置模板</a><a href="configuration-error.html" class="sidebar-link">检测错误</a><strong class="sidebar-title">上线使用</strong><a href="submit-bill.html" class="sidebar-link">提交上线单</a><a href="deploying.html" class="sidebar-link">部署上线</a><a href="deploy-error.html" class="sidebar-link">部署出错</a><strong class="sidebar-title">自定义</strong><a href="local.html" class="sidebar-link">各种自定义</a><strong class="sidebar-title">其它</strong><a href="contributing.html" class="sidebar-link">我想贡献</a><a href="releases.html" class="sidebar-link">更新日志</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+  </div>
+  <footer id="footer">
+  <div class="wrapper">
+    <div class="inner">
+      <div id="footer-copyright">
+        &copy; 2019 <a href="https://walle-web.io/" target="_blank">walle</a><br>
+        Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+      </div>
+      <div id="footer-links">
+        <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+        <a href="https://github.com/meolu/walle-web" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+        <a href="https://twitter.com/wushuiyong" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/" class="mobile-nav-link">首页</a></li><li class="mobile-nav-item"><a href="/docs/" class="mobile-nav-link">文档</a></li><li class="mobile-nav-item"><a href="/news/" class="mobile-nav-link">动态</a></li><li class="mobile-nav-item"><a href="/about" class="mobile-nav-link">关于我们</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/meolu/walle-web" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">快速开始</strong><a href="index.html" class="mobile-nav-link">概述</a><a href="architecture.html" class="mobile-nav-link current">原理分析</a><a href="permission.html" class="mobile-nav-link">权限模型</a><a href="dependency.html" class="mobile-nav-link">依赖检查</a><a href="installation.html" class="mobile-nav-link">标准安装</a><a href="installation_docker.html" class="mobile-nav-link">Docker安装</a><a href="upgrade.html" class="mobile-nav-link">升级</a><a href="install-error.html" class="mobile-nav-link">安装错误</a><a href="troubleshooting.html" class="mobile-nav-link">常见问题排解</a><strong class="mobile-nav-title">配置项目</strong><a href="configuration-user.html" class="mobile-nav-link">用户配置</a><a href="configuration-project.html" class="mobile-nav-link">项目配置</a><a href="configuration-project-java.html" class="mobile-nav-link">Java项目配置模板</a><a href="configuration-project-php.html" class="mobile-nav-link">PHP项目配置模板</a><a href="configuration-error.html" class="mobile-nav-link">检测错误</a><strong class="mobile-nav-title">上线使用</strong><a href="submit-bill.html" class="mobile-nav-link">提交上线单</a><a href="deploying.html" class="mobile-nav-link">部署上线</a><a href="deploy-error.html" class="mobile-nav-link">部署出错</a><strong class="mobile-nav-title">自定义</strong><a href="local.html" class="mobile-nav-link">各种自定义</a><strong class="mobile-nav-title">其它</strong><a href="contributing.html" class="mobile-nav-link">我想贡献</a><a href="releases.html" class="mobile-nav-link">更新日志</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+        <option value="en">English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+
+<script src="/js/version_select.js"></script>
+
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<!--  <script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script> -->
+
+<script src="/js/tab.js"></script>
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','URYXMYgtQuEhNHNY8d-F','2.0.0');
+</script>
+</body>
+</html>
