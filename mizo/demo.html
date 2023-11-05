@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online TTS</title>
+    <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-light.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item center full">
+                <h1 class="topcoat-navigation-bar__title">ONLINE TTS</h1>
+            </div>         
+        </div>    
+    </header>        
+    
+    <h3 class="checker" onclick="checkSupport()">( check your browser compatibility )</h3>
+    <section>
+        <textarea id="ttsInput" class="topcoat-textarea mousetrap" placeholder="Yo... Whazzzup ??? Paste anything here, and press the speak button to convert text into speech !!!"></textarea>             
+        <div id="customise-options">
+            <label id="voice-label">
+                Select voice :
+                <div id="voice-container">
+                    <select id="select-voice">
+                        <option value="1">UK Female</option>
+                        <option value="2">UK Male</option>
+                        <option value="3">US Female</option>
+                        <option value="4">US Male</option>
+                        <option value="5">Australian Female</option>
+                        <option value="6">Dutch Female</option>            
+                        <!--        
+                            <option value="7">Hindi Female</option> 
+                        -->
+                        <option value="8">Japanese Female</option>
+                        <option value="9">Korean Female</option>                                    
+                    </select>                      
+                </div>
+            </label>   
+            <label id="speed-label">
+                Select speech speed :
+                <div id="speed-container">
+                    <input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.1" onchange="setSpeed(this.value)">
+                </div>
+            </label>                                  
+        </div>
+        <div class="button-row">
+            <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">STOP</button>
+            <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()" >SPEAK</button>            
+        </div>
+        <div id="links">
+            <ul>
+                <li>
+                    <a href="https://github.com/therealvasanth/online-tts" target="_blank">
+                            <img src="images/github.png" alt="Logo of github Octocat anchoring to the GitHub page of Online TTS">
+                    </a>
+                </li>
+                <li>
+                    <img src="images/help.png" alt="Image of a question mark which on click provides info about how to use Online TTS" onclick="info()">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <br>
+    <footer>
+        <div class="license" style="width:300px;vertical-align:top;font-family: Arial;font-size:9pt;margin:0 auto;line-height: normal">
+            <a rel="license" href="//responsivevoice.org/">
+                <img title="ResponsiveVoice Text To Speech" src="https://responsivevoice.org/wp-content/uploads/2014/08/120x31.png" style="float:left;padding-right:2px" />
+            </a>
+            <span xmlns:dct="https://purl.org/dc/terms/" property="dct:title">
+                <a href="//responsivevoice.org/" target="_blank" title="ResponsiveVoice Text To Speech">ResponsiveVoice</a>
+            </span> used under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License">Non-Commercial License</a>
+        </div>
+        <div style="clear:both;">&nbsp;</div>           
+    </footer>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=8FI8w234"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script type="text/javascript" src="js/mousetrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

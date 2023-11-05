@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="images/favicon.png">
+	<title>Maxui</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	
+	<!-- fakeloader -->
+	<div class="fakeLoader"></div>
+	<!-- end fakeloader -->
+	
+	<!-- navbar -->
+	<div class="navbar">
+		<div class="left">
+			<a href="" class="link link-back"><i class="icon ion-ios-arrow-back"></i></a>
+		</div>
+		<div class="title">
+			Settings
+		</div>
+		<div class="right">
+			
+		</div>
+	</div>
+	<!-- end navbar -->
+
+	<!-- pages wrapper -->
+	<div class="pages-wrapper">
+
+		<!-- separator -->
+		<div class="separator-large"></div>
+		<!-- end separator -->
+		
+		<!-- settings -->
+		<div class="settings">
+			<div class="container">
+				<div class="setting-avatar">
+					<img src="images/square6.jpg" alt="image-demo">
+					<div class="btn-upload-picture">
+						<div class="form">
+							<input type="file" id="avatar-picture">
+							<label for="avatar-picture">
+								<h6 class="color-theme">Upload Image</h6>
+							</label>
+						</div>
+					</div>
+
+					<!-- separator -->
+					<div class="separator-medium"></div>
+					<!-- end separator -->
+
+					<div class="setting-form">
+						<form class="form-fill form-horizontal">
+							<div class="form-wrapper">
+								<div class="input-wrap row">
+									<label for="inputName" class="col-3 col-form-label">Name</label>
+									<div class="col-9">
+										<input id="inputName" type="text">
+									</div>
+								</div>
+								<div class="input-wrap row">
+									<label for="inputName" class="col-3 col-form-label">Email</label>
+									<div class="col-9">
+										<input id="inputName" type="email">
+									</div>
+								</div>
+								<div class="input-wrap row">
+									<label for="inputName" class="col-3 col-form-label">Address</label>
+									<div class="col-9">
+										<input id="inputName" type="text">
+									</div>
+								</div>
+								<div class="input-wrap row">
+									<label for="inputName" class="col-3 col-form-label">Phone</label>
+									<div class="col-9">
+										<input id="inputName" type="text">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- separator -->
+			<div class="separator-large"></div>
+			<!-- end separator -->
+
+			<!-- section title -->
+			<div class="section-title">
+				<h6>Notification</h6>
+			</div>
+			<!-- end section title -->
+
+			<div class="notification-setting">
+				<div class="list-view">
+					<ul>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">App update</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+										<label class="custom-control-label" for="customSwitch1"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">Automatic update</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch2">
+										<label class="custom-control-label" for="customSwitch2"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">Email notification</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+										<label class="custom-control-label" for="customSwitch3"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">News app</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch4">
+										<label class="custom-control-label" for="customSwitch4"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- separator -->
+			<div class="separator-large"></div>
+			<!-- end separator -->
+
+			<!-- section title -->
+			<div class="section-title">
+				<h6>Network Settings</h6>
+			</div>
+			<!-- end section title -->
+
+			<div class="notification-setting">
+				<div class="list-view">
+					<ul>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">Airplane Mode</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch5" checked>
+										<label class="custom-control-label" for="customSwitch5"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">Cellular</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch6">
+										<label class="custom-control-label" for="customSwitch6"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="list-item">
+								<div class="list-label">
+									<div class="list-title">Wifi</div>
+									<div class="list-after">
+										<span class="list-after-text text-weight-md ">Wifi 1</span>
+										<i class="icon ion-ios-arrow-forward"></i>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="list-item">
+							<div class="list-label">
+								<div class="list-title">Bluetooth</div>
+								<div class="list-after">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" class="custom-control-input" id="customSwitch7">
+										<label class="custom-control-label" for="customSwitch7"></label>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!-- end settings -->
+
+	</div>
+	<!-- end pages wrapper -->
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/fakeLoader.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
