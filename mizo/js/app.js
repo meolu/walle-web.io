@@ -15,10 +15,16 @@ var setSpeed = function (x) {
     console.log(b);
 }
 
+jQuery('.sentence-en').click(function(e) {
+    var word = $(e.target).text()
+    if (word == "") {
+        return
+    }
+    responsiveVoice.speak(word, "UK English Male", {rate: speechSpeed});
+});
 
 jQuery('.word-en').click(function(e) {
     var word = $(e.target).text()
-    console.log(word)
     if (word == "") {
         return
     }
