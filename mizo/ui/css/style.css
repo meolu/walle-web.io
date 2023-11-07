@@ -826,6 +826,7 @@ textarea {
     /*margin-top: 5px;*/
     text-align: left;
 }
+
 .word-row {
     background: #f5f3fd !important;
     height: 70px;
@@ -863,7 +864,45 @@ textarea {
     /*background-color: #dd4b39;*/
     width: 45%;
 }
+.sentence-row:nth-of-type(odd) {
+background-color:#e8dffa;
+}
+.sentence-row:nth-of-type(even) {
+background-color:#ececec;
+}
 
+.sentence-row {
+    height: 95px;
+    display: block;
+    position: relative;
+    clear: both;
+    margin: 1px auto;
+}
+.sentence-en, .sentence-mizo {
+    text-align: left!important;
+    font-family: 'Roboto', sans-serif;
+
+    display: block;
+    height: 30px;
+    position: relative;
+    /*margin-block-start: 1em;*/
+    /*margin-block-end: 1em;*/
+
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.sentence-en {
+    color: #18791b;
+    font-size: 24px;
+    padding-left: 15px;
+}
+.sentence-mizo {
+    color: #ce630f;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 20px;
+}
 /* pricing table */
 .pricing-number {
     font-size: 36px;
