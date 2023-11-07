@@ -15,7 +15,6 @@ var setSpeed = function (x) {
     console.log(b);
 }
 
-wordlist = '{"english":"lunch","mizo":"chawchhun"},{"english":"listen","mizo":"ngaithla"}]'
 
 jQuery('.word-en').click(function(e) {
     var word = $(e.target).text()
@@ -23,16 +22,9 @@ jQuery('.word-en').click(function(e) {
     if (word == "") {
         return
     }
-    responsiveVoice.speak(word, "UK English Female", {rate: speechSpeed});
+    responsiveVoice.speak(word, "UK English Male", {rate: speechSpeed});
 });
 
-var speakEnglish = function (e) {
-    var word = document.getElementById("ttsInput").value;
-    if (word == "") {
-        return
-    }
-    responsiveVoice.speak(word, "UK English Female", {rate: speechSpeed});
-}
 var startSpeech = function () {
     setInput();
     voices = document.getElementById("select-voice");
